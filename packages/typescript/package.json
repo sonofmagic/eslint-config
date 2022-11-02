@@ -10,7 +10,7 @@
     "lint": "eslint . --config=index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "SonOfMagic <qq1324318532@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "@icebreakers/eslint-config-basic": "workspace:*",
@@ -19,5 +19,9 @@
   },
   "devDependencies": {
     "eslint": "^8.23.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   }
 }
