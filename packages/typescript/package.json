@@ -1,10 +1,13 @@
 {
-  "name": "typescript",
+  "name": "@icebreakers/eslint-config-ts",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "files": [
+    "*.js"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint . --config=index.js"
   },
   "keywords": [],
   "author": "",
