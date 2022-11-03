@@ -1,6 +1,6 @@
 {
   "name": "@icebreakers/test-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,6 +10,11 @@
   "scripts": {
     "lint": "eslint . --config=index.js",
     "build": "tsc"
+  },
+  "homepage": "https://github.com/sonofmagic/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonofmagic/eslint-config.git"
   },
   "keywords": [],
   "author": "SonOfMagic <qq1324318532@gmail.com>",

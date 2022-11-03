@@ -1,6 +1,6 @@
 {
   "name": "@icebreakers/eslint-config-ts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "files": [
@@ -13,6 +13,11 @@
   "keywords": [],
   "author": "SonOfMagic <qq1324318532@gmail.com>",
   "license": "ISC",
+  "homepage": "https://github.com/sonofmagic/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonofmagic/eslint-config.git"
+  },
   "dependencies": {
     "@icebreakers/eslint-config-basic": "workspace:*",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
