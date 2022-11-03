@@ -1,0 +1,23 @@
+{
+  "name": "@icebreakers/test-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint . --config=index.js",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "SonOfMagic <qq1324318532@gmail.com>",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {},
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

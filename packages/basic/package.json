@@ -7,7 +7,8 @@
     "*.js"
   ],
   "scripts": {
-    "lint": "eslint . --config=index.js"
+    "lint": "eslint . --config=index.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "SonOfMagic <qq1324318532@gmail.com>",
@@ -22,7 +23,8 @@
     "eslint-plugin-promise": "6.1.1"
   },
   "devDependencies": {
-    "eslint": "^8.26.0"
+    "eslint": "^8.26.0",
+    "@icebreakers/test-utils": "workspace:*"
   },
   "publishConfig": {
     "access": "public",

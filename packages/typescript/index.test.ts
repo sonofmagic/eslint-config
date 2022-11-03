@@ -1,8 +1,7 @@
 import { ESLint } from 'eslint'
 import { resolve } from 'path'
 import { eslintFormatParser } from '@icebreakers/test-utils'
-
-describe('basic', () => {
+describe('typescript', () => {
   const eslint = new ESLint({
     overrideConfigFile: resolve(__dirname, 'index.js'),
     useEslintrc: false
