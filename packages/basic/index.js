@@ -6,9 +6,7 @@ module.exports = {
     browser: true,
     'jest/globals': true
   },
+  // https://www.npmjs.com/package/eslint-plugin-prettier
   extends: ['standard', 'plugin:prettier/recommended'],
-  plugins: ['jest'],
-  rules: {
-    'prettier/prettier': 'error'
-  }
+  plugins: ['jest']
 }
