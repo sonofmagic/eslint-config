@@ -1,7 +1,7 @@
 {
   "name": "@icebreakers/eslint-config-ts",
-  "version": "1.0.2",
-  "description": "",
+  "version": "1.0.3",
+  "description": "icebreaker's typescript eslint-config",
   "main": "index.js",
   "files": [
     "*.js"
@@ -24,8 +24,8 @@
     "@typescript-eslint/parser": "^5.36.1"
   },
   "devDependencies": {
-    "eslint": "^8.23.0",
-    "@icebreakers/test-utils": "workspace:*"
+    "@icebreakers/test-utils": "workspace:*",
+    "eslint": "^8.23.0"
   },
   "publishConfig": {
     "access": "public",
