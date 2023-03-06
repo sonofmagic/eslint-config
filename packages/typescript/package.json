@@ -1,6 +1,6 @@
 {
   "name": "@icebreakers/eslint-config-ts",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "icebreaker's typescript eslint-config",
   "main": "index.js",
   "files": [
@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@icebreakers/eslint-config-basic": "workspace:*",
+    "@types/jest": "^29.4.0",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1"
   },
