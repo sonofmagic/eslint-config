@@ -41,7 +41,9 @@ insert_final_newline = false
     "singleQuote": true,
     "endOfLine": "lf",
     "trailingComma": "none",
-    "printWidth": 180
+    "printWidth": 180,
+    "bracketSameLine": true,
+    "htmlWhitespaceSensitivity": "ignore"
 }
 ```
 
