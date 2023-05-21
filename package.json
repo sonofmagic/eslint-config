@@ -12,7 +12,8 @@
     "lint": "pnpm -r run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "release": "bumpp -r",
-    "test": "pnpm -r run test"
+    "test": "pnpm -r run test",
+    "sync": "cnpm sync @icebreakers/eslint-config-basic eslint-config-icebreaker @icebreakers/test-utils @icebreakers/eslint-config-ts"
   },
   "devDependencies": {
     "@icebreakers/eslint-config-basic": "workspace:*",
