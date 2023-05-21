@@ -3,11 +3,14 @@
 
 name: Node.js Package
 
+permissions:
+  contents: write
+
 on:
-  # you need to custom your event trigger !
-  # release:
-  #   types: [created]
   workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
 
 jobs:
   build:

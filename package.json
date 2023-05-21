@@ -7,16 +7,17 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
+    "build": "pnpm -r run build",
+    "dev": "pnpm -r run dev --parallel",
+    "lint": "pnpm -r run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "release": "pnpm -r publish --access public",
-    "test": "turbo run test"
+    "test": "pnpm -r run test"
   },
   "devDependencies": {
     "@icebreakers/eslint-config-basic": "workspace:*",
     "@icebreakers/eslint-config-ts": "workspace:*",
+    "eslint-config-icebreaker": "workspace:*",
     "@types/eslint": "^8.37.0",
     "@types/jest": "^29.5.1",
     "@types/node": "^20.2.1",
@@ -25,11 +26,11 @@
     "prettier": "^2.8.8",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
-    "turbo": "^1.9.8",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "bumpp": "^9.1.0"
   },
   "engines": {
     "node": ">=14.0.0"
   },
-  "packageManager": "pnpm@7.14.1"
+  "packageManager": "pnpm@8.5.1"
 }
