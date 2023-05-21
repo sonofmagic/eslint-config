@@ -39,6 +39,9 @@ exports[`typescript snapshot 1`] = `
     "@babel/semi": [
       "off",
     ],
+    "@typescript-eslint/block-spacing": [
+      "off",
+    ],
     "@typescript-eslint/brace-style": [
       "off",
     ],
@@ -54,8 +57,14 @@ exports[`typescript snapshot 1`] = `
     "@typescript-eslint/indent": [
       "off",
     ],
+    "@typescript-eslint/key-spacing": [
+      "off",
+    ],
     "@typescript-eslint/keyword-spacing": [
       "off",
+    ],
+    "@typescript-eslint/lines-around-comment": [
+      0,
     ],
     "@typescript-eslint/member-delimiter-style": [
       "off",
@@ -1117,6 +1126,9 @@ exports[`typescript snapshot 1`] = `
       0,
     ],
     "vue/multiline-html-element-content-newline": [
+      "off",
+    ],
+    "vue/multiline-ternary": [
       "off",
     ],
     "vue/mustache-interpolation-spacing": [

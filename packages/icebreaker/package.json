@@ -25,12 +25,7 @@
     "eslint-plugin-promise": "^6.0.1",
     "eslint-plugin-unicorn": "^47.0.0"
   },
-  "devDependencies": {
-    "changelogen": "^0.5.3",
-    "eslint": "^8.27.0",
-    "prettier": "^2.7.1",
-    "typescript": "^5.0.4"
-  },
+  "devDependencies": {},
   "peerDependencies": {
     "eslint": "*",
     "typescript": "*"
