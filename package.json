@@ -1,6 +1,6 @@
 {
   "name": "eslint-config",
-  "version": "0.0.0",
+  "version": "1.1.0",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -11,7 +11,7 @@
     "dev": "pnpm -r run dev --parallel",
     "lint": "pnpm -r run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "release": "pnpm -r publish --access public",
+    "release": "bumpp -r",
     "test": "pnpm -r run test"
   },
   "devDependencies": {
