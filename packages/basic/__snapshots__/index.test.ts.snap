@@ -601,6 +601,7 @@ exports[`basic snapshot 1`] = `
       "off",
       {
         "max": 1,
+        "maxBOF": 0,
         "maxEOF": 0,
       },
     ],

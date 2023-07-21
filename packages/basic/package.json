@@ -20,16 +20,16 @@
   },
   "dependencies": {
     "eslint-config-prettier": "^8.8.0",
-    "eslint-config-standard": "^17.0.0",
+    "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-jest": "^27.2.1",
-    "eslint-plugin-n": "^16.0.0",
-    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-jest": "^27.2.3",
+    "eslint-plugin-n": "^16.0.1",
+    "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-promise": "6.1.1"
   },
   "devDependencies": {
     "@icebreakers/test-utils": "workspace:*",
-    "eslint": "^8.41.0"
+    "eslint": "^8.45.0"
   },
   "publishConfig": {
     "access": "public",

@@ -15,7 +15,7 @@ exports[`typescript snapshot 1`] = `
   },
   "ignorePatterns": [],
   "noInlineConfig": undefined,
-  "parser": "node_modules/@typescript-eslint/parser/dist/index.js",
+  "parser": "node_modules\\@typescript-eslint\\parser\\dist\\index.js",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true,
@@ -602,6 +602,7 @@ exports[`typescript snapshot 1`] = `
       "off",
       {
         "max": 1,
+        "maxBOF": 0,
         "maxEOF": 0,
       },
     ],

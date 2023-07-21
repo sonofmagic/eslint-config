@@ -52,6 +52,13 @@ module.exports = {
     'unicorn/no-await-expression-member': 0,
     'unicorn/no-useless-undefined': 0,
     'unicorn/no-array-push-push': 0,
+    'unicorn/no-array-reduce': 0,
+    'unicorn/no-object-as-default-parameter': 0,
+    'unicorn/filename-case': 0,
+    'unicorn/no-null': 0,
+    'unicorn/prefer-module': 0,
+    'unicorn/prefer-top-level-await': 0,
+
     '@typescript-eslint/no-explicit-any': 0,
     '@typescript-eslint/no-empty-function': 0,
     '@typescript-eslint/no-var-requires': 0,
