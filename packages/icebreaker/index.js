@@ -58,7 +58,9 @@ module.exports = {
     'unicorn/no-null': 0,
     'unicorn/prefer-module': 0,
     'unicorn/prefer-top-level-await': 0,
-
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/issues/2175
+    // no-empty-file always false positives in @typescript-eslint/parser@6
+    'unicorn/no-empty-file': 0,
     '@typescript-eslint/no-explicit-any': 0,
     '@typescript-eslint/no-empty-function': 0,
     '@typescript-eslint/no-var-requires': 0,
