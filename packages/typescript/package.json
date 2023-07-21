@@ -1,6 +1,6 @@
 {
   "name": "@icebreakers/eslint-config-ts",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "icebreaker's typescript eslint-config",
   "main": "index.js",
   "files": [
