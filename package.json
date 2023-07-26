@@ -18,9 +18,9 @@
   "devDependencies": {
     "@icebreakers/eslint-config-basic": "workspace:*",
     "@icebreakers/eslint-config-ts": "workspace:*",
-    "@types/eslint": "^8.44.0",
+    "@types/eslint": "^8.44.1",
     "@types/jest": "^29.5.3",
-    "@types/node": "^20.4.2",
+    "@types/node": "^20.4.5",
     "bumpp": "^9.1.1",
     "changelogen": "^0.5.4",
     "eslint": "^8.45.0",
