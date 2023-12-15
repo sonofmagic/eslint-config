@@ -15,7 +15,7 @@ exports[`typescript snapshot 1`] = `
   },
   "ignorePatterns": [],
   "noInlineConfig": undefined,
-  "parser": "node_modules\\@typescript-eslint\\parser\\dist\\index.js",
+  "parser": "node_modules/@typescript-eslint/parser/dist/index.js",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true,
@@ -115,6 +115,7 @@ exports[`typescript snapshot 1`] = `
       "error",
       {
         "allowImplicit": false,
+        "allowVoid": false,
         "checkForEach": false,
       },
     ],
@@ -385,6 +386,9 @@ exports[`typescript snapshot 1`] = `
     ],
     "max-len": [
       0,
+    ],
+    "max-statements-per-line": [
+      "off",
     ],
     "multiline-ternary": [
       "off",
@@ -1038,7 +1042,7 @@ exports[`typescript snapshot 1`] = `
       "never",
     ],
     "unicode-bom": [
-      "off",
+      "error",
       "never",
     ],
     "unicorn/empty-brace-spaces": [
@@ -1049,6 +1053,9 @@ exports[`typescript snapshot 1`] = `
     ],
     "unicorn/number-literal-case": [
       "off",
+    ],
+    "unicorn/template-indent": [
+      0,
     ],
     "use-isnan": [
       "error",
@@ -1067,6 +1074,9 @@ exports[`typescript snapshot 1`] = `
       "off",
     ],
     "vue/array-bracket-spacing": [
+      "off",
+    ],
+    "vue/array-element-newline": [
       "off",
     ],
     "vue/arrow-spacing": [

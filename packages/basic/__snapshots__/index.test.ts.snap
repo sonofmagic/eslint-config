@@ -114,6 +114,7 @@ exports[`basic snapshot 1`] = `
       "error",
       {
         "allowImplicit": false,
+        "allowVoid": false,
         "checkForEach": false,
       },
     ],
@@ -384,6 +385,9 @@ exports[`basic snapshot 1`] = `
     ],
     "max-len": [
       0,
+    ],
+    "max-statements-per-line": [
+      "off",
     ],
     "multiline-ternary": [
       "off",
@@ -1037,7 +1041,7 @@ exports[`basic snapshot 1`] = `
       "never",
     ],
     "unicode-bom": [
-      "off",
+      "error",
       "never",
     ],
     "unicorn/empty-brace-spaces": [
@@ -1048,6 +1052,9 @@ exports[`basic snapshot 1`] = `
     ],
     "unicorn/number-literal-case": [
       "off",
+    ],
+    "unicorn/template-indent": [
+      0,
     ],
     "use-isnan": [
       "error",
@@ -1066,6 +1073,9 @@ exports[`basic snapshot 1`] = `
       "off",
     ],
     "vue/array-bracket-spacing": [
+      "off",
+    ],
+    "vue/array-element-newline": [
       "off",
     ],
     "vue/arrow-spacing": [
