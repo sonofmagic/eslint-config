@@ -18,18 +18,18 @@
   "devDependencies": {
     "@icebreakers/eslint-config-basic": "workspace:*",
     "@icebreakers/eslint-config-ts": "workspace:*",
-    "@types/eslint": "^8.44.9",
-    "@types/jest": "^29.5.11",
-    "@types/node": "^20.10.4",
-    "bumpp": "^9.2.1",
+    "@types/eslint": "^8.56.10",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.7",
+    "bumpp": "^9.4.0",
     "changelogen": "^0.5.5",
     "eslint": "^8.55.0",
     "eslint-config-icebreaker": "workspace:*",
     "jest": "^29.7.0",
-    "prettier": "^3.1.1",
-    "ts-jest": "^29.1.1",
+    "prettier": "^3.2.5",
+    "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.5"
   },
   "engines": {
     "node": ">=14.0.0"
