@@ -8,7 +8,8 @@
     "build:up": "tsup --format esm,cjs --clean --dts",
     "test": "vitest run",
     "test:dev": "vitest",
-    "release": "pnpm publish"
+    "release": "pnpm publish",
+    "sync": "cnpm sync @icebreakers/eslint-config"
   },
   "keywords": [],
   "author": "",
