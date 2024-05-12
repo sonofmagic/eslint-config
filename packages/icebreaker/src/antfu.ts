@@ -21,6 +21,9 @@ export function icebreaker(
     rules: {
       'curly': ['error', 'all'],
       'no-console': ['warn'],
+      'ts/prefer-ts-expect-error': 'off',
+      'ts/ban-ts-comment': 'off',
     },
+
   }, ...userConfigs)
 }
