@@ -1,2 +1,2 @@
-export { sxzz as icebreaker } from '@sxzz/eslint-config'
-export { default as icebreakerWithoutPrettier } from '@antfu/eslint-config'
+export { icebreaker } from './sxzz'
+export { icebreakerWithoutPrettier } from './antfu'
