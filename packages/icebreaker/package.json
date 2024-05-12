@@ -1,0 +1,35 @@
+{
+  "name": "@icebreakers/eslint-config",
+  "version": "0.0.0",
+  "description": "icebreakers's eslint config",
+  "scripts": {
+    "dev": "unbuild --sourcemap",
+    "build": "unbuild",
+    "build:up": "tsup --format esm,cjs --clean --dts",
+    "test": "vitest run",
+    "test:dev": "vitest",
+    "release": "pnpm publish"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "sideEffects": false,
+  "type": "commonjs",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@antfu/eslint-config": "2.17.0",
+    "@sxzz/eslint-config": "3.11.0"
+  }
+}
