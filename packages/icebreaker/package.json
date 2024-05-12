@@ -13,7 +13,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "sideEffects": false,
   "type": "commonjs",
   "exports": {
     ".": {
