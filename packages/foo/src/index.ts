@@ -10,3 +10,12 @@ export function foo() {
 export function getDirname() {
   return __dirname
 }
+
+if (__dirname) {
+  console.log('---')
+}
+else {
+  console.log('---')
+}
+
+if (__filename) { console.log('--') }

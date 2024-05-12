@@ -1,2 +1,2 @@
-export { icebreaker } from './sxzz'
-export { icebreakerWithoutPrettier } from './antfu'
+export { icebreakerWithPrettier } from './sxzz'
+export { icebreaker } from './antfu'

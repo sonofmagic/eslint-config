@@ -1,6 +1,6 @@
 {
   "name": "@icebreakers/eslint-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "icebreakers's eslint config",
   "scripts": {
     "dev": "unbuild --sourcemap",
