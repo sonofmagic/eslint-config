@@ -50,9 +50,6 @@ importers:
       eslint:
         specifier: npm:eslint-ts-patch@9.2.0-6
         version: eslint-ts-patch@9.2.0-6
-      eslint-define-config:
-        specifier: ^1.24.1
-        version: 1.24.1
       eslint-flat-config-utils:
         specifier: ^0.2.4
         version: 0.2.4
@@ -943,6 +940,10 @@ packages:
 
   '@pkgr/core@0.1.0':
     resolution: {integrity: sha512-Zwq5OCzuwJC2jwqmpEQt7Ds1DTi6BWSwoGkbb1n9pO3hzb35BoJELx7c0T23iDkBGkh2e7tvOtjF3tr3OaQHDQ==}
+    engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
+
+  '@pkgr/core@0.1.1':
+    resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
   '@rollup/plugin-alias@5.0.0':
@@ -1898,10 +1899,6 @@ packages:
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
-
-  eslint-define-config@1.24.1:
-    resolution: {integrity: sha512-o36vBhPSWyIQlHoMqGhhcGmOOm2A2ccBVIdLTG/AWdm9YmjpsLpf+5ntf9LlHR6dduLREgxtGwvwPwSt7vnXJg==}
-    engines: {node: '>=18.0.0', npm: '>=9.0.0', pnpm: '>= 8.6.0'}
 
   eslint-flat-config-utils@0.2.4:
     resolution: {integrity: sha512-k7MJkSIfF0bs5eQu1KXyV0AhsvdsqSt1pQfZNLwf6qkozuHQV6aNHg5f8+3Ya+WTzpB+e7I3hMhs4qBwx7nEkw==}
@@ -4992,6 +4989,9 @@ snapshots:
 
   '@pkgr/core@0.1.0': {}
 
+  '@pkgr/core@0.1.1':
+    optional: true
+
   '@rollup/plugin-alias@5.0.0(rollup@3.28.1)':
     dependencies:
       slash: 4.0.0
@@ -6066,8 +6066,6 @@ snapshots:
   eslint-config-prettier@9.1.0(eslint@9.2.0):
     dependencies:
       eslint: 9.2.0
-
-  eslint-define-config@1.24.1: {}
 
   eslint-flat-config-utils@0.2.4:
     dependencies:
@@ -7884,7 +7882,7 @@ snapshots:
 
   synckit@0.9.0:
     dependencies:
-      '@pkgr/core': 0.1.0
+      '@pkgr/core': 0.1.1
       tslib: 2.6.2
     optional: true
 
