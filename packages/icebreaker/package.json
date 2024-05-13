@@ -1,6 +1,6 @@
 {
   "name": "@icebreakers/eslint-config",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "icebreakers's eslint config",
   "scripts": {
     "dev": "unbuild --sourcemap",
@@ -11,16 +11,25 @@
     "release": "pnpm publish",
     "sync": "cnpm sync @icebreakers/eslint-config"
   },
-  "keywords": [],
+  "keywords": [
+    "eslint-config",
+    "prettier"
+  ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
-    }
+    },
+    "./antfu": {
+      "types": "./dist/antfu.d.ts",
+      "import": "./dist/antfu.mjs",
+      "require": "./dist/antfu.cjs"
+    },
+    "./*": "./*"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -28,9 +37,17 @@
   "files": [
     "dist"
   ],
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
   "dependencies": {
     "@antfu/eslint-config": "2.17.0",
-    "@sxzz/eslint-config": "3.11.0"
-  },
-  "devDependencies": {}
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3"
+  }
 }

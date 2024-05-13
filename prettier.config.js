@@ -4,8 +4,7 @@ const config = {
   useTabs: false,
   semi: false,
   singleQuote: true,
-  endOfLine: 'lf',
-  trailingComma: 'none',
-  printWidth: 80
+  endOfLine: 'auto',
+  printWidth: 80,
 }
 export default config
