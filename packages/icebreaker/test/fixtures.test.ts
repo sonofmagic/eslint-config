@@ -1,14 +1,18 @@
-import { join, resolve } from 'node:path'
+import { join, resolve as r } from 'node:path'
 import fs from 'fs-extra'
 import { execa } from 'execa'
 import fg from 'fast-glob'
 import type { OptionsConfig, TypedFlatConfigItem } from '../src/types'
 
+function resolve(...args: string[]) {
+  return r(__dirname, ...args)
+}
+
 beforeAll(async () => {
-  await fs.rm('_fixtures', { recursive: true, force: true })
+  await fs.rm(resolve('_fixtures'), { recursive: true, force: true })
 })
 afterAll(async () => {
-  await fs.rm('_fixtures', { recursive: true, force: true })
+  await fs.rm(resolve('_fixtures'), { recursive: true, force: true })
 })
 
 runWithConfig('js', {
@@ -104,10 +108,11 @@ export default antfu(
       stdio: 'pipe',
     })
 
-    const files = await fg('**/*', {
+    const files = await fg(join(__dirname, '**/*'), {
       ignore: [
         'node_modules',
         'eslint.config.js',
+        'fixtures.test.ts',
       ],
       cwd: target,
     })
