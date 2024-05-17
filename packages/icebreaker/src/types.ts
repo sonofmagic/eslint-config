@@ -15,3 +15,8 @@ export type UserConfigItem = Awaitable<
   | FlatConfigComposer<any, any>
   | Linter.FlatConfig[]
 >
+
+export type {
+  OptionsConfig,
+  TypedFlatConfigItem,
+}
