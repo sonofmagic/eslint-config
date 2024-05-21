@@ -1,4 +1,4 @@
-import { icebreaker } from './packages/icebreaker/src/index'
+import { icebreaker } from './packages/icebreaker/dist/index.mjs'
 
 export default icebreaker()
 

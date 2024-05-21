@@ -6,6 +6,7 @@ import type { FlatConfigComposer } from 'eslint-flat-config-utils'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import { FlatCompat } from '@eslint/eslintrc'
 import { isPackageExists } from 'local-pkg'
+import * as mdx from 'eslint-plugin-mdx'
 import { antfu } from './antfu'
 import type { UserConfigItem, UserDefinedOptions } from './types'
 
@@ -15,7 +16,12 @@ export function icebreaker(
   options: UserDefinedOptions = {},
   ...userConfigs: UserConfigItem[]
 ): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
-  const { prettier, tailwindcss: enableTailwindcss = isPackageExists('tailwindcss'), ...opts } = options
+  const {
+    prettier: enablePrettier,
+    tailwindcss: enableTailwindcss = isPackageExists('tailwindcss'),
+    mdx: enableMDX,
+    ...opts
+  } = options
 
   const presets: UserConfigItem[] = [
     {
@@ -27,7 +33,7 @@ export function icebreaker(
       },
     },
   ]
-  if (options?.prettier) {
+  if (enablePrettier) {
     presets.push(eslintPluginPrettierRecommended)
   }
   // https://github.com/francoismassart/eslint-plugin-tailwindcss/issues/335
@@ -35,6 +41,30 @@ export function icebreaker(
     presets.push(...compat.config({
       extends: ['plugin:tailwindcss/recommended'],
     }))
+  }
+
+  if (enableMDX) {
+    presets.push({
+      ...mdx.flat,
+      // optional, if you want to lint code blocks at the same
+      processor: mdx.createRemarkProcessor({
+        lintCodeBlocks: true,
+        // optional, if you want to disable language mapper, set it to `false`
+        // if you want to override the default language mapper inside, you can provide your own
+        languageMapper: {},
+      }),
+    })
+    presets.push(
+      {
+        ...mdx.flatCodeBlocks,
+        rules: {
+          ...mdx.flatCodeBlocks.rules,
+          // if you want to override some rules for code blocks
+          // 'no-var': 'error',
+          // 'prefer-const': 'error',
+        },
+      },
+    )
   }
 
   return antfu(opts, ...presets, ...userConfigs)
