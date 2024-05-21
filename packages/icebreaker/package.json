@@ -1,24 +1,15 @@
 {
   "name": "@icebreakers/eslint-config",
+  "type": "module",
   "version": "0.3.0",
   "description": "icebreakers's eslint config",
-  "scripts": {
-    "dev": "unbuild --sourcemap",
-    "build": "unbuild",
-    "build:up": "tsup --format esm,cjs --clean --dts",
-    "test": "vitest run",
-    "test:dev": "vitest",
-    "release": "pnpm publish",
-    "sync": "cnpm sync @icebreakers/eslint-config"
-  },
+  "author": "",
+  "license": "MIT",
   "keywords": [
     "eslint-config",
     "prettier",
     "icebreaker"
   ],
-  "author": "",
-  "license": "MIT",
-  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -30,9 +21,6 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
   "typesVersions": {
     "*": {
       "*": [
@@ -40,6 +28,18 @@
         "./dist/index.d.ts"
       ]
     }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "unbuild --sourcemap",
+    "build": "unbuild",
+    "build:up": "tsup --format esm,cjs --clean --dts",
+    "test": "vitest run",
+    "test:dev": "vitest",
+    "release": "pnpm publish",
+    "sync": "cnpm sync @icebreakers/eslint-config"
   },
   "dependencies": {
     "@antfu/eslint-config": "2.18.1",

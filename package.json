@@ -10,8 +10,8 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
-    "test": "vitest run --coverage.enabled",
-    "test:dev": "vitest",
+    "test": "turbo run test",
+    "test:dev": "turbo run test:dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "release": "bumpp -r --no-push --no-commit",
@@ -59,7 +59,7 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "packageManager": "pnpm@9.1.0",
+  "packageManager": "pnpm@9.1.1",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"

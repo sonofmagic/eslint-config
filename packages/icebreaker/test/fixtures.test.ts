@@ -1,11 +1,11 @@
 import { join, resolve } from 'node:path'
-import { afterAll, beforeAll, it } from 'vitest'
+import { it } from 'vitest'
 import fs from 'fs-extra'
 import { execa } from 'execa'
 import fg from 'fast-glob'
-import type { OptionsConfig, TypedFlatConfigItem } from '../src/types'
+import type { TypedFlatConfigItem, UserDefinedOptions } from '../src/types'
 
-describe.skip('fixtures', () => {
+describe('fixtures', () => {
   beforeAll(async () => {
     await fs.rm('_fixtures', { recursive: true, force: true })
   })
@@ -80,7 +80,14 @@ describe.skip('fixtures', () => {
     },
   )
 
-  function runWithConfig(name: string, configs: OptionsConfig, ...items: TypedFlatConfigItem[]) {
+  runWithConfig(
+    'mdx',
+    {
+      mdx: true,
+    },
+  )
+
+  function runWithConfig(name: string, configs: UserDefinedOptions, ...items: TypedFlatConfigItem[]) {
     it.concurrent(name, async ({ expect }) => {
       const from = resolve('fixtures/input')
       const output = resolve('fixtures/output', name)
@@ -93,15 +100,15 @@ describe.skip('fixtures', () => {
       })
       await fs.writeFile(join(target, 'eslint.config.js'), `
 // @eslint-disable
-import antfu from '@antfu/eslint-config'
+import { icebreaker } from '@icebreakers/eslint-config'
 
-export default antfu(
+export default icebreaker(
   ${JSON.stringify(configs)},
   ...${JSON.stringify(items) ?? []},
 )
   `)
 
-      await execa('npx', ['eslint', '.', '--fix'], {
+      await execa('pnpm', ['exec', 'eslint', '.', '--fix'], {
         cwd: target,
         stdio: 'pipe',
       })
@@ -117,9 +124,11 @@ export default antfu(
       await Promise.all(files.map(async (file) => {
         const content = await fs.readFile(join(target, file), 'utf-8')
         const source = await fs.readFile(join(from, file), 'utf-8')
-        const outputPath = join(output, file)
+        // const outputPath = join(output, file)
         if (content === source) {
-          if (fs.existsSync(outputPath)) { fs.remove(outputPath) }
+          // if (fs.existsSync(outputPath)) {
+          //   fs.remove(outputPath)
+          // }
           return
         }
         await expect.soft(content).toMatchFileSnapshot(join(output, file))

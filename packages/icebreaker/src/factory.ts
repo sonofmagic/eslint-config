@@ -6,8 +6,7 @@ import type { FlatConfigComposer } from 'eslint-flat-config-utils'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import { FlatCompat } from '@eslint/eslintrc'
 import { isPackageExists } from 'local-pkg'
-import * as mdx from 'eslint-plugin-mdx'
-import { antfu } from './antfu'
+import { antfu, interopDefault } from './antfu'
 import type { UserConfigItem, UserDefinedOptions } from './types'
 
 const compat = new FlatCompat()
@@ -44,27 +43,29 @@ export function icebreaker(
   }
 
   if (enableMDX) {
-    presets.push({
-      ...mdx.flat,
-      // optional, if you want to lint code blocks at the same
-      processor: mdx.createRemarkProcessor({
-        lintCodeBlocks: true,
-        // optional, if you want to disable language mapper, set it to `false`
-        // if you want to override the default language mapper inside, you can provide your own
-        languageMapper: {},
-      }),
-    })
-    presets.push(
-      {
-        ...mdx.flatCodeBlocks,
-        rules: {
-          ...mdx.flatCodeBlocks.rules,
-          // if you want to override some rules for code blocks
-          // 'no-var': 'error',
-          // 'prefer-const': 'error',
+    presets.push(interopDefault(import('eslint-plugin-mdx')).then((mdx) => {
+      return [
+        {
+          ...mdx.flat,
+          // optional, if you want to lint code blocks at the same
+          processor: mdx.createRemarkProcessor({
+            lintCodeBlocks: true,
+            // optional, if you want to disable language mapper, set it to `false`
+            // if you want to override the default language mapper inside, you can provide your own
+            languageMapper: {},
+          }),
         },
-      },
-    )
+        {
+          ...mdx.flatCodeBlocks,
+          rules: {
+            ...mdx.flatCodeBlocks.rules,
+            // if you want to override some rules for code blocks
+            // 'no-var': 'error',
+            // 'prefer-const': 'error',
+          },
+        },
+      ]
+    }))
   }
 
   return antfu(opts, ...presets, ...userConfigs)
