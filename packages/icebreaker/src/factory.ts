@@ -4,12 +4,11 @@ import type {
 } from '@antfu/eslint-config'
 import type { FlatConfigComposer } from 'eslint-flat-config-utils'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
-import { FlatCompat } from '@eslint/eslintrc'
 import { isPackageExists } from 'local-pkg'
+// @ts-ignore
+import tailwind from 'eslint-plugin-tailwindcss'
 import { antfu, interopDefault } from './antfu'
 import type { UserConfigItem, UserDefinedOptions } from './types'
-
-const compat = new FlatCompat()
 
 export function icebreaker(
   options: UserDefinedOptions = {},
@@ -37,9 +36,7 @@ export function icebreaker(
   }
   // https://github.com/francoismassart/eslint-plugin-tailwindcss/issues/335
   if (enableTailwindcss) {
-    presets.push(...compat.config({
-      extends: ['plugin:tailwindcss/recommended'],
-    }))
+    presets.push(...tailwind.configs['flat/recommended'])
   }
 
   if (enableMDX) {
@@ -47,11 +44,8 @@ export function icebreaker(
       return [
         {
           ...mdx.flat,
-          // optional, if you want to lint code blocks at the same
           processor: mdx.createRemarkProcessor({
             lintCodeBlocks: true,
-            // optional, if you want to disable language mapper, set it to `false`
-            // if you want to override the default language mapper inside, you can provide your own
             languageMapper: {},
           }),
         },
@@ -59,9 +53,6 @@ export function icebreaker(
           ...mdx.flatCodeBlocks,
           rules: {
             ...mdx.flatCodeBlocks.rules,
-            // if you want to override some rules for code blocks
-            // 'no-var': 'error',
-            // 'prefer-const': 'error',
           },
         },
       ]

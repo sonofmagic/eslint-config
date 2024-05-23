@@ -2,7 +2,7 @@ import { icebreaker } from '../src/index'
 
 describe('index', () => {
   it('mdx', async () => {
-    const plugins = await icebreaker({
+    const plugins = icebreaker({
       mdx: true,
     })
     console.log(plugins)
