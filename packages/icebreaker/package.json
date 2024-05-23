@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.3.2",
   "description": "icebreakers's eslint config",
-  "author": "",
+  "author": "SonOfMagic <qq1324318532@gmail.com>",
   "license": "MIT",
   "keywords": [
     "eslint-config",
