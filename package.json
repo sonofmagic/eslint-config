@@ -7,7 +7,7 @@
     "apps/*",
     "packages/*"
   ],
-  "packageManager": "pnpm@9.1.1",
+  "packageManager": "pnpm@9.1.2",
   "author": "SonOfMagic <qq1324318532@gmail.com>",
   "engines": {
     "node": ">=18.0.0"
