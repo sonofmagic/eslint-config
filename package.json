@@ -43,6 +43,7 @@
     "@types/node": "^20.14.1",
     "@vitest/coverage-v8": "^1.6.0",
     "bumpp": "^9.4.1",
+    "ci-info": "^4.0.0",
     "defu": "^6.1.4",
     "eslint": "^9.4.0",
     "eslint-flat-config-utils": "^0.2.5",
