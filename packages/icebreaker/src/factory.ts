@@ -5,8 +5,6 @@ import type {
 import type { FlatConfigComposer } from 'eslint-flat-config-utils'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import { isPackageExists } from 'local-pkg'
-// @ts-ignore
-import tailwind from 'eslint-plugin-tailwindcss'
 import { antfu, interopDefault } from './antfu'
 import type { UserConfigItem, UserDefinedOptions } from './types'
 
@@ -36,7 +34,14 @@ export function icebreaker(
   }
   // https://github.com/francoismassart/eslint-plugin-tailwindcss/issues/335
   if (enableTailwindcss) {
-    presets.push(...tailwind.configs['flat/recommended'])
+    presets.push(
+      interopDefault(
+        // @ts-ignore
+        import('eslint-plugin-tailwindcss'),
+      ).then((tailwind) => {
+        return tailwind.configs['flat/recommended']
+      }),
+    )
   }
 
   if (enableMDX) {
