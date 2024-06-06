@@ -26,6 +26,7 @@ export function icebreaker(
         'no-console': ['warn'],
         'ts/prefer-ts-expect-error': 'off',
         'ts/ban-ts-comment': 'off',
+        'vue/attribute-hyphenation': 'off',
       },
     },
   ]
@@ -42,6 +43,11 @@ export function icebreaker(
         return tailwind.configs['flat/recommended']
       }),
     )
+    presets.push({
+      rules: {
+        'tailwindcss/no-custom-classname': 'off',
+      },
+    })
   }
 
   if (enableMDX) {
