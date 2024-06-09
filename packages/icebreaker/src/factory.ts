@@ -5,6 +5,7 @@ import type {
 import type { FlatConfigComposer } from 'eslint-flat-config-utils'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import { isPackageExists } from 'local-pkg'
+import { defu } from 'defu'
 import { antfu, interopDefault } from './antfu'
 import type { UserConfigItem, UserDefinedOptions } from './types'
 
@@ -17,7 +18,9 @@ export function icebreaker(
     tailwindcss: enableTailwindcss = isPackageExists('tailwindcss'),
     mdx: enableMDX,
     ...opts
-  } = options
+  } = defu<UserDefinedOptions, UserDefinedOptions[]>(options, {
+    formatters: true,
+  })
 
   const presets: UserConfigItem[] = [
     {
