@@ -3,7 +3,6 @@ import type {
   TypedFlatConfigItem,
 } from '@antfu/eslint-config'
 import type { FlatConfigComposer } from 'eslint-flat-config-utils'
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import { isPackageExists } from 'local-pkg'
 import { defu } from 'defu'
 import { antfu, interopDefault } from './antfu'
@@ -14,7 +13,6 @@ export function icebreaker(
   ...userConfigs: UserConfigItem[]
 ): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
   const {
-    prettier: enablePrettier,
     tailwindcss: enableTailwindcss = isPackageExists('tailwindcss'),
     mdx: enableMDX,
     ...opts
@@ -30,12 +28,11 @@ export function icebreaker(
         'ts/prefer-ts-expect-error': 'off',
         'ts/ban-ts-comment': 'off',
         'vue/attribute-hyphenation': 'off',
+        'unused-imports/no-unused-imports': 'error',
       },
     },
   ]
-  if (enablePrettier) {
-    presets.push(eslintPluginPrettierRecommended)
-  }
+
   // https://github.com/francoismassart/eslint-plugin-tailwindcss/issues/335
   if (enableTailwindcss) {
     presets.push(
