@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 0.3.12
+
+### Patch Changes
+
+- [`fb7759c`](https://github.com/sonofmagic/eslint-config/commit/fb7759caa20658455ee8b40f0e0cde01d88d3168) Thanks [@sonofmagic](https://github.com/sonofmagic)! - fix: allow ts fn argsIgnorePattern
+
 ## 0.3.11
 
 ### Patch Changes
