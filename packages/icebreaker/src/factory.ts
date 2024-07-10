@@ -31,6 +31,7 @@ export function icebreaker(
         'vue/attribute-hyphenation': 'off',
         // 问题在于 auto fix 的时候，会直接 remove 整个 import ，而我们想让用户自己去 remove
         // 'unused-imports/no-unused-imports': 'error',
+        // https://typescript-eslint.io/rules/no-unused-vars/
         'no-unused-vars': 'off',
         'ts/no-unused-vars': 'error',
       },
