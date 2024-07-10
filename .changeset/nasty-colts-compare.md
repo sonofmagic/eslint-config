@@ -2,4 +2,4 @@
 '@icebreakers/eslint-config': patch
 ---
 
-的撒旦
+fix: allow ts fn argsIgnorePattern
