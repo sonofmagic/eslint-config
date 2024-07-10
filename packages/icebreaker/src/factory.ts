@@ -15,6 +15,7 @@ export function icebreaker(
   const {
     tailwindcss: enableTailwindcss = isPackageExists('tailwindcss'),
     mdx: enableMDX,
+    a11y: enableA11y,
     ...opts
   } = defu<UserDefinedOptions, UserDefinedOptions[]>(options, {
     formatters: true,
@@ -30,7 +31,8 @@ export function icebreaker(
         'vue/attribute-hyphenation': 'off',
         // 问题在于 auto fix 的时候，会直接 remove 整个 import ，而我们想让用户自己去 remove
         // 'unused-imports/no-unused-imports': 'error',
-        'no-unused-vars': 'warn',
+        'no-unused-vars': 'off',
+        'ts/no-unused-vars': 'error',
       },
     },
   ]
@@ -70,6 +72,30 @@ export function icebreaker(
         },
       ]
     }))
+  }
+
+  if (enableA11y) {
+    if (opts.vue) {
+      presets.push(
+        interopDefault(
+          // @ts-ignore
+          import('eslint-plugin-vuejs-accessibility'),
+        ).then((pluginVueA11y) => {
+          return pluginVueA11y.configs['flat/recommended']
+        }),
+      )
+    }
+
+    if (opts.react) {
+      presets.push(
+        interopDefault(
+          // @ts-ignore
+          import('eslint-plugin-jsx-a11y'),
+        ).then((jsxA11y) => {
+          return jsxA11y.flatConfigs.recommended
+        }),
+      )
+    }
   }
 
   return antfu(opts, ...presets, ...userConfigs)

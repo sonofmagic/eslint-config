@@ -7,7 +7,7 @@ import type {
 import type { FlatConfigComposer } from 'eslint-flat-config-utils'
 
 export type UserDefinedOptions = OptionsConfig &
-  TypedFlatConfigItem & { tailwindcss?: boolean, mdx?: boolean }
+  TypedFlatConfigItem & { tailwindcss?: boolean, mdx?: boolean, a11y?: boolean }
 
 export type UserConfigItem = Awaitable<
   | TypedFlatConfigItem
