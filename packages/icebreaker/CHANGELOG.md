@@ -1,5 +1,14 @@
 # @icebreakers/eslint-config
 
+## 0.3.11
+
+### Patch Changes
+
+- [`aaccc60`](https://github.com/sonofmagic/eslint-config/commit/aaccc60d1fcb298daf04cea582a427c49c9402c1) Thanks [@sonofmagic](https://github.com/sonofmagic)! - 0.4.0
+
+  - add `ally` support
+  - fix ts enum error
+
 ## 0.3.10
 
 ### Patch Changes
