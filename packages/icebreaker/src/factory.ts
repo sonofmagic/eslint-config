@@ -33,7 +33,15 @@ export function icebreaker(
         // 'unused-imports/no-unused-imports': 'error',
         // https://typescript-eslint.io/rules/no-unused-vars/
         'no-unused-vars': 'off',
-        'ts/no-unused-vars': 'error',
+        'ts/no-unused-vars': ['error', {
+          args: 'all',
+          argsIgnorePattern: '^_',
+          caughtErrors: 'all',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          ignoreRestSiblings: true,
+        }],
       },
     },
   ]
