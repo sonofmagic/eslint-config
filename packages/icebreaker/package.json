@@ -41,12 +41,12 @@
     "sync": "cnpm sync @icebreakers/eslint-config"
   },
   "dependencies": {
-    "@antfu/eslint-config": "2.21.2",
+    "@antfu/eslint-config": "2.23.1",
     "eslint-plugin-format": "0.1.2",
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-mdx": "3.1.5",
     "eslint-plugin-tailwindcss": "3.17.4",
-    "eslint-plugin-vuejs-accessibility": "^2.3.1",
+    "eslint-plugin-vuejs-accessibility": "^2.4.0",
     "local-pkg": "0.5.0"
   },
   "publishConfig": {
