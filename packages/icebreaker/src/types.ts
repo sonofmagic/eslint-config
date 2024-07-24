@@ -13,7 +13,7 @@ export type UserConfigItem = Awaitable<
   | TypedFlatConfigItem
   | TypedFlatConfigItem[]
   | FlatConfigComposer<any, any>
-  | Linter.FlatConfig[]
+  | Linter.Config[]
 >
 
 export type {
