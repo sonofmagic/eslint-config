@@ -9,7 +9,6 @@ import { antfu, interopDefault } from './antfu'
 import type { UserConfigItem, UserDefinedOptions } from './types'
 
 // for vue2 @see https://github.com/antfu/eslint-config/issues/367#issuecomment-1979646400
-
 export function icebreaker(
   options: UserDefinedOptions = {},
   ...userConfigs: UserConfigItem[]
