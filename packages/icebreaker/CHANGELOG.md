@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 0.3.15
+
+### Patch Changes
+
+- [`18197ba`](https://github.com/sonofmagic/eslint-config/commit/18197baca36d096693efcbd1bd88b67a3a4ab290) Thanks [@sonofmagic](https://github.com/sonofmagic)! - Add `globals` as deps and upgrade `@types/eslint`
+
 ## 0.3.14
 
 ### Patch Changes
