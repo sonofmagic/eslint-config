@@ -30,6 +30,8 @@ export function icebreaker(
         'ts/prefer-ts-expect-error': 'off',
         'ts/ban-ts-comment': 'off',
         'vue/attribute-hyphenation': 'off',
+        'vue/v-on-event-hyphenation': 'off',
+        'vue/custom-event-name-casing': 'off',
         // 问题在于 auto fix 的时候，会直接 remove 整个 import ，而我们想让用户自己去 remove
         // 'unused-imports/no-unused-imports': 'error',
         // https://typescript-eslint.io/rules/no-unused-vars/
