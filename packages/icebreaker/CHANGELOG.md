@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 0.3.16
+
+### Patch Changes
+
+- [`048dd98`](https://github.com/sonofmagic/eslint-config/commit/048dd98b66c2fc25cf9cdfa40803dc641c2f19da) Thanks [@sonofmagic](https://github.com/sonofmagic)! - add default vue rule
+
 ## 0.3.15
 
 ### Patch Changes
