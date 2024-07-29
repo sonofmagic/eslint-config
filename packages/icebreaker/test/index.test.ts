@@ -5,13 +5,13 @@ describe('index', () => {
     const plugins = await icebreaker({
       mdx: true,
     })
-    console.log(plugins)
+    expect(plugins).toMatchFileSnapshot('./__snapshots__/mdx.test.ts.snap')
   })
 
   it('tailwindcss', async () => {
     const plugins = await icebreaker({
       tailwindcss: true,
     })
-    console.log(plugins)
+    expect(plugins).toMatchFileSnapshot('./__snapshots__/tailwindcss.test.ts.snap')
   })
 })
