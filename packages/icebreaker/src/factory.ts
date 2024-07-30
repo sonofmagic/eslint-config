@@ -45,6 +45,7 @@ export function icebreaker(
           varsIgnorePattern: '^_',
           ignoreRestSiblings: true,
         }],
+        'unused-imports/no-unused-vars': 'off',
       },
     },
   ]

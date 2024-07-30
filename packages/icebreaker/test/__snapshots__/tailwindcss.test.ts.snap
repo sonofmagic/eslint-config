@@ -55178,7 +55178,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
         "configs": {
           "all": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.8.0/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+              "D:\github\eslint-config\node_modules\.pnpm\eslint-plugin-jsonc@2.16.0_eslint@9.8.0\node_modules\eslint-plugin-jsonc\dist\configs\base.js",
             ],
             "rules": {
               "jsonc/array-bracket-newline": "error",
@@ -55228,7 +55228,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           },
           "auto-config": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.8.0/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+              "D:\github\eslint-config\node_modules\.pnpm\eslint-plugin-jsonc@2.16.0_eslint@9.8.0\node_modules\eslint-plugin-jsonc\dist\configs\base.js",
             ],
             "rules": {
               "jsonc/auto": "error",
@@ -55242,7 +55242,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                   "*.json5",
                   "*.jsonc",
                 ],
-                "parser": "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/jsonc-eslint-parser@2.4.0/node_modules/jsonc-eslint-parser/lib/index.js",
+                "parser": "D:\github\eslint-config\node_modules\.pnpm\jsonc-eslint-parser@2.4.0\node_modules\jsonc-eslint-parser\lib\index.js",
                 "rules": {
                   "no-unused-expressions": "off",
                   "no-unused-vars": "off",
@@ -57579,7 +57579,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           ],
           "prettier": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.8.0/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+              "D:\github\eslint-config\node_modules\.pnpm\eslint-plugin-jsonc@2.16.0_eslint@9.8.0\node_modules\eslint-plugin-jsonc\dist\configs\base.js",
             ],
             "rules": {
               "jsonc/array-bracket-newline": "off",
@@ -57600,7 +57600,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           },
           "recommended-with-json": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.8.0/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+              "D:\github\eslint-config\node_modules\.pnpm\eslint-plugin-jsonc@2.16.0_eslint@9.8.0\node_modules\eslint-plugin-jsonc\dist\configs\base.js",
             ],
             "rules": {
               "jsonc/comma-dangle": "error",
@@ -57636,7 +57636,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           },
           "recommended-with-json5": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.8.0/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+              "D:\github\eslint-config\node_modules\.pnpm\eslint-plugin-jsonc@2.16.0_eslint@9.8.0\node_modules\eslint-plugin-jsonc\dist\configs\base.js",
             ],
             "rules": {
               "jsonc/no-bigint-literals": "error",
@@ -57661,7 +57661,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           },
           "recommended-with-jsonc": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.8.0/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+              "D:\github\eslint-config\node_modules\.pnpm\eslint-plugin-jsonc@2.16.0_eslint@9.8.0\node_modules\eslint-plugin-jsonc\dist\configs\base.js",
             ],
             "rules": {
               "jsonc/no-bigint-literals": "error",
@@ -57698,7 +57698,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           "configs": {
             "all": {
               "extends": [
-                "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.8.0/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+                "D:\github\eslint-config\node_modules\.pnpm\eslint-plugin-jsonc@2.16.0_eslint@9.8.0\node_modules\eslint-plugin-jsonc\dist\configs\base.js",
               ],
               "rules": {
                 "jsonc/array-bracket-newline": "error",
@@ -57748,7 +57748,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
             },
             "auto-config": {
               "extends": [
-                "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.8.0/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+                "D:\github\eslint-config\node_modules\.pnpm\eslint-plugin-jsonc@2.16.0_eslint@9.8.0\node_modules\eslint-plugin-jsonc\dist\configs\base.js",
               ],
               "rules": {
                 "jsonc/auto": "error",
@@ -57762,7 +57762,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                     "*.json5",
                     "*.jsonc",
                   ],
-                  "parser": "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/jsonc-eslint-parser@2.4.0/node_modules/jsonc-eslint-parser/lib/index.js",
+                  "parser": "D:\github\eslint-config\node_modules\.pnpm\jsonc-eslint-parser@2.4.0\node_modules\jsonc-eslint-parser\lib\index.js",
                   "rules": {
                     "no-unused-expressions": "off",
                     "no-unused-vars": "off",
@@ -60099,7 +60099,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
             ],
             "prettier": {
               "extends": [
-                "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.8.0/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+                "D:\github\eslint-config\node_modules\.pnpm\eslint-plugin-jsonc@2.16.0_eslint@9.8.0\node_modules\eslint-plugin-jsonc\dist\configs\base.js",
               ],
               "rules": {
                 "jsonc/array-bracket-newline": "off",
@@ -60120,7 +60120,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
             },
             "recommended-with-json": {
               "extends": [
-                "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.8.0/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+                "D:\github\eslint-config\node_modules\.pnpm\eslint-plugin-jsonc@2.16.0_eslint@9.8.0\node_modules\eslint-plugin-jsonc\dist\configs\base.js",
               ],
               "rules": {
                 "jsonc/comma-dangle": "error",
@@ -60156,7 +60156,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
             },
             "recommended-with-json5": {
               "extends": [
-                "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.8.0/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+                "D:\github\eslint-config\node_modules\.pnpm\eslint-plugin-jsonc@2.16.0_eslint@9.8.0\node_modules\eslint-plugin-jsonc\dist\configs\base.js",
               ],
               "rules": {
                 "jsonc/no-bigint-literals": "error",
@@ -60181,7 +60181,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
             },
             "recommended-with-jsonc": {
               "extends": [
-                "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.8.0/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+                "D:\github\eslint-config\node_modules\.pnpm\eslint-plugin-jsonc@2.16.0_eslint@9.8.0\node_modules\eslint-plugin-jsonc\dist\configs\base.js",
               ],
               "rules": {
                 "jsonc/no-bigint-literals": "error",
@@ -69598,7 +69598,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                   "*.yaml",
                   "*.yml",
                 ],
-                "parser": "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/yaml-eslint-parser@1.2.3/node_modules/yaml-eslint-parser/lib/index.js",
+                "parser": "D:\github\eslint-config\node_modules\.pnpm\yaml-eslint-parser@1.2.3\node_modules\yaml-eslint-parser\lib\index.js",
                 "rules": {
                   "no-irregular-whitespace": "off",
                   "no-unused-vars": "off",
@@ -71083,7 +71083,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           ],
           "prettier": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-yml@1.14.0_eslint@9.8.0/node_modules/eslint-plugin-yml/lib/configs/base.js",
+              "D:\github\eslint-config\node_modules\.pnpm\eslint-plugin-yml@1.14.0_eslint@9.8.0\node_modules\eslint-plugin-yml\lib\configs\base.js",
             ],
             "rules": {
               "yml/block-mapping-colon-indicator-newline": "off",
@@ -71102,7 +71102,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           },
           "recommended": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-yml@1.14.0_eslint@9.8.0/node_modules/eslint-plugin-yml/lib/configs/base.js",
+              "D:\github\eslint-config\node_modules\.pnpm\eslint-plugin-yml@1.14.0_eslint@9.8.0\node_modules\eslint-plugin-yml\lib\configs\base.js",
             ],
             "rules": {
               "yml/no-empty-document": "error",
@@ -71116,7 +71116,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           },
           "standard": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-yml@1.14.0_eslint@9.8.0/node_modules/eslint-plugin-yml/lib/configs/base.js",
+              "D:\github\eslint-config\node_modules\.pnpm\eslint-plugin-yml@1.14.0_eslint@9.8.0\node_modules\eslint-plugin-yml\lib\configs\base.js",
             ],
             "rules": {
               "yml/block-mapping": "error",
@@ -72923,7 +72923,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                 "files": [
                   "*.toml",
                 ],
-                "parser": "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/toml-eslint-parser@0.10.0/node_modules/toml-eslint-parser/lib/index.js",
+                "parser": "D:\github\eslint-config\node_modules\.pnpm\toml-eslint-parser@0.10.0\node_modules\toml-eslint-parser\lib\index.js",
                 "rules": {
                   "no-irregular-whitespace": "off",
                   "spaced-comment": "off",
@@ -74020,7 +74020,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           ],
           "recommended": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-toml@0.11.1_eslint@9.8.0/node_modules/eslint-plugin-toml/lib/configs/base.js",
+              "D:\github\eslint-config\node_modules\.pnpm\eslint-plugin-toml@0.11.1_eslint@9.8.0\node_modules\eslint-plugin-toml\lib\configs\base.js",
             ],
             "rules": {
               "toml/no-unreadable-number-separator": "error",
@@ -74031,7 +74031,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           },
           "standard": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-toml@0.11.1_eslint@9.8.0/node_modules/eslint-plugin-toml/lib/configs/base.js",
+              "D:\github\eslint-config\node_modules\.pnpm\eslint-plugin-toml@0.11.1_eslint@9.8.0\node_modules\eslint-plugin-toml\lib\configs\base.js",
             ],
             "rules": {
               "toml/array-bracket-newline": "error",
@@ -75856,6 +75856,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
         },
       ],
       "ts/prefer-ts-expect-error": "off",
+      "unused-imports/no-unused-vars": "off",
       "vue/attribute-hyphenation": "off",
       "vue/custom-event-name-casing": "off",
       "vue/v-on-event-hyphenation": "off",
