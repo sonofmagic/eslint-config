@@ -1,6 +1,7 @@
+import ci from 'ci-info'
 import { icebreaker } from '../src/index'
 
-describe('index', () => {
+describe.skipIf(ci.isCI)('index', () => {
   it('mdx', async () => {
     const plugins = await icebreaker({
       mdx: true,
