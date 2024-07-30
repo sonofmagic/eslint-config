@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 0.3.17
+
+### Patch Changes
+
+- [`7a6a5c5`](https://github.com/sonofmagic/eslint-config/commit/7a6a5c564d5d7fec51161028bcd4b4130818b610) Thanks [@sonofmagic](https://github.com/sonofmagic)! - disabled `unused-imports/no-unused-vars` rule
+
 ## 0.3.16
 
 ### Patch Changes
