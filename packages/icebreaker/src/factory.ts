@@ -47,6 +47,7 @@ export function icebreaker(
         }],
         'unused-imports/no-unused-vars': 'off',
         'vue/no-mutating-props': 'warn',
+        'ts/no-use-before-define': 'warn',
       },
     },
   ]
