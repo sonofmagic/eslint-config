@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 0.3.18
+
+### Patch Changes
+
+- [`5ba0310`](https://github.com/sonofmagic/eslint-config/commit/5ba0310ee2f915b4721bfd0b43a18c21d9dd2ffa) Thanks [@sonofmagic](https://github.com/sonofmagic)! - upgrade typescript eslint plugin
+
 ## 0.3.17
 
 ### Patch Changes
