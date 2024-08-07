@@ -39,9 +39,9 @@
     "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.17.7",
     "@types/lodash-es": "^4.17.12",
-    "@types/node": "^22.0.0",
-    "@vitest/coverage-v8": "^2.0.4",
-    "bumpp": "^9.4.1",
+    "@types/node": "^22.1.0",
+    "@vitest/coverage-v8": "^2.0.5",
+    "bumpp": "^9.4.2",
     "ci-info": "^4.0.0",
     "defu": "^6.1.4",
     "eslint": "^9.8.0",
@@ -56,11 +56,11 @@
     "prettier": "^3.3.3",
     "ts-node": "^10.9.2",
     "tslib": "^2.6.3",
-    "tsup": "^8.2.3",
-    "turbo": "^2.0.9",
+    "tsup": "^8.2.4",
+    "turbo": "^2.0.12",
     "typescript": "^5.5.4",
     "unbuild": "^2.0.0",
-    "vitest": "^2.0.4"
+    "vitest": "^2.0.5"
   },
   "publishConfig": {
     "access": "public",
