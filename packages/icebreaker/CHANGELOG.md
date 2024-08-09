@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 0.3.19
+
+### Patch Changes
+
+- [`5525e6a`](https://github.com/sonofmagic/eslint-config/commit/5525e6ae1740b31df78442370db6dce1d21af0a2) Thanks [@sonofmagic](https://github.com/sonofmagic)! - fix vue plugin rules and upgrade deps
+
 ## 0.3.18
 
 ### Patch Changes
