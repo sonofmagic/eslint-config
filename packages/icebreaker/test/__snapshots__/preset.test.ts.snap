@@ -1,0 +1,205 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`presets > c 1`] = `
+[
+  {
+    "formatters": true,
+  },
+  {
+    "rules": {
+      "curly": [
+        "error",
+        "all",
+      ],
+      "no-console": [
+        "warn",
+      ],
+      "no-unused-vars": "off",
+      "ts/ban-ts-comment": "off",
+      "ts/no-unused-vars": [
+        "error",
+        {
+          "args": "all",
+          "argsIgnorePattern": "^_",
+          "caughtErrors": "all",
+          "caughtErrorsIgnorePattern": "^_",
+          "destructuredArrayIgnorePattern": "^_",
+          "ignoreRestSiblings": true,
+          "varsIgnorePattern": "^_",
+        },
+      ],
+      "ts/no-use-before-define": "warn",
+      "ts/prefer-ts-expect-error": "off",
+      "unused-imports/no-unused-vars": "off",
+    },
+  },
+]
+`;
+
+exports[`presets > c0 1`] = `
+[
+  {
+    "a11y": true,
+    "formatters": true,
+  },
+  {
+    "rules": {
+      "curly": [
+        "error",
+        "all",
+      ],
+      "no-console": [
+        "warn",
+      ],
+      "no-unused-vars": "off",
+      "ts/ban-ts-comment": "off",
+      "ts/no-unused-vars": [
+        "error",
+        {
+          "args": "all",
+          "argsIgnorePattern": "^_",
+          "caughtErrors": "all",
+          "caughtErrorsIgnorePattern": "^_",
+          "destructuredArrayIgnorePattern": "^_",
+          "ignoreRestSiblings": true,
+          "varsIgnorePattern": "^_",
+        },
+      ],
+      "ts/no-use-before-define": "warn",
+      "ts/prefer-ts-expect-error": "off",
+      "unused-imports/no-unused-vars": "off",
+    },
+  },
+]
+`;
+
+exports[`presets > c1 1`] = `
+[
+  {
+    "formatters": true,
+    "vue": true,
+  },
+  {
+    "rules": {
+      "curly": [
+        "error",
+        "all",
+      ],
+      "no-console": [
+        "warn",
+      ],
+      "no-unused-vars": "off",
+      "ts/ban-ts-comment": "off",
+      "ts/no-unused-vars": [
+        "error",
+        {
+          "args": "all",
+          "argsIgnorePattern": "^_",
+          "caughtErrors": "all",
+          "caughtErrorsIgnorePattern": "^_",
+          "destructuredArrayIgnorePattern": "^_",
+          "ignoreRestSiblings": true,
+          "varsIgnorePattern": "^_",
+        },
+      ],
+      "ts/no-use-before-define": "warn",
+      "ts/prefer-ts-expect-error": "off",
+      "unused-imports/no-unused-vars": "off",
+      "vue/attribute-hyphenation": "off",
+      "vue/custom-event-name-casing": "off",
+      "vue/no-mutating-props": "warn",
+      "vue/v-on-event-hyphenation": "off",
+    },
+  },
+]
+`;
+
+exports[`presets > c2 1`] = `
+[
+  {
+    "formatters": true,
+    "vue": {
+      "vueVersion": 3,
+    },
+  },
+  {
+    "rules": {
+      "curly": [
+        "error",
+        "all",
+      ],
+      "no-console": [
+        "warn",
+      ],
+      "no-unused-vars": "off",
+      "ts/ban-ts-comment": "off",
+      "ts/no-unused-vars": [
+        "error",
+        {
+          "args": "all",
+          "argsIgnorePattern": "^_",
+          "caughtErrors": "all",
+          "caughtErrorsIgnorePattern": "^_",
+          "destructuredArrayIgnorePattern": "^_",
+          "ignoreRestSiblings": true,
+          "varsIgnorePattern": "^_",
+        },
+      ],
+      "ts/no-use-before-define": "warn",
+      "ts/prefer-ts-expect-error": "off",
+      "unused-imports/no-unused-vars": "off",
+      "vue/attribute-hyphenation": "off",
+      "vue/custom-event-name-casing": "off",
+      "vue/no-mutating-props": "warn",
+      "vue/no-v-for-template-key": "off",
+      "vue/no-v-for-template-key-on-child": "error",
+      "vue/v-on-event-hyphenation": "off",
+    },
+  },
+]
+`;
+
+exports[`presets > c3 1`] = `
+[
+  {
+    "formatters": true,
+    "vue": {
+      "vueVersion": 2,
+    },
+  },
+  {
+    "rules": {
+      "curly": [
+        "error",
+        "all",
+      ],
+      "no-console": [
+        "warn",
+      ],
+      "no-unused-vars": "off",
+      "ts/ban-ts-comment": "off",
+      "ts/no-unused-vars": [
+        "error",
+        {
+          "args": "all",
+          "argsIgnorePattern": "^_",
+          "caughtErrors": "all",
+          "caughtErrorsIgnorePattern": "^_",
+          "destructuredArrayIgnorePattern": "^_",
+          "ignoreRestSiblings": true,
+          "varsIgnorePattern": "^_",
+        },
+      ],
+      "ts/no-use-before-define": "warn",
+      "ts/prefer-ts-expect-error": "off",
+      "unused-imports/no-unused-vars": "off",
+      "vue/attribute-hyphenation": "off",
+      "vue/custom-event-name-casing": "off",
+      "vue/no-mutating-props": "warn",
+      "vue/no-v-for-template-key": "error",
+      "vue/no-v-for-template-key-on-child": "off",
+      "vue/v-on-event-hyphenation": "off",
+    },
+  },
+]
+`;
