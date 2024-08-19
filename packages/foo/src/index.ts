@@ -18,4 +18,6 @@ else {
   console.log('---')
 }
 
-if (__filename) { console.log('--') }
+if (__filename) {
+  console.log('--')
+}

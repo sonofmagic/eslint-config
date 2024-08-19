@@ -12,6 +12,22 @@ import { getPresets } from './preset'
 export function getRestConfigAndPresets(options?: UserDefinedOptions): [OptionsConfig & TypedFlatConfigItem, ...UserConfigItem[]] {
   const opts = defu<UserDefinedOptions, UserDefinedOptions[]>(options, {
     formatters: true,
+    typescript: {
+      overrides: {
+        'ts/no-unused-vars': ['error', {
+          args: 'all',
+          argsIgnorePattern: '^_',
+          caughtErrors: 'all',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          ignoreRestSiblings: true,
+        }],
+        'ts/prefer-ts-expect-error': 'off',
+        'ts/ban-ts-comment': 'off',
+        'ts/no-use-before-define': 'warn',
+      },
+    },
   })
   const presets = getPresets(opts)
   return [opts, ...presets]

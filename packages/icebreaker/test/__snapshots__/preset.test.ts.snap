@@ -4,6 +4,25 @@ exports[`presets > c 1`] = `
 [
   {
     "formatters": true,
+    "typescript": {
+      "overrides": {
+        "ts/ban-ts-comment": "off",
+        "ts/no-unused-vars": [
+          "error",
+          {
+            "args": "all",
+            "argsIgnorePattern": "^_",
+            "caughtErrors": "all",
+            "caughtErrorsIgnorePattern": "^_",
+            "destructuredArrayIgnorePattern": "^_",
+            "ignoreRestSiblings": true,
+            "varsIgnorePattern": "^_",
+          },
+        ],
+        "ts/no-use-before-define": "warn",
+        "ts/prefer-ts-expect-error": "off",
+      },
+    },
   },
   {
     "rules": {
@@ -15,21 +34,6 @@ exports[`presets > c 1`] = `
         "warn",
       ],
       "no-unused-vars": "off",
-      "ts/ban-ts-comment": "off",
-      "ts/no-unused-vars": [
-        "error",
-        {
-          "args": "all",
-          "argsIgnorePattern": "^_",
-          "caughtErrors": "all",
-          "caughtErrorsIgnorePattern": "^_",
-          "destructuredArrayIgnorePattern": "^_",
-          "ignoreRestSiblings": true,
-          "varsIgnorePattern": "^_",
-        },
-      ],
-      "ts/no-use-before-define": "warn",
-      "ts/prefer-ts-expect-error": "off",
       "unused-imports/no-unused-vars": "off",
     },
   },
@@ -41,6 +45,25 @@ exports[`presets > c0 1`] = `
   {
     "a11y": true,
     "formatters": true,
+    "typescript": {
+      "overrides": {
+        "ts/ban-ts-comment": "off",
+        "ts/no-unused-vars": [
+          "error",
+          {
+            "args": "all",
+            "argsIgnorePattern": "^_",
+            "caughtErrors": "all",
+            "caughtErrorsIgnorePattern": "^_",
+            "destructuredArrayIgnorePattern": "^_",
+            "ignoreRestSiblings": true,
+            "varsIgnorePattern": "^_",
+          },
+        ],
+        "ts/no-use-before-define": "warn",
+        "ts/prefer-ts-expect-error": "off",
+      },
+    },
   },
   {
     "rules": {
@@ -52,21 +75,6 @@ exports[`presets > c0 1`] = `
         "warn",
       ],
       "no-unused-vars": "off",
-      "ts/ban-ts-comment": "off",
-      "ts/no-unused-vars": [
-        "error",
-        {
-          "args": "all",
-          "argsIgnorePattern": "^_",
-          "caughtErrors": "all",
-          "caughtErrorsIgnorePattern": "^_",
-          "destructuredArrayIgnorePattern": "^_",
-          "ignoreRestSiblings": true,
-          "varsIgnorePattern": "^_",
-        },
-      ],
-      "ts/no-use-before-define": "warn",
-      "ts/prefer-ts-expect-error": "off",
       "unused-imports/no-unused-vars": "off",
     },
   },
@@ -77,6 +85,25 @@ exports[`presets > c1 1`] = `
 [
   {
     "formatters": true,
+    "typescript": {
+      "overrides": {
+        "ts/ban-ts-comment": "off",
+        "ts/no-unused-vars": [
+          "error",
+          {
+            "args": "all",
+            "argsIgnorePattern": "^_",
+            "caughtErrors": "all",
+            "caughtErrorsIgnorePattern": "^_",
+            "destructuredArrayIgnorePattern": "^_",
+            "ignoreRestSiblings": true,
+            "varsIgnorePattern": "^_",
+          },
+        ],
+        "ts/no-use-before-define": "warn",
+        "ts/prefer-ts-expect-error": "off",
+      },
+    },
     "vue": true,
   },
   {
@@ -89,21 +116,6 @@ exports[`presets > c1 1`] = `
         "warn",
       ],
       "no-unused-vars": "off",
-      "ts/ban-ts-comment": "off",
-      "ts/no-unused-vars": [
-        "error",
-        {
-          "args": "all",
-          "argsIgnorePattern": "^_",
-          "caughtErrors": "all",
-          "caughtErrorsIgnorePattern": "^_",
-          "destructuredArrayIgnorePattern": "^_",
-          "ignoreRestSiblings": true,
-          "varsIgnorePattern": "^_",
-        },
-      ],
-      "ts/no-use-before-define": "warn",
-      "ts/prefer-ts-expect-error": "off",
       "unused-imports/no-unused-vars": "off",
       "vue/attribute-hyphenation": "off",
       "vue/custom-event-name-casing": "off",
@@ -118,6 +130,25 @@ exports[`presets > c2 1`] = `
 [
   {
     "formatters": true,
+    "typescript": {
+      "overrides": {
+        "ts/ban-ts-comment": "off",
+        "ts/no-unused-vars": [
+          "error",
+          {
+            "args": "all",
+            "argsIgnorePattern": "^_",
+            "caughtErrors": "all",
+            "caughtErrorsIgnorePattern": "^_",
+            "destructuredArrayIgnorePattern": "^_",
+            "ignoreRestSiblings": true,
+            "varsIgnorePattern": "^_",
+          },
+        ],
+        "ts/no-use-before-define": "warn",
+        "ts/prefer-ts-expect-error": "off",
+      },
+    },
     "vue": {
       "vueVersion": 3,
     },
@@ -132,21 +163,6 @@ exports[`presets > c2 1`] = `
         "warn",
       ],
       "no-unused-vars": "off",
-      "ts/ban-ts-comment": "off",
-      "ts/no-unused-vars": [
-        "error",
-        {
-          "args": "all",
-          "argsIgnorePattern": "^_",
-          "caughtErrors": "all",
-          "caughtErrorsIgnorePattern": "^_",
-          "destructuredArrayIgnorePattern": "^_",
-          "ignoreRestSiblings": true,
-          "varsIgnorePattern": "^_",
-        },
-      ],
-      "ts/no-use-before-define": "warn",
-      "ts/prefer-ts-expect-error": "off",
       "unused-imports/no-unused-vars": "off",
       "vue/attribute-hyphenation": "off",
       "vue/custom-event-name-casing": "off",
@@ -163,6 +179,25 @@ exports[`presets > c3 1`] = `
 [
   {
     "formatters": true,
+    "typescript": {
+      "overrides": {
+        "ts/ban-ts-comment": "off",
+        "ts/no-unused-vars": [
+          "error",
+          {
+            "args": "all",
+            "argsIgnorePattern": "^_",
+            "caughtErrors": "all",
+            "caughtErrorsIgnorePattern": "^_",
+            "destructuredArrayIgnorePattern": "^_",
+            "ignoreRestSiblings": true,
+            "varsIgnorePattern": "^_",
+          },
+        ],
+        "ts/no-use-before-define": "warn",
+        "ts/prefer-ts-expect-error": "off",
+      },
+    },
     "vue": {
       "vueVersion": 2,
     },
@@ -177,21 +212,6 @@ exports[`presets > c3 1`] = `
         "warn",
       ],
       "no-unused-vars": "off",
-      "ts/ban-ts-comment": "off",
-      "ts/no-unused-vars": [
-        "error",
-        {
-          "args": "all",
-          "argsIgnorePattern": "^_",
-          "caughtErrors": "all",
-          "caughtErrorsIgnorePattern": "^_",
-          "destructuredArrayIgnorePattern": "^_",
-          "ignoreRestSiblings": true,
-          "varsIgnorePattern": "^_",
-        },
-      ],
-      "ts/no-use-before-define": "warn",
-      "ts/prefer-ts-expect-error": "off",
       "unused-imports/no-unused-vars": "off",
       "vue/attribute-hyphenation": "off",
       "vue/custom-event-name-casing": "off",
