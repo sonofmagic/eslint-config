@@ -43,6 +43,7 @@ export function getPresets(options: UserDefinedOptions) {
         Object.assign(presetRules, {
           'vue/no-v-for-template-key-on-child': 'off',
           'vue/no-v-for-template-key': 'error',
+          'vue/no-deprecated-v-bind-sync': 'off',
         } as Partial<Linter.RulesRecord>)
       }
       else {
