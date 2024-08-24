@@ -19,4 +19,4 @@ export default icebreaker()
 
 Install [VS Code ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
-Version: `^3.0.10` ( >=`3.0.10`)
+Version: ( >=`3.0.10`)
