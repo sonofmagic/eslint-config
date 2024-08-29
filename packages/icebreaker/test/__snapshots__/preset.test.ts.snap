@@ -7,6 +7,13 @@ exports[`presets > c 1`] = `
     "typescript": {
       "overrides": {
         "ts/ban-ts-comment": "off",
+        "ts/no-unused-expressions": [
+          "error",
+          {
+            "allowShortCircuit": true,
+            "allowTernary": true,
+          },
+        ],
         "ts/no-unused-vars": [
           "error",
           {
@@ -48,6 +55,13 @@ exports[`presets > c0 1`] = `
     "typescript": {
       "overrides": {
         "ts/ban-ts-comment": "off",
+        "ts/no-unused-expressions": [
+          "error",
+          {
+            "allowShortCircuit": true,
+            "allowTernary": true,
+          },
+        ],
         "ts/no-unused-vars": [
           "error",
           {
@@ -88,6 +102,13 @@ exports[`presets > c1 1`] = `
     "typescript": {
       "overrides": {
         "ts/ban-ts-comment": "off",
+        "ts/no-unused-expressions": [
+          "error",
+          {
+            "allowShortCircuit": true,
+            "allowTernary": true,
+          },
+        ],
         "ts/no-unused-vars": [
           "error",
           {
@@ -133,6 +154,13 @@ exports[`presets > c2 1`] = `
     "typescript": {
       "overrides": {
         "ts/ban-ts-comment": "off",
+        "ts/no-unused-expressions": [
+          "error",
+          {
+            "allowShortCircuit": true,
+            "allowTernary": true,
+          },
+        ],
         "ts/no-unused-vars": [
           "error",
           {
@@ -182,6 +210,13 @@ exports[`presets > c3 1`] = `
     "typescript": {
       "overrides": {
         "ts/ban-ts-comment": "off",
+        "ts/no-unused-expressions": [
+          "error",
+          {
+            "allowShortCircuit": true,
+            "allowTernary": true,
+          },
+        ],
         "ts/no-unused-vars": [
           "error",
           {
