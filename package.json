@@ -36,7 +36,7 @@
     "@commitlint/types": "^19.0.3",
     "@eslint/config-inspector": "^0.5.4",
     "@eslint/eslintrc": "^3.1.0",
-    "@icebreakers/eslint-config": "^0.3.23",
+    "@icebreakers/eslint-config": "^0.3.24",
     "@types/eslint__eslintrc": "^2.1.2",
     "@types/fs-extra": "^11.0.4",
     "@types/get-value": "^3.0.5",
