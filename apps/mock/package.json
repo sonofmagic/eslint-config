@@ -1,0 +1,14 @@
+{
+  "name": "@icebreakers/mock",
+  "version": "0.0.0",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "keywords": [],
+  "scripts": {
+    "stylelint": "npx @icebreakers/stylelint-config"
+  },
+  "dependencies": {
+    "@icebreakers/stylelint-config": "workspace:*"
+  }
+}
