@@ -1,11 +1,13 @@
 {
   "name": "@icebreakers/stylelint-config",
   "type": "module",
-  "version": "0.0.0",
-  "description": "my foo your bar pkg",
+  "version": "0.0.1",
+  "description": "icebreaker's stylelint config",
   "author": "",
   "license": "ISC",
-  "keywords": [],
+  "keywords": [
+    "stylelint"
+  ],
   "sideEffects": false,
   "exports": {
     ".": "./src/index.ts"
@@ -26,9 +28,11 @@
     "release": "pnpm publish"
   },
   "dependencies": {
+    "comment-json": "^4.2.5",
     "postcss-html": "^1.7.0",
     "stylelint-config-recommended-scss": "^14.1.0",
-    "stylelint-config-recommended-vue": "^1.5.0"
+    "stylelint-config-recommended-vue": "^1.5.0",
+    "stylelint-config-standard-scss": "^13.1.0"
   },
   "publishConfig": {
     "access": "public",

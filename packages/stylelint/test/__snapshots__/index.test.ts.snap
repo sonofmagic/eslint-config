@@ -1,5 +1,15 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`index > common 1`] = `
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-recommended-vue/scss",
+  ],
+  "overrides": [],
+}
+`;
+
 exports[`index > setVscodeSettingsJson case 0 1`] = `
 {
   "css.validate": false,
@@ -7,6 +17,8 @@ exports[`index > setVscodeSettingsJson case 0 1`] = `
   "scss.validate": false,
   "stylelint.validate": [
     "vue",
+    "css",
+    "scss",
   ],
 }
 `;

@@ -7,6 +7,8 @@ export function setVscodeSettingsJson(json: any = {}) {
   set(json, 'scss\\.validate', false)
   const stylelintValidates = new Set(get(json, 'stylelint\\.validate', { default: [] }) as string[])
   stylelintValidates.add('vue')
+  stylelintValidates.add('css')
+  stylelintValidates.add('scss')
   set(json, 'stylelint\\.validate', Array.from(stylelintValidates))
   return json
 }

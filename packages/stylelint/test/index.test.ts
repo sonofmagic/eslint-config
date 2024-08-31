@@ -1,4 +1,5 @@
 import { setVscodeSettingsJson } from '@/shared'
+import { icebreaker } from '@/index'
 
 describe('index', () => {
   it('setVscodeSettingsJson case 0', () => {
@@ -13,5 +14,9 @@ describe('index', () => {
         'css',
       ],
     })).toMatchSnapshot()
+  })
+
+  it('common', () => {
+    expect(icebreaker()).toMatchSnapshot()
   })
 })
