@@ -3,8 +3,8 @@
   "type": "module",
   "version": "0.0.1",
   "description": "icebreaker's stylelint config",
-  "author": "",
-  "license": "ISC",
+  "author": "SonOfMagic <qq1324318532@gmail.com>",
+  "license": "MIT",
   "keywords": [
     "stylelint"
   ],
@@ -25,7 +25,8 @@
     "build": "tsup",
     "test": "vitest run",
     "test:dev": "vitest",
-    "release": "pnpm publish"
+    "release": "pnpm publish",
+    "sync": "cnpm sync @icebreakers/eslint-config"
   },
   "dependencies": {
     "comment-json": "^4.2.5",
