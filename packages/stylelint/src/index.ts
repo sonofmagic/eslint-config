@@ -1,6 +1,7 @@
 import type { Config } from 'stylelint'
-// import.meta.resolve
-export function icebreaker(): Config {
+import { defu } from 'defu'
+
+function createDefaultConfig(): Config {
   return {
     extends: [
       // extends: ['stylelint-config-standard', 'stylelint-config-recommended-scss']
@@ -18,4 +19,9 @@ export function icebreaker(): Config {
       // },
     ],
   }
+}
+
+// import.meta.resolve
+export function icebreaker(config?: Config): Config {
+  return defu(config, createDefaultConfig())
 }

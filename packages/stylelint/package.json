@@ -1,7 +1,7 @@
 {
   "name": "@icebreakers/stylelint-config",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "icebreaker's stylelint config",
   "author": "SonOfMagic <qq1324318532@gmail.com>",
   "license": "MIT",
