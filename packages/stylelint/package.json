@@ -1,7 +1,7 @@
 {
   "name": "@icebreakers/stylelint-config",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "icebreaker's stylelint config",
   "author": "SonOfMagic <qq1324318532@gmail.com>",
   "license": "MIT",
@@ -38,7 +38,7 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org",
-    "bin": "./dev/bin.js",
+    "bin": "./bin/init.js",
     "exports": {
       ".": {
         "types": "./dist/index.d.ts",
