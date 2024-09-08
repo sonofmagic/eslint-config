@@ -78,8 +78,8 @@
   "less.validate": false,
   "scss.validate": false,
   "stylelint.validate": [
+    "vue",
     "css",
-    "scss",
-    "vue"
+    "scss"
   ]
 }
