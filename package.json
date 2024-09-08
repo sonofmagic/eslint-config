@@ -53,7 +53,7 @@
     "cross-env": "^7.0.3",
     "defu": "^6.1.4",
     "eslint": "^9.9.1",
-    "eslint-flat-config-utils": "^0.3.1",
+    "eslint-flat-config-utils": "^0.4.0",
     "execa": "^9.3.1",
     "fast-glob": "^3.3.2",
     "fs-extra": "^11.2.0",
