@@ -1,5 +1,5 @@
-import type { Config } from 'stylelint'
 import { defu } from 'defu'
+import type { Config } from 'stylelint'
 
 function createDefaultConfig(): Config {
   return {

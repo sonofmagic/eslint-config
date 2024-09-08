@@ -3,8 +3,16 @@
   "type": "module",
   "version": "0.0.0",
   "description": "my foo your bar pkg",
-  "author": "",
+  "author": "ice breaker <1324318532@qq.com>",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonofmagic/eslint-config.git",
+    "directory": "packages/foo"
+  },
+  "bugs": {
+    "url": "https://github.com/sonofmagic/eslint-config/issues"
+  },
   "keywords": [],
   "sideEffects": false,
   "exports": {

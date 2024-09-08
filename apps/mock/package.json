@@ -2,8 +2,16 @@
   "name": "@icebreakers/mock",
   "version": "0.0.0",
   "description": "",
-  "author": "",
+  "author": "ice breaker <1324318532@qq.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonofmagic/eslint-config.git",
+    "directory": "apps/mock"
+  },
+  "bugs": {
+    "url": "https://github.com/sonofmagic/eslint-config/issues"
+  },
   "keywords": [],
   "scripts": {
     "stylelint": "npx @icebreakers/stylelint-config"

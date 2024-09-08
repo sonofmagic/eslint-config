@@ -8,7 +8,14 @@
     "packages/*"
   ],
   "packageManager": "pnpm@9.9.0",
-  "author": "SonOfMagic <qq1324318532@gmail.com>",
+  "author": "ice breaker <1324318532@qq.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonofmagic/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sonofmagic/eslint-config/issues"
+  },
   "engines": {
     "node": ">=18.0.0"
   },
@@ -25,7 +32,10 @@
     "commit": "commit",
     "sync": "turbo run sync",
     "inspector": "@eslint/config-inspector",
-    "build:inspector": "pnpm build && npx @eslint/config-inspector build"
+    "build:inspector": "pnpm build && npx @eslint/config-inspector build",
+    "script:init": "tsx scripts/init.ts",
+    "script:sync": "tsx scripts/sync.ts",
+    "script:clean": "tsx scripts/clean.ts"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.0",
@@ -36,7 +46,7 @@
     "@commitlint/types": "^19.0.3",
     "@eslint/config-inspector": "^0.5.4",
     "@eslint/eslintrc": "^3.1.0",
-    "@icebreakers/eslint-config": "^0.4.1",
+    "@icebreakers/eslint-config": "^0.4.2",
     "@icebreakers/stylelint-config": "^0.0.3",
     "@pnpm/workspace.find-packages": "^4.0.9",
     "@types/eslint__eslintrc": "^2.1.2",

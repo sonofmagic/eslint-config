@@ -1,6 +1,6 @@
-import process from 'node:process'
 import fs from 'node:fs'
 import { resolve } from 'node:path'
+import process from 'node:process'
 import jsonc from 'comment-json'
 import { setVscodeSettingsJson } from './shared'
 

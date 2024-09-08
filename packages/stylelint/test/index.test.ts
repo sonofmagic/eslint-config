@@ -1,5 +1,5 @@
-import { setVscodeSettingsJson } from '@/shared'
 import { icebreaker } from '@/index'
+import { setVscodeSettingsJson } from '@/shared'
 
 describe('index', () => {
   it('setVscodeSettingsJson case 0', () => {

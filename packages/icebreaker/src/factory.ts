@@ -1,13 +1,13 @@
+import { defu } from 'defu'
 import type {
   ConfigNames,
   OptionsConfig,
   TypedFlatConfigItem,
 } from '@antfu/eslint-config'
 import type { FlatConfigComposer } from 'eslint-flat-config-utils'
-import { defu } from 'defu'
 import { antfu } from './antfu'
-import type { UserConfigItem, UserDefinedOptions } from './types'
 import { getPresets } from './preset'
+import type { UserConfigItem, UserDefinedOptions } from './types'
 
 export function getRestConfigAndPresets(options?: UserDefinedOptions): [OptionsConfig & TypedFlatConfigItem, ...UserConfigItem[]] {
   const opts = defu<UserDefinedOptions, UserDefinedOptions[]>(options, {

@@ -1,5 +1,5 @@
-import set from 'set-value'
 import get from 'get-value'
+import set from 'set-value'
 
 export function setVscodeSettingsJson(json: any = {}) {
   set(json, 'css\\.validate', false)

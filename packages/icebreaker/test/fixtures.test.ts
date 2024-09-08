@@ -1,8 +1,8 @@
 import { join, resolve } from 'node:path'
-import { it } from 'vitest'
-import fs from 'fs-extra'
 import { execa } from 'execa'
 import fg from 'fast-glob'
+import fs from 'fs-extra'
+import { it } from 'vitest'
 // import ci from 'ci-info'
 import type { TypedFlatConfigItem, UserDefinedOptions } from '../src/types'
 

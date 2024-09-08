@@ -1,9 +1,9 @@
-import type { Linter } from 'eslint'
 import type {
   Awaitable,
   OptionsConfig,
   TypedFlatConfigItem,
 } from '@antfu/eslint-config'
+import type { Linter } from 'eslint'
 import type { FlatConfigComposer } from 'eslint-flat-config-utils'
 
 export type UserDefinedOptions = OptionsConfig &
