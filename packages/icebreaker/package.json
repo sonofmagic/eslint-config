@@ -48,7 +48,7 @@
     "sync": "cnpm sync @icebreakers/eslint-config"
   },
   "dependencies": {
-    "@antfu/eslint-config": "3.4.1",
+    "@antfu/eslint-config": "3.5.0",
     "eslint-plugin-format": "0.1.2",
     "eslint-plugin-jsx-a11y": "^6.10.0",
     "eslint-plugin-mdx": "3.1.5",
