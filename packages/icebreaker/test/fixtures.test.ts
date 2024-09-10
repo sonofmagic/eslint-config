@@ -6,6 +6,55 @@ import { it } from 'vitest'
 // import ci from 'ci-info'
 import type { TypedFlatConfigItem, UserDefinedOptions } from '../src/types'
 
+function runWithConfig(name: string, configs: UserDefinedOptions, ...items: TypedFlatConfigItem[]) {
+  it.concurrent(name, async ({ expect }) => {
+    const from = resolve('fixtures/input')
+    const output = resolve('fixtures/output', name)
+    const target = resolve('_fixtures', name)
+
+    await fs.copy(from, target, {
+      filter: (src) => {
+        return !src.includes('node_modules')
+      },
+    })
+    await fs.writeFile(join(target, 'eslint.config.js'), `
+// @eslint-disable
+import { icebreaker } from '@icebreakers/eslint-config'
+
+export default icebreaker(
+${JSON.stringify(configs)},
+...${JSON.stringify(items) ?? []},
+)
+`)
+
+    await execa('pnpm', ['exec', 'eslint', '.', '--fix'], {
+      cwd: target,
+      stdio: 'pipe',
+    })
+
+    const files = await fg('**/*', {
+      ignore: [
+        'node_modules',
+        'eslint.config.js',
+      ],
+      cwd: target,
+    })
+
+    await Promise.all(files.map(async (file) => {
+      const content = await fs.readFile(join(target, file), 'utf-8')
+      const source = await fs.readFile(join(from, file), 'utf-8')
+      // const outputPath = join(output, file)
+      if (content === source) {
+        // if (fs.existsSync(outputPath)) {
+        //   fs.remove(outputPath)
+        // }
+        return
+      }
+      await expect.soft(content).toMatchFileSnapshot(join(output, file))
+    }))
+  }, 30_000)
+}
+
 describe.skipIf(true)('fixtures', () => {
   beforeAll(async () => {
     await fs.rm('_fixtures', { recursive: true, force: true })
@@ -87,53 +136,4 @@ describe.skipIf(true)('fixtures', () => {
       mdx: true,
     },
   )
-
-  function runWithConfig(name: string, configs: UserDefinedOptions, ...items: TypedFlatConfigItem[]) {
-    it.concurrent(name, async ({ expect }) => {
-      const from = resolve('fixtures/input')
-      const output = resolve('fixtures/output', name)
-      const target = resolve('_fixtures', name)
-
-      await fs.copy(from, target, {
-        filter: (src) => {
-          return !src.includes('node_modules')
-        },
-      })
-      await fs.writeFile(join(target, 'eslint.config.js'), `
-// @eslint-disable
-import { icebreaker } from '@icebreakers/eslint-config'
-
-export default icebreaker(
-  ${JSON.stringify(configs)},
-  ...${JSON.stringify(items) ?? []},
-)
-  `)
-
-      await execa('pnpm', ['exec', 'eslint', '.', '--fix'], {
-        cwd: target,
-        stdio: 'pipe',
-      })
-
-      const files = await fg('**/*', {
-        ignore: [
-          'node_modules',
-          'eslint.config.js',
-        ],
-        cwd: target,
-      })
-
-      await Promise.all(files.map(async (file) => {
-        const content = await fs.readFile(join(target, file), 'utf-8')
-        const source = await fs.readFile(join(from, file), 'utf-8')
-        // const outputPath = join(output, file)
-        if (content === source) {
-          // if (fs.existsSync(outputPath)) {
-          //   fs.remove(outputPath)
-          // }
-          return
-        }
-        await expect.soft(content).toMatchFileSnapshot(join(output, file))
-      }))
-    }, 30_000)
-  }
 })
