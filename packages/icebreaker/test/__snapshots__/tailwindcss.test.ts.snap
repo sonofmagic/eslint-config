@@ -1,7 +1,26 @@
 [
   {
     "ignores": [
-      "**/_fixtures",
+      "**/node_modules",
+      "**/.pnp",
+      "**/.pnp.js",
+      "**/coverage",
+      "**/.next/",
+      "**/out/",
+      "**/build",
+      "**/.DS_Store",
+      "**/*.pem",
+      "**/npm-debug.log*",
+      "**/yarn-debug.log*",
+      "**/yarn-error.log*",
+      "**/.pnpm-debug.log*",
+      "**/.env.local",
+      "**/.env.development.local",
+      "**/.env.test.local",
+      "**/.env.production.local",
+      "**/.turbo",
+      "**/dist",
+      "**/.eslint-config-inspector",
     ],
     "name": "antfu/gitignore",
   },
@@ -29466,7 +29485,7 @@
       "command": {
         "meta": {
           "name": "command",
-          "version": "0.2.3",
+          "version": "0.2.4",
         },
         "rules": {
           "command": {
@@ -30110,6 +30129,7 @@
                         "maxLineLength": undefined,
                         "newlinesBetween": "always",
                         "order": "asc",
+                        "sortSideEffects": false,
                         "type": "alphabetical",
                       },
                     ],
@@ -30242,6 +30262,10 @@
                                 "desc",
                               ],
                               "type": "string",
+                            },
+                            "sortSideEffects": {
+                              "description": "Controls whether side-effect imports should be sorted.",
+                              "type": "boolean",
                             },
                             "type": {
                               "description": "Specifies the sorting method.",
@@ -32237,6 +32261,7 @@
                         "maxLineLength": undefined,
                         "newlinesBetween": "always",
                         "order": "asc",
+                        "sortSideEffects": false,
                         "type": "alphabetical",
                       },
                     ],
@@ -32369,6 +32394,10 @@
                                 "desc",
                               ],
                               "type": "string",
+                            },
+                            "sortSideEffects": {
+                              "description": "Controls whether side-effect imports should be sorted.",
+                              "type": "boolean",
                             },
                             "type": {
                               "description": "Specifies the sorting method.",
@@ -34364,6 +34393,7 @@
                         "maxLineLength": undefined,
                         "newlinesBetween": "always",
                         "order": "asc",
+                        "sortSideEffects": false,
                         "type": "alphabetical",
                       },
                     ],
@@ -34496,6 +34526,10 @@
                                 "desc",
                               ],
                               "type": "string",
+                            },
+                            "sortSideEffects": {
+                              "description": "Controls whether side-effect imports should be sorted.",
+                              "type": "boolean",
                             },
                             "type": {
                               "description": "Specifies the sorting method.",
@@ -36489,6 +36523,7 @@
                 "maxLineLength": undefined,
                 "newlinesBetween": "always",
                 "order": "asc",
+                "sortSideEffects": false,
                 "type": "alphabetical",
               },
             ],
@@ -36621,6 +36656,10 @@
                         "desc",
                       ],
                       "type": "string",
+                    },
+                    "sortSideEffects": {
+                      "description": "Controls whether side-effect imports should be sorted.",
+                      "type": "boolean",
                     },
                     "type": {
                       "description": "Specifies the sorting method.",
@@ -47273,12 +47312,6 @@
     },
     "rules": {
       "unicorn/consistent-empty-array-spread": "error",
-      "unicorn/consistent-function-scoping": [
-        "error",
-        {
-          "checkArrowFunctions": false,
-        },
-      ],
       "unicorn/error-message": "error",
       "unicorn/escape-case": "error",
       "unicorn/new-for-builtins": "error",
@@ -48327,7 +48360,7 @@
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.4.0",
+          "version": "8.5.0",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -51950,6 +51983,7 @@ You must still type the parameters of the function.",
               "fixable": "code",
               "messages": {
                 "duplicate": "{{type}} type constituent is duplicated with {{previous}}.",
+                "unnecessary": "Explicit undefined is unnecessary on an optional parameter.",
               },
               "schema": [
                 {
@@ -53857,10 +53891,10 @@ You must still type the parameters of the function.",
                 "url": "https://typescript-eslint.io/rules/no-unsafe-argument",
               },
               "messages": {
-                "unsafeArgument": "Unsafe argument of type `{{sender}}` assigned to a parameter of type `{{receiver}}`.",
-                "unsafeArraySpread": "Unsafe spread of an `any` array type.",
-                "unsafeSpread": "Unsafe spread of an `any` type.",
-                "unsafeTupleSpread": "Unsafe spread of a tuple type. The argument is of type `{{sender}}` and is assigned to a parameter of type `{{receiver}}`.",
+                "unsafeArgument": "Unsafe argument of type {{sender}} assigned to a parameter of type {{receiver}}.",
+                "unsafeArraySpread": "Unsafe spread of an {{sender}} array type.",
+                "unsafeSpread": "Unsafe spread of an {{sender}} type.",
+                "unsafeTupleSpread": "Unsafe spread of a tuple type. The argument is {{sender}} and is assigned to a parameter of type {{receiver}}.",
               },
               "schema": [],
               "type": "problem",
@@ -55927,11 +55961,11 @@ If your function does not access `this`, you can annotate it with `this: void`, 
         "createProgram": [Function],
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.4.0",
+          "version": "8.5.0",
         },
         "parse": [Function],
         "parseForESLint": [Function],
-        "version": "8.4.0",
+        "version": "8.5.0",
         "withoutProjectParserOptions": [Function],
       },
       "parserOptions": {
@@ -58869,6 +58903,10 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                         },
                       ],
                     },
+                    "tabLength": {
+                      "default": 4,
+                      "type": "number",
+                    },
                   },
                   "type": "object",
                 },
@@ -60799,6 +60837,18 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                           "type": "object",
                         },
                         "return": {
+                          "additionalProperties": false,
+                          "properties": {
+                            "after": {
+                              "type": "boolean",
+                            },
+                            "before": {
+                              "type": "boolean",
+                            },
+                          },
+                          "type": "object",
+                        },
+                        "satisfies": {
                           "additionalProperties": false,
                           "properties": {
                             "after": {
@@ -63674,9 +63724,6 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                           "$ref": "#/items/0/$defs/spacingConfig",
                         },
                         "colon": {
-                          "$ref": "#/items/0/$defs/spacingConfig",
-                        },
-                        "operator": {
                           "$ref": "#/items/0/$defs/spacingConfig",
                         },
                         "parameter": {
@@ -71525,7 +71572,6 @@ If your function does not access `this`, you can annotate it with `this: void`, 
       "test/prefer-hooks-in-order": "error",
       "test/prefer-lowercase-title": "error",
       "ts/explicit-function-return-type": "off",
-      "unicorn/consistent-function-scoping": "off",
     },
   },
   {
@@ -71535,7 +71581,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
         "configs": {
           "all": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.9.1_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.10.0_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
             ],
             "rules": {
               "jsonc/array-bracket-newline": "error",
@@ -71585,7 +71631,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           },
           "auto-config": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.9.1_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.10.0_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
             ],
             "rules": {
               "jsonc/auto": "error",
@@ -73936,7 +73982,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           ],
           "prettier": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.9.1_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.10.0_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
             ],
             "rules": {
               "jsonc/array-bracket-newline": "off",
@@ -73957,7 +74003,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           },
           "recommended-with-json": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.9.1_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.10.0_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
             ],
             "rules": {
               "jsonc/comma-dangle": "error",
@@ -73993,7 +74039,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           },
           "recommended-with-json5": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.9.1_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.10.0_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
             ],
             "rules": {
               "jsonc/no-bigint-literals": "error",
@@ -74018,7 +74064,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           },
           "recommended-with-jsonc": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.9.1_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.10.0_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
             ],
             "rules": {
               "jsonc/no-bigint-literals": "error",
@@ -74055,7 +74101,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           "configs": {
             "all": {
               "extends": [
-                "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.9.1_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+                "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.10.0_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
               ],
               "rules": {
                 "jsonc/array-bracket-newline": "error",
@@ -74105,7 +74151,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
             },
             "auto-config": {
               "extends": [
-                "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.9.1_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+                "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.10.0_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
               ],
               "rules": {
                 "jsonc/auto": "error",
@@ -76456,7 +76502,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
             ],
             "prettier": {
               "extends": [
-                "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.9.1_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+                "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.10.0_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
               ],
               "rules": {
                 "jsonc/array-bracket-newline": "off",
@@ -76477,7 +76523,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
             },
             "recommended-with-json": {
               "extends": [
-                "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.9.1_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+                "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.10.0_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
               ],
               "rules": {
                 "jsonc/comma-dangle": "error",
@@ -76513,7 +76559,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
             },
             "recommended-with-json5": {
               "extends": [
-                "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.9.1_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+                "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.10.0_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
               ],
               "rules": {
                 "jsonc/no-bigint-literals": "error",
@@ -76538,7 +76584,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
             },
             "recommended-with-jsonc": {
               "extends": [
-                "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.9.1_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
+                "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-jsonc@2.16.0_eslint@9.10.0_jiti@1.21.6_/node_modules/eslint-plugin-jsonc/dist/configs/base.js",
               ],
               "rules": {
                 "jsonc/no-bigint-literals": "error",
@@ -87440,7 +87486,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           ],
           "prettier": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-yml@1.14.0_eslint@9.9.1_jiti@1.21.6_/node_modules/eslint-plugin-yml/lib/configs/base.js",
+              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-yml@1.14.0_eslint@9.10.0_jiti@1.21.6_/node_modules/eslint-plugin-yml/lib/configs/base.js",
             ],
             "rules": {
               "yml/block-mapping-colon-indicator-newline": "off",
@@ -87459,7 +87505,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           },
           "recommended": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-yml@1.14.0_eslint@9.9.1_jiti@1.21.6_/node_modules/eslint-plugin-yml/lib/configs/base.js",
+              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-yml@1.14.0_eslint@9.10.0_jiti@1.21.6_/node_modules/eslint-plugin-yml/lib/configs/base.js",
             ],
             "rules": {
               "yml/no-empty-document": "error",
@@ -87473,7 +87519,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           },
           "standard": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-yml@1.14.0_eslint@9.9.1_jiti@1.21.6_/node_modules/eslint-plugin-yml/lib/configs/base.js",
+              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-yml@1.14.0_eslint@9.10.0_jiti@1.21.6_/node_modules/eslint-plugin-yml/lib/configs/base.js",
             ],
             "rules": {
               "yml/block-mapping": "error",
@@ -90377,7 +90423,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           ],
           "recommended": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-toml@0.11.1_eslint@9.9.1_jiti@1.21.6_/node_modules/eslint-plugin-toml/lib/configs/base.js",
+              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-toml@0.11.1_eslint@9.10.0_jiti@1.21.6_/node_modules/eslint-plugin-toml/lib/configs/base.js",
             ],
             "rules": {
               "toml/no-unreadable-number-separator": "error",
@@ -90388,7 +90434,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
           },
           "standard": {
             "extends": [
-              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-toml@0.11.1_eslint@9.9.1_jiti@1.21.6_/node_modules/eslint-plugin-toml/lib/configs/base.js",
+              "/Users/icebreaker/Documents/GitHub/eslint-config/node_modules/.pnpm/eslint-plugin-toml@0.11.1_eslint@9.10.0_jiti@1.21.6_/node_modules/eslint-plugin-toml/lib/configs/base.js",
             ],
             "rules": {
               "toml/array-bracket-newline": "error",
@@ -91785,7 +91831,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
     "plugins": {
       "markdown": {
         "configs": {
-          "recommended": [
+          "processor": [
             {
               "name": "markdown/recommended/plugin",
               "plugins": {
@@ -91822,6 +91868,25 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               },
             },
           ],
+          "recommended": [
+            {
+              "files": [
+                "**/*.md",
+              ],
+              "language": "markdown/commonmark",
+              "name": "markdown/recommended",
+              "plugins": {
+                "markdown": [Circular],
+              },
+              "rules": {
+                "markdown/fenced-code-language": "error",
+                "markdown/heading-increment": "error",
+                "markdown/no-empty-links": "error",
+                "markdown/no-invalid-label-refs": "error",
+                "markdown/no-missing-label-refs": "error",
+              },
+            },
+          ],
           "recommended-legacy": {
             "overrides": [
               {
@@ -91855,19 +91920,155 @@ If your function does not access `this`, you can annotate it with `this: void`, 
             ],
           },
         },
+        "languages": {
+          "commonmark": MarkdownLanguage {
+            "columnStart": 1,
+            "fileType": "text",
+            "lineStart": 1,
+            "nodeTypeKey": "type",
+          },
+          "gfm": MarkdownLanguage {
+            "columnStart": 1,
+            "fileType": "text",
+            "lineStart": 1,
+            "nodeTypeKey": "type",
+          },
+        },
         "meta": {
-          "name": "eslint-plugin-markdown",
-          "version": "5.1.0",
+          "name": "@eslint/markdown",
+          "version": "6.1.0",
         },
         "processors": {
           "markdown": {
             "meta": {
-              "name": "eslint-plugin-markdown/markdown",
-              "version": "5.1.0",
+              "name": "@eslint/markdown/markdown",
+              "version": "6.1.0",
             },
             "postprocess": [Function],
             "preprocess": [Function],
             "supportsAutofix": true,
+          },
+        },
+        "rules": {
+          "fenced-code-language": {
+            "create": [Function],
+            "meta": {
+              "docs": {
+                "description": "Require languages for fenced code blocks.",
+                "recommended": true,
+              },
+              "messages": {
+                "disallowedLanguage": "Code block language "{{lang}}" is not allowed.",
+                "missingLanguage": "Missing code block language.",
+              },
+              "schema": [
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "required": {
+                      "items": {
+                        "type": "string",
+                      },
+                      "type": "array",
+                      "uniqueItems": true,
+                    },
+                  },
+                  "type": "object",
+                },
+              ],
+              "type": "problem",
+            },
+          },
+          "heading-increment": {
+            "create": [Function],
+            "meta": {
+              "docs": {
+                "description": "Enforce heading levels increment by one.",
+                "recommended": true,
+              },
+              "messages": {
+                "skippedHeading": "Heading level skipped from {{fromLevel}} to {{toLevel}}.",
+              },
+              "type": "problem",
+            },
+          },
+          "no-duplicate-headings": {
+            "create": [Function],
+            "meta": {
+              "docs": {
+                "description": "Disallow duplicate headings in the same document.",
+              },
+              "messages": {
+                "duplicateHeading": "Duplicate heading "{{text}}" found.",
+              },
+              "type": "problem",
+            },
+          },
+          "no-empty-links": {
+            "create": [Function],
+            "meta": {
+              "docs": {
+                "description": "Disallow empty links.",
+                "recommended": true,
+              },
+              "messages": {
+                "emptyLink": "Unexpected empty link found.",
+              },
+              "type": "problem",
+            },
+          },
+          "no-html": {
+            "create": [Function],
+            "meta": {
+              "docs": {
+                "description": "Disallow HTML tags.",
+              },
+              "messages": {
+                "disallowedElement": "HTML element "{{name}}" is not allowed.",
+              },
+              "schema": [
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "allowed": {
+                      "items": {
+                        "type": "string",
+                      },
+                      "type": "array",
+                      "uniqueItems": true,
+                    },
+                  },
+                  "type": "object",
+                },
+              ],
+              "type": "problem",
+            },
+          },
+          "no-invalid-label-refs": {
+            "create": [Function],
+            "meta": {
+              "docs": {
+                "description": "Disallow invalid label references.",
+                "recommended": true,
+              },
+              "messages": {
+                "invalidLabelRef": "Label reference '{{label}}' is invalid due to white space between [ and ].",
+              },
+              "type": "problem",
+            },
+          },
+          "no-missing-label-refs": {
+            "create": [Function],
+            "meta": {
+              "docs": {
+                "description": "Disallow missing label references.",
+                "recommended": true,
+              },
+              "messages": {
+                "notFound": "Label reference '{{label}}' not found.",
+              },
+              "type": "problem",
+            },
           },
         },
       },
@@ -91883,7 +92084,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
     "name": "antfu/markdown/processor",
     "processor": {
       "meta": {
-        "name": "merged-processor:eslint-plugin-markdown/markdown+pass-through",
+        "name": "merged-processor:@eslint/markdown/markdown+pass-through",
       },
       "postprocess": [Function],
       "preprocess": [Function],
@@ -92201,7 +92402,6 @@ If your function does not access `this`, you can annotate it with `this: void`, 
     "rules": {
       "no-console": "off",
       "ts/explicit-function-return-type": "off",
-      "unicorn/consistent-function-scoping": "off",
     },
   },
   {
