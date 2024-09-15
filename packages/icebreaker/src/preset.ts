@@ -1,6 +1,6 @@
 import type { Linter } from 'eslint'
-import { interopDefault } from './antfu'
 import type { UserConfigItem, UserDefinedOptions } from './types'
+import { interopDefault } from './antfu'
 
 export function getPresets(options: UserDefinedOptions) {
   const {
@@ -8,7 +8,8 @@ export function getPresets(options: UserDefinedOptions) {
     mdx: enableMDX,
     a11y: enableA11y,
     vue: enableVue,
-    ...opts
+    react: enableReact,
+    // ...opts
   } = options
   const presetRules: Partial<Linter.RulesRecord> = {
     'curly': ['error', 'all'],
@@ -98,7 +99,7 @@ export function getPresets(options: UserDefinedOptions) {
       )
     }
 
-    if (opts.react) {
+    if (enableReact) {
       presets.push(
         interopDefault(
           // @ts-ignore
