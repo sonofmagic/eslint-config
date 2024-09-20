@@ -1275,14 +1275,14 @@
       "antfu": {
         "meta": {
           "name": "antfu",
-          "version": "2.5.0",
+          "version": "2.7.0",
         },
         "rules": {
           "consistent-chaining": {
             "create": [Function],
             "defaultOptions": [
               {
-                "allowFirstPropertyAccess": true,
+                "allowLeadingPropertyAccess": true,
               },
             ],
             "meta": {
@@ -1299,9 +1299,9 @@
                 {
                   "additionalProperties": false,
                   "properties": {
-                    "allowFirstPropertyAccess": {
+                    "allowLeadingPropertyAccess": {
                       "default": true,
-                      "description": "Allow first property access to be on the same line",
+                      "description": "Allow leading property access to be on the same line",
                       "type": "boolean",
                     },
                   },
@@ -1506,6 +1506,21 @@
               },
               "messages": {
                 "noImportNodeModulesByPath": "Do not import modules in `node_modules` folder by path",
+              },
+              "schema": [],
+              "type": "problem",
+            },
+          },
+          "no-top-level-await": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Prevent using top-level await",
+                "url": "https://github.com/antfu/eslint-plugin-antfu/blob/main/src/rules/no-top-level-await.test.ts",
+              },
+              "messages": {
+                "NoTopLevelAwait": "Do not use top-level await",
               },
               "schema": [],
               "type": "problem",
@@ -1746,6 +1761,7 @@
           "setWithoutGet": true,
         },
       ],
+      "antfu/no-top-level-await": "error",
       "array-callback-return": "error",
       "block-scoped-var": "error",
       "constructor-super": "error",
@@ -3830,7 +3846,7 @@
         },
         "meta": {
           "name": "eslint-plugin-n",
-          "version": "17.10.2",
+          "version": "17.10.3",
         },
         "rules": {
           "callback-return": {
@@ -7929,13 +7945,13 @@
                 "examples": {
                   "meta": {
                     "name": "eslint-plugin-jsdoc/processor",
-                    "version": "50.2.2",
+                    "version": "50.2.4",
                   },
                   "processors": {
                     "examples": {
                       "meta": {
                         "name": "eslint-plugin-jsdoc/preprocessor",
-                        "version": "50.2.2",
+                        "version": "50.2.4",
                       },
                       "postprocess": [Function],
                       "preprocess": [Function],
@@ -7992,13 +8008,13 @@
                 "examples": {
                   "meta": {
                     "name": "eslint-plugin-jsdoc/processor",
-                    "version": "50.2.2",
+                    "version": "50.2.4",
                   },
                   "processors": {
                     "examples": {
                       "meta": {
                         "name": "eslint-plugin-jsdoc/preprocessor",
-                        "version": "50.2.2",
+                        "version": "50.2.4",
                       },
                       "postprocess": [Function],
                       "preprocess": [Function],
@@ -8037,13 +8053,13 @@
                 "examples": {
                   "meta": {
                     "name": "eslint-plugin-jsdoc/processor",
-                    "version": "50.2.2",
+                    "version": "50.2.4",
                   },
                   "processors": {
                     "examples": {
                       "meta": {
                         "name": "eslint-plugin-jsdoc/preprocessor",
-                        "version": "50.2.2",
+                        "version": "50.2.4",
                       },
                       "postprocess": [Function],
                       "preprocess": [Function],
@@ -11765,14 +11781,14 @@
       "antfu": {
         "meta": {
           "name": "antfu",
-          "version": "2.5.0",
+          "version": "2.7.0",
         },
         "rules": {
           "consistent-chaining": {
             "create": [Function],
             "defaultOptions": [
               {
-                "allowFirstPropertyAccess": true,
+                "allowLeadingPropertyAccess": true,
               },
             ],
             "meta": {
@@ -11789,9 +11805,9 @@
                 {
                   "additionalProperties": false,
                   "properties": {
-                    "allowFirstPropertyAccess": {
+                    "allowLeadingPropertyAccess": {
                       "default": true,
-                      "description": "Allow first property access to be on the same line",
+                      "description": "Allow leading property access to be on the same line",
                       "type": "boolean",
                     },
                   },
@@ -11996,6 +12012,21 @@
               },
               "messages": {
                 "noImportNodeModulesByPath": "Do not import modules in `node_modules` folder by path",
+              },
+              "schema": [],
+              "type": "problem",
+            },
+          },
+          "no-top-level-await": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Prevent using top-level await",
+                "url": "https://github.com/antfu/eslint-plugin-antfu/blob/main/src/rules/no-top-level-await.test.ts",
+              },
+              "messages": {
+                "NoTopLevelAwait": "Do not use top-level await",
               },
               "schema": [],
               "type": "problem",
@@ -29485,7 +29516,7 @@
       "command": {
         "meta": {
           "name": "command",
-          "version": "0.2.4",
+          "version": "0.2.5",
         },
         "rules": {
           "command": {
@@ -29601,6 +29632,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedAstroAttributesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedAstroAttributesOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -30142,6 +30174,7 @@
                       "messages": {
                         "extraSpacingBetweenImports": "Extra spacing between "{{left}}" and "{{right}}" imports.",
                         "missedSpacingBetweenImports": "Missed spacing between "{{left}}" and "{{right}}" imports.",
+                        "unexpectedImportsGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedImportsOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -30304,6 +30337,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedInterfacePropertiesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedInterfacePropertiesOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -30409,6 +30443,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedIntersectionTypesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedIntersectionTypesOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -30479,6 +30514,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedJSXPropsGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedJSXPropsOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -30749,6 +30785,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedObjectTypesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedObjectTypesOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -30853,6 +30890,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedObjectsGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedObjectsOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -31035,6 +31073,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedSvelteAttributesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedSvelteAttributesOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -31170,6 +31209,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedUnionTypesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedUnionTypesOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -31289,6 +31329,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedVueAttributesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedVueAttributesOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -31733,6 +31774,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedAstroAttributesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedAstroAttributesOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -32274,6 +32316,7 @@
                       "messages": {
                         "extraSpacingBetweenImports": "Extra spacing between "{{left}}" and "{{right}}" imports.",
                         "missedSpacingBetweenImports": "Missed spacing between "{{left}}" and "{{right}}" imports.",
+                        "unexpectedImportsGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedImportsOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -32436,6 +32479,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedInterfacePropertiesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedInterfacePropertiesOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -32541,6 +32585,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedIntersectionTypesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedIntersectionTypesOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -32611,6 +32656,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedJSXPropsGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedJSXPropsOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -32881,6 +32927,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedObjectTypesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedObjectTypesOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -32985,6 +33032,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedObjectsGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedObjectsOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -33167,6 +33215,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedSvelteAttributesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedSvelteAttributesOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -33302,6 +33351,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedUnionTypesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedUnionTypesOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -33421,6 +33471,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedVueAttributesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedVueAttributesOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -33865,6 +33916,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedAstroAttributesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedAstroAttributesOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -34406,6 +34458,7 @@
                       "messages": {
                         "extraSpacingBetweenImports": "Extra spacing between "{{left}}" and "{{right}}" imports.",
                         "missedSpacingBetweenImports": "Missed spacing between "{{left}}" and "{{right}}" imports.",
+                        "unexpectedImportsGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedImportsOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -34568,6 +34621,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedInterfacePropertiesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedInterfacePropertiesOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -34673,6 +34727,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedIntersectionTypesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedIntersectionTypesOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -34743,6 +34798,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedJSXPropsGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedJSXPropsOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -35013,6 +35069,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedObjectTypesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedObjectTypesOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -35117,6 +35174,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedObjectsGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedObjectsOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -35299,6 +35357,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedSvelteAttributesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedSvelteAttributesOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -35434,6 +35493,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedUnionTypesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedUnionTypesOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -35553,6 +35613,7 @@
                       },
                       "fixable": "code",
                       "messages": {
+                        "unexpectedVueAttributesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                         "unexpectedVueAttributesOrder": "Expected "{{right}}" to come before "{{left}}".",
                       },
                       "schema": [
@@ -35995,6 +36056,7 @@
               },
               "fixable": "code",
               "messages": {
+                "unexpectedAstroAttributesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                 "unexpectedAstroAttributesOrder": "Expected "{{right}}" to come before "{{left}}".",
               },
               "schema": [
@@ -36536,6 +36598,7 @@
               "messages": {
                 "extraSpacingBetweenImports": "Extra spacing between "{{left}}" and "{{right}}" imports.",
                 "missedSpacingBetweenImports": "Missed spacing between "{{left}}" and "{{right}}" imports.",
+                "unexpectedImportsGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                 "unexpectedImportsOrder": "Expected "{{right}}" to come before "{{left}}".",
               },
               "schema": [
@@ -36698,6 +36761,7 @@
               },
               "fixable": "code",
               "messages": {
+                "unexpectedInterfacePropertiesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                 "unexpectedInterfacePropertiesOrder": "Expected "{{right}}" to come before "{{left}}".",
               },
               "schema": [
@@ -36803,6 +36867,7 @@
               },
               "fixable": "code",
               "messages": {
+                "unexpectedIntersectionTypesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                 "unexpectedIntersectionTypesOrder": "Expected "{{right}}" to come before "{{left}}".",
               },
               "schema": [
@@ -36873,6 +36938,7 @@
               },
               "fixable": "code",
               "messages": {
+                "unexpectedJSXPropsGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                 "unexpectedJSXPropsOrder": "Expected "{{right}}" to come before "{{left}}".",
               },
               "schema": [
@@ -37143,6 +37209,7 @@
               },
               "fixable": "code",
               "messages": {
+                "unexpectedObjectTypesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                 "unexpectedObjectTypesOrder": "Expected "{{right}}" to come before "{{left}}".",
               },
               "schema": [
@@ -37247,6 +37314,7 @@
               },
               "fixable": "code",
               "messages": {
+                "unexpectedObjectsGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                 "unexpectedObjectsOrder": "Expected "{{right}}" to come before "{{left}}".",
               },
               "schema": [
@@ -37429,6 +37497,7 @@
               },
               "fixable": "code",
               "messages": {
+                "unexpectedSvelteAttributesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                 "unexpectedSvelteAttributesOrder": "Expected "{{right}}" to come before "{{left}}".",
               },
               "schema": [
@@ -37564,6 +37633,7 @@
               },
               "fixable": "code",
               "messages": {
+                "unexpectedUnionTypesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                 "unexpectedUnionTypesOrder": "Expected "{{right}}" to come before "{{left}}".",
               },
               "schema": [
@@ -37683,6 +37753,7 @@
               },
               "fixable": "code",
               "messages": {
+                "unexpectedVueAttributesGroupOrder": "Expected "{{right}}" ({{rightGroup}}) to come before "{{left}}" ({{leftGroup}}).",
                 "unexpectedVueAttributesOrder": "Expected "{{right}}" to come before "{{left}}".",
               },
               "schema": [
@@ -37766,9 +37837,14 @@
         "error",
         {
           "groups": [
+            "type",
+            [
+              "parent-type",
+              "sibling-type",
+              "index-type",
+            ],
             "builtin",
             "external",
-            "type",
             [
               "internal",
               "internal-type",
@@ -37777,11 +37853,6 @@
               "parent",
               "sibling",
               "index",
-            ],
-            [
-              "parent-type",
-              "sibling-type",
-              "index-type",
             ],
             "side-effect",
             "object",
@@ -47348,14 +47419,14 @@
       "antfu": {
         "meta": {
           "name": "antfu",
-          "version": "2.5.0",
+          "version": "2.7.0",
         },
         "rules": {
           "consistent-chaining": {
             "create": [Function],
             "defaultOptions": [
               {
-                "allowFirstPropertyAccess": true,
+                "allowLeadingPropertyAccess": true,
               },
             ],
             "meta": {
@@ -47372,9 +47443,9 @@
                 {
                   "additionalProperties": false,
                   "properties": {
-                    "allowFirstPropertyAccess": {
+                    "allowLeadingPropertyAccess": {
                       "default": true,
-                      "description": "Allow first property access to be on the same line",
+                      "description": "Allow leading property access to be on the same line",
                       "type": "boolean",
                     },
                   },
@@ -47579,6 +47650,21 @@
               },
               "messages": {
                 "noImportNodeModulesByPath": "Do not import modules in `node_modules` folder by path",
+              },
+              "schema": [],
+              "type": "problem",
+            },
+          },
+          "no-top-level-await": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Prevent using top-level await",
+                "url": "https://github.com/antfu/eslint-plugin-antfu/blob/main/src/rules/no-top-level-await.test.ts",
+              },
+              "messages": {
+                "NoTopLevelAwait": "Do not use top-level await",
               },
               "schema": [],
               "type": "problem",
@@ -48360,7 +48446,7 @@
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.5.0",
+          "version": "8.6.0",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -52916,6 +53002,7 @@ You must still type the parameters of the function.",
               },
               "messages": {
                 "conditional": "Expected non-Promise value in a boolean conditional.",
+                "predicate": "Expected a non-Promise value to be returned.",
                 "spread": "Expected a non-Promise value to be spreaded in an object.",
                 "voidReturnArgument": "Promise returned in function argument where a void return was expected.",
                 "voidReturnAttribute": "Promise-returning function provided to attribute where a void return was expected.",
@@ -55385,6 +55472,16 @@ You can try to fix this by turning on the `noImplicitThis` compiler option, or a
             "create": [Function],
             "defaultOptions": [
               {
+                "allow": [
+                  {
+                    "from": "lib",
+                    "name": [
+                      "Error",
+                      "URL",
+                      "URLSearchParams",
+                    ],
+                  },
+                ],
                 "allowAny": true,
                 "allowBoolean": true,
                 "allowNullish": true,
@@ -55418,6 +55515,117 @@ You can try to fix this by turning on the `noImplicitThis` compiler option, or a
                 {
                   "additionalProperties": false,
                   "properties": {
+                    "allow": {
+                      "description": "Types to allow in template expressions.",
+                      "items": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                          },
+                          {
+                            "additionalProperties": false,
+                            "properties": {
+                              "from": {
+                                "enum": [
+                                  "file",
+                                ],
+                                "type": "string",
+                              },
+                              "name": {
+                                "oneOf": [
+                                  {
+                                    "type": "string",
+                                  },
+                                  {
+                                    "items": {
+                                      "type": "string",
+                                    },
+                                    "minItems": 1,
+                                    "type": "array",
+                                    "uniqueItems": true,
+                                  },
+                                ],
+                              },
+                              "path": {
+                                "type": "string",
+                              },
+                            },
+                            "required": [
+                              "from",
+                              "name",
+                            ],
+                            "type": "object",
+                          },
+                          {
+                            "additionalProperties": false,
+                            "properties": {
+                              "from": {
+                                "enum": [
+                                  "lib",
+                                ],
+                                "type": "string",
+                              },
+                              "name": {
+                                "oneOf": [
+                                  {
+                                    "type": "string",
+                                  },
+                                  {
+                                    "items": {
+                                      "type": "string",
+                                    },
+                                    "minItems": 1,
+                                    "type": "array",
+                                    "uniqueItems": true,
+                                  },
+                                ],
+                              },
+                            },
+                            "required": [
+                              "from",
+                              "name",
+                            ],
+                            "type": "object",
+                          },
+                          {
+                            "additionalProperties": false,
+                            "properties": {
+                              "from": {
+                                "enum": [
+                                  "package",
+                                ],
+                                "type": "string",
+                              },
+                              "name": {
+                                "oneOf": [
+                                  {
+                                    "type": "string",
+                                  },
+                                  {
+                                    "items": {
+                                      "type": "string",
+                                    },
+                                    "minItems": 1,
+                                    "type": "array",
+                                    "uniqueItems": true,
+                                  },
+                                ],
+                              },
+                              "package": {
+                                "type": "string",
+                              },
+                            },
+                            "required": [
+                              "from",
+                              "name",
+                              "package",
+                            ],
+                            "type": "object",
+                          },
+                        ],
+                      },
+                      "type": "array",
+                    },
                     "allowAny": {
                       "description": "Whether to allow `any` typed values in template expressions.",
                       "type": "boolean",
@@ -55961,11 +56169,11 @@ If your function does not access `this`, you can annotate it with `this: void`, 
         "createProgram": [Function],
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.5.0",
+          "version": "8.6.0",
         },
         "parse": [Function],
         "parseForESLint": [Function],
-        "version": "8.5.0",
+        "version": "8.6.0",
         "withoutProjectParserOptions": [Function],
       },
       "parserOptions": {
@@ -56044,7 +56252,12 @@ If your function does not access `this`, you can annotate it with `this: void`, 
       "ts/no-non-null-asserted-nullish-coalescing": "error",
       "ts/no-non-null-asserted-optional-chain": "error",
       "ts/no-non-null-assertion": "off",
-      "ts/no-redeclare": "error",
+      "ts/no-redeclare": [
+        "error",
+        {
+          "builtinGlobals": false,
+        },
+      ],
       "ts/no-require-imports": "error",
       "ts/no-this-alias": "error",
       "ts/no-unnecessary-type-constraint": "error",
@@ -56086,14 +56299,14 @@ If your function does not access `this`, you can annotate it with `this: void`, 
       "antfu": {
         "meta": {
           "name": "antfu",
-          "version": "2.5.0",
+          "version": "2.7.0",
         },
         "rules": {
           "consistent-chaining": {
             "create": [Function],
             "defaultOptions": [
               {
-                "allowFirstPropertyAccess": true,
+                "allowLeadingPropertyAccess": true,
               },
             ],
             "meta": {
@@ -56110,9 +56323,9 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                 {
                   "additionalProperties": false,
                   "properties": {
-                    "allowFirstPropertyAccess": {
+                    "allowLeadingPropertyAccess": {
                       "default": true,
-                      "description": "Allow first property access to be on the same line",
+                      "description": "Allow leading property access to be on the same line",
                       "type": "boolean",
                     },
                   },
@@ -56317,6 +56530,21 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               },
               "messages": {
                 "noImportNodeModulesByPath": "Do not import modules in `node_modules` folder by path",
+              },
+              "schema": [],
+              "type": "problem",
+            },
+          },
+          "no-top-level-await": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Prevent using top-level await",
+                "url": "https://github.com/antfu/eslint-plugin-antfu/blob/main/src/rules/no-top-level-await.test.ts",
+              },
+              "messages": {
+                "NoTopLevelAwait": "Do not use top-level await",
               },
               "schema": [],
               "type": "problem",
@@ -66903,7 +67131,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                 },
                 "meta": {
                   "name": "vitest",
-                  "version": "1.0.5",
+                  "version": "1.1.3",
                 },
                 "rules": {
                   "consistent-test-filename": {
@@ -66919,7 +67147,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                         "description": "require .spec test file pattern",
                         "recommended": false,
                         "requiresTypeChecking": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/consistent-test-filename.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/consistent-test-filename.md",
                       },
                       "messages": {
                         "consistentTestFilename": "use test file name pattern {{pattern}}",
@@ -66955,7 +67183,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using test or it but not both",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/consistent-test-it.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/consistent-test-it.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -67002,7 +67230,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce having expectation in test body",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/expect-expect.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/expect-expect.md",
                       },
                       "messages": {
                         "noAssertions": "Test has no assertions",
@@ -67044,7 +67272,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                         "description": "enforce a maximum number of expect per test",
                         "recommended": false,
                         "requiresTypeChecking": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/max-expects.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/max-expects.md",
                       },
                       "messages": {
                         "maxExpect": "Too many assertion calls ({{count}}). Maximum is {{max}}.",
@@ -67074,7 +67302,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "require describe block to be less than set max value or default value",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/max-nested-describe.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/max-nested-describe.md",
                       },
                       "messages": {
                         "maxNestedDescribe": "Nested describe block should be less than set max value.",
@@ -67101,7 +67329,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                         "description": "disallow alias methods",
                         "recommended": false,
                         "requiresTypeChecking": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-alias-methods.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-alias-methods.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -67119,7 +67347,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                         "description": "disallow commented out tests",
                         "recommended": false,
                         "requiresTypeChecking": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-commented-out-tests.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-commented-out-tests.md",
                       },
                       "messages": {
                         "noCommentedOutTests": "Remove commented out tests. You may want to use `skip` or `only` instead.",
@@ -67136,7 +67364,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                         "description": "disallow conditional expects",
                         "recommended": false,
                         "requiresTypeChecking": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-conditional-expect.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-conditional-expect.md",
                       },
                       "messages": {
                         "noConditionalExpect": "Avoid calling `expect` inside conditional statements",
@@ -67153,7 +67381,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                         "description": "disallow conditional tests",
                         "recommended": false,
                         "requiresTypeChecking": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-conditional-in-test.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-conditional-in-test.md",
                       },
                       "messages": {
                         "noConditionalInTest": "Remove conditional tests",
@@ -67169,7 +67397,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow conditional tests",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-conditional-tests.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-conditional-tests.md",
                       },
                       "messages": {
                         "noConditionalTests": "Avoid using if conditions in a test.",
@@ -67185,7 +67413,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow disabled tests",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-disabled-tests.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-disabled-tests.md",
                       },
                       "messages": {
                         "disabledSuite": "Disabled test suite. If you want to skip a test suite temporarily, use .todo() instead.",
@@ -67207,7 +67435,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow using a callback in asynchronous tests and hooks",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-done-callback.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-done-callback.md",
                       },
                       "hasSuggestions": true,
                       "messages": {
@@ -67227,7 +67455,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                         "description": "disallow duplicate hooks and teardown hooks",
                         "recommended": false,
                         "requiresTypeChecking": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-duplicate-hooks.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-duplicate-hooks.md",
                       },
                       "messages": {
                         "noDuplicateHooks": "Duplicate {{hook}} in describe block.",
@@ -67247,7 +67475,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow focused tests",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-focused-tests.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-focused-tests.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -67279,7 +67507,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow setup and teardown hooks",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-hooks.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-hooks.md",
                       },
                       "messages": {
                         "unexpectedHook": "Unexpected '{{ hookName }}' hook",
@@ -67311,7 +67539,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow identical titles",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-identical-title.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-identical-title.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -67329,7 +67557,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow importing `node:test`",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-import-node-test.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-import-node-test.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -67346,7 +67574,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow string interpolation in snapshots",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-interpolation-in-snapshots.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-interpolation-in-snapshots.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -67365,7 +67593,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow large snapshots",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-large-snapshots.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-large-snapshots.md",
                       },
                       "messages": {
                         "noSnapShot": "`{{ lineCount }}`s should begin with lowercase",
@@ -67401,7 +67629,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow importing from __mocks__ directory",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-mocks-import.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-mocks-import.md",
                       },
                       "messages": {
                         "noMocksImport": "Mocks should not be manually imported from a __mocks__ directory. Instead use `jest.mock` and import from the original module path.",
@@ -67419,7 +67647,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow the use of certain matchers",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-restricted-matchers.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-restricted-matchers.md",
                       },
                       "messages": {
                         "restrictedChain": "use of {{ restriction }} is disallowed",
@@ -67448,7 +67676,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow specific `vi.` methods",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-restricted-vi-methods.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-restricted-vi-methods.md",
                       },
                       "messages": {
                         "restrictedViMethod": "Use of `{{ restriction }}` is disallowed",
@@ -67479,7 +67707,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow using `expect` outside of `it` or `test` blocks",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-standalone-expect.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-standalone-expect.md",
                       },
                       "messages": {
                         "noStandaloneExpect": "Expect must be called inside a test block",
@@ -67507,7 +67735,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow using `test` as a prefix",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-test-prefixes.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-test-prefixes.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -67524,7 +67752,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow return statements in tests",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-test-return-statement.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-test-return-statement.md",
                       },
                       "messages": {
                         "noTestReturnStatement": "Return statements are not allowed in tests",
@@ -67540,7 +67768,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "deprecated": false,
                       "docs": {
                         "description": "Enforce padding around `afterAll` blocks",
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-after-all-blocks.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-after-all-blocks.md",
                       },
                       "fixable": "whitespace",
                       "messages": {
@@ -67557,7 +67785,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "deprecated": false,
                       "docs": {
                         "description": "Enforce padding around `afterEach` blocks",
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-after-each-blocks.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-after-each-blocks.md",
                       },
                       "fixable": "whitespace",
                       "messages": {
@@ -67574,7 +67802,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "deprecated": false,
                       "docs": {
                         "description": "Enforce padding around vitest functions",
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-all.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-all.md",
                       },
                       "fixable": "whitespace",
                       "messages": {
@@ -67591,7 +67819,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "deprecated": false,
                       "docs": {
                         "description": "Enforce padding around `beforeAll` blocks",
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-before-all-blocks.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-before-all-blocks.md",
                       },
                       "fixable": "whitespace",
                       "messages": {
@@ -67608,7 +67836,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "deprecated": false,
                       "docs": {
                         "description": "Enforce padding around `beforeEach` blocks",
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-before-each-blocks.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-before-each-blocks.md",
                       },
                       "fixable": "whitespace",
                       "messages": {
@@ -67625,7 +67853,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "deprecated": false,
                       "docs": {
                         "description": "Enforce padding around `describe` blocks",
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-describe-blocks.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-describe-blocks.md",
                       },
                       "fixable": "whitespace",
                       "messages": {
@@ -67642,7 +67870,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "deprecated": false,
                       "docs": {
                         "description": "Enforce padding around `expect` groups",
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-expect-groups.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-expect-groups.md",
                       },
                       "fixable": "whitespace",
                       "messages": {
@@ -67659,7 +67887,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "deprecated": false,
                       "docs": {
                         "description": "Enforce padding around afterAll blocks",
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-test-blocks.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-test-blocks.md",
                       },
                       "fixable": "whitespace",
                       "messages": {
@@ -67676,7 +67904,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using `toBeCalledWith()` or `toHaveBeenCalledWith()`",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-called-with.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-called-with.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -67693,7 +67921,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using the built-in comparison matchers",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-comparison-matcher.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-comparison-matcher.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -67710,7 +67938,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using `each` rather than manual loops",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-each.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-each.md",
                       },
                       "messages": {
                         "preferEach": "Prefer using `{{ fn }}.each` rather than a manual loop",
@@ -67726,7 +67954,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using the built-in quality matchers",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-equality-matcher.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-equality-matcher.md",
                       },
                       "hasSuggestions": true,
                       "messages": {
@@ -67750,7 +67978,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using expect assertions instead of callbacks",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-expect-assertions.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-expect-assertions.md",
                       },
                       "hasSuggestions": true,
                       "messages": {
@@ -67789,7 +68017,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using `expect().resolves` over `expect(await ...)` syntax",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-expect-resolves.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-expect-resolves.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -67806,7 +68034,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce having hooks in consistent order",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-hooks-in-order.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-hooks-in-order.md",
                       },
                       "messages": {
                         "reorderHooks": "`{{ currentHook }}` hooks should be before any `{{ previousHook }}` hooks",
@@ -67822,7 +68050,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce having hooks before any test cases",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-hooks-on-top.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-hooks-on-top.md",
                       },
                       "messages": {
                         "noHookOnTop": "Hooks should come before test cases",
@@ -67845,10 +68073,11 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce lowercase titles",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-lowercase-title.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-lowercase-title.md",
                       },
                       "fixable": "code",
                       "messages": {
+                        "fullyLowerCaseTitle": "`{{ method }}`s should be lowercase",
                         "lowerCaseTitle": "`{{ method }}`s should begin with lowercase",
                       },
                       "schema": [
@@ -67895,7 +68124,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce mock resolved/rejected shorthands for promises",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-mock-promise-shorthand.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-mock-promise-shorthand.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -67914,7 +68143,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce including a hint with external snapshots",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-snapshot-hint.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-snapshot-hint.md",
                       },
                       "messages": {
                         "missingHint": "You should provide a hint for this snapshot",
@@ -67938,7 +68167,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using `vi.spyOn`",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-spy-on.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-spy-on.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -67955,7 +68184,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce strict equal over equal",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-strict-equal.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-strict-equal.md",
                       },
                       "hasSuggestions": true,
                       "messages": {
@@ -67973,7 +68202,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using toBe()",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -67994,7 +68223,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using toBeFalsy()",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be-falsy.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be-falsy.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -68011,7 +68240,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using toBeObject()",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be-object.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be-object.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -68028,7 +68257,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using `toBeTruthy`",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be-truthy.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be-truthy.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -68045,7 +68274,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using toContain()",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-contain.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-contain.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -68062,7 +68291,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using toHaveLength()",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-have-length.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-have-length.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -68079,7 +68308,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using `test.todo`",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-todo.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-todo.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -68101,7 +68330,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "require setup and teardown to be within a hook",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/require-hook.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-hook.md",
                       },
                       "messages": {
                         "useHook": "This should be done within a hook",
@@ -68130,7 +68359,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "require local Test Context for concurrent snapshot tests",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/require-local-test-context-for-concurrent-snapshots.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-local-test-context-for-concurrent-snapshots.md",
                       },
                       "messages": {
                         "requireLocalTestContext": "Use local Test Context instead",
@@ -68146,7 +68375,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "require toThrow() to be called with an error message",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/require-to-throw-message.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-to-throw-message.md",
                       },
                       "messages": {
                         "addErrorMessage": "Add an error message to {{ matcherName }}()",
@@ -68164,7 +68393,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce that all tests are in a top-level describe",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/require-top-level-describe.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-top-level-describe.md",
                       },
                       "messages": {
                         "tooManyDescribes": "There should not be more than {{ max }} describe{{ s }} at the top level",
@@ -68193,7 +68422,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce valid describe callback",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/valid-describe-callback.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/valid-describe-callback.md",
                       },
                       "messages": {
                         "nameAndCallback": "Describe requires a name and callback arguments",
@@ -68222,7 +68451,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce valid `expect()` usage",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/valid-expect.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/valid-expect.md",
                       },
                       "messages": {
                         "asyncMustBeAwaited": "Async assertions must be awaited{{orReturned}}",
@@ -68275,7 +68504,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce valid titles",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/valid-title.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/valid-title.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -68533,7 +68762,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                 },
                 "meta": {
                   "name": "vitest",
-                  "version": "1.0.5",
+                  "version": "1.1.3",
                 },
                 "rules": {
                   "consistent-test-filename": {
@@ -68549,7 +68778,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                         "description": "require .spec test file pattern",
                         "recommended": false,
                         "requiresTypeChecking": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/consistent-test-filename.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/consistent-test-filename.md",
                       },
                       "messages": {
                         "consistentTestFilename": "use test file name pattern {{pattern}}",
@@ -68585,7 +68814,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using test or it but not both",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/consistent-test-it.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/consistent-test-it.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -68632,7 +68861,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce having expectation in test body",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/expect-expect.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/expect-expect.md",
                       },
                       "messages": {
                         "noAssertions": "Test has no assertions",
@@ -68674,7 +68903,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                         "description": "enforce a maximum number of expect per test",
                         "recommended": false,
                         "requiresTypeChecking": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/max-expects.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/max-expects.md",
                       },
                       "messages": {
                         "maxExpect": "Too many assertion calls ({{count}}). Maximum is {{max}}.",
@@ -68704,7 +68933,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "require describe block to be less than set max value or default value",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/max-nested-describe.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/max-nested-describe.md",
                       },
                       "messages": {
                         "maxNestedDescribe": "Nested describe block should be less than set max value.",
@@ -68731,7 +68960,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                         "description": "disallow alias methods",
                         "recommended": false,
                         "requiresTypeChecking": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-alias-methods.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-alias-methods.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -68749,7 +68978,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                         "description": "disallow commented out tests",
                         "recommended": false,
                         "requiresTypeChecking": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-commented-out-tests.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-commented-out-tests.md",
                       },
                       "messages": {
                         "noCommentedOutTests": "Remove commented out tests. You may want to use `skip` or `only` instead.",
@@ -68766,7 +68995,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                         "description": "disallow conditional expects",
                         "recommended": false,
                         "requiresTypeChecking": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-conditional-expect.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-conditional-expect.md",
                       },
                       "messages": {
                         "noConditionalExpect": "Avoid calling `expect` inside conditional statements",
@@ -68783,7 +69012,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                         "description": "disallow conditional tests",
                         "recommended": false,
                         "requiresTypeChecking": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-conditional-in-test.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-conditional-in-test.md",
                       },
                       "messages": {
                         "noConditionalInTest": "Remove conditional tests",
@@ -68799,7 +69028,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow conditional tests",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-conditional-tests.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-conditional-tests.md",
                       },
                       "messages": {
                         "noConditionalTests": "Avoid using if conditions in a test.",
@@ -68815,7 +69044,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow disabled tests",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-disabled-tests.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-disabled-tests.md",
                       },
                       "messages": {
                         "disabledSuite": "Disabled test suite. If you want to skip a test suite temporarily, use .todo() instead.",
@@ -68837,7 +69066,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow using a callback in asynchronous tests and hooks",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-done-callback.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-done-callback.md",
                       },
                       "hasSuggestions": true,
                       "messages": {
@@ -68857,7 +69086,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                         "description": "disallow duplicate hooks and teardown hooks",
                         "recommended": false,
                         "requiresTypeChecking": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-duplicate-hooks.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-duplicate-hooks.md",
                       },
                       "messages": {
                         "noDuplicateHooks": "Duplicate {{hook}} in describe block.",
@@ -68877,7 +69106,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow focused tests",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-focused-tests.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-focused-tests.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -68909,7 +69138,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow setup and teardown hooks",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-hooks.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-hooks.md",
                       },
                       "messages": {
                         "unexpectedHook": "Unexpected '{{ hookName }}' hook",
@@ -68941,7 +69170,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow identical titles",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-identical-title.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-identical-title.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -68959,7 +69188,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow importing `node:test`",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-import-node-test.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-import-node-test.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -68976,7 +69205,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow string interpolation in snapshots",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-interpolation-in-snapshots.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-interpolation-in-snapshots.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -68995,7 +69224,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow large snapshots",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-large-snapshots.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-large-snapshots.md",
                       },
                       "messages": {
                         "noSnapShot": "`{{ lineCount }}`s should begin with lowercase",
@@ -69031,7 +69260,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow importing from __mocks__ directory",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-mocks-import.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-mocks-import.md",
                       },
                       "messages": {
                         "noMocksImport": "Mocks should not be manually imported from a __mocks__ directory. Instead use `jest.mock` and import from the original module path.",
@@ -69049,7 +69278,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow the use of certain matchers",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-restricted-matchers.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-restricted-matchers.md",
                       },
                       "messages": {
                         "restrictedChain": "use of {{ restriction }} is disallowed",
@@ -69078,7 +69307,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow specific `vi.` methods",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-restricted-vi-methods.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-restricted-vi-methods.md",
                       },
                       "messages": {
                         "restrictedViMethod": "Use of `{{ restriction }}` is disallowed",
@@ -69109,7 +69338,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow using `expect` outside of `it` or `test` blocks",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-standalone-expect.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-standalone-expect.md",
                       },
                       "messages": {
                         "noStandaloneExpect": "Expect must be called inside a test block",
@@ -69137,7 +69366,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow using `test` as a prefix",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-test-prefixes.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-test-prefixes.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -69154,7 +69383,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "disallow return statements in tests",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-test-return-statement.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-test-return-statement.md",
                       },
                       "messages": {
                         "noTestReturnStatement": "Return statements are not allowed in tests",
@@ -69170,7 +69399,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "deprecated": false,
                       "docs": {
                         "description": "Enforce padding around `afterAll` blocks",
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-after-all-blocks.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-after-all-blocks.md",
                       },
                       "fixable": "whitespace",
                       "messages": {
@@ -69187,7 +69416,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "deprecated": false,
                       "docs": {
                         "description": "Enforce padding around `afterEach` blocks",
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-after-each-blocks.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-after-each-blocks.md",
                       },
                       "fixable": "whitespace",
                       "messages": {
@@ -69204,7 +69433,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "deprecated": false,
                       "docs": {
                         "description": "Enforce padding around vitest functions",
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-all.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-all.md",
                       },
                       "fixable": "whitespace",
                       "messages": {
@@ -69221,7 +69450,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "deprecated": false,
                       "docs": {
                         "description": "Enforce padding around `beforeAll` blocks",
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-before-all-blocks.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-before-all-blocks.md",
                       },
                       "fixable": "whitespace",
                       "messages": {
@@ -69238,7 +69467,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "deprecated": false,
                       "docs": {
                         "description": "Enforce padding around `beforeEach` blocks",
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-before-each-blocks.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-before-each-blocks.md",
                       },
                       "fixable": "whitespace",
                       "messages": {
@@ -69255,7 +69484,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "deprecated": false,
                       "docs": {
                         "description": "Enforce padding around `describe` blocks",
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-describe-blocks.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-describe-blocks.md",
                       },
                       "fixable": "whitespace",
                       "messages": {
@@ -69272,7 +69501,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "deprecated": false,
                       "docs": {
                         "description": "Enforce padding around `expect` groups",
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-expect-groups.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-expect-groups.md",
                       },
                       "fixable": "whitespace",
                       "messages": {
@@ -69289,7 +69518,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "deprecated": false,
                       "docs": {
                         "description": "Enforce padding around afterAll blocks",
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-test-blocks.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-test-blocks.md",
                       },
                       "fixable": "whitespace",
                       "messages": {
@@ -69306,7 +69535,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using `toBeCalledWith()` or `toHaveBeenCalledWith()`",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-called-with.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-called-with.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -69323,7 +69552,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using the built-in comparison matchers",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-comparison-matcher.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-comparison-matcher.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -69340,7 +69569,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using `each` rather than manual loops",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-each.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-each.md",
                       },
                       "messages": {
                         "preferEach": "Prefer using `{{ fn }}.each` rather than a manual loop",
@@ -69356,7 +69585,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using the built-in quality matchers",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-equality-matcher.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-equality-matcher.md",
                       },
                       "hasSuggestions": true,
                       "messages": {
@@ -69380,7 +69609,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using expect assertions instead of callbacks",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-expect-assertions.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-expect-assertions.md",
                       },
                       "hasSuggestions": true,
                       "messages": {
@@ -69419,7 +69648,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using `expect().resolves` over `expect(await ...)` syntax",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-expect-resolves.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-expect-resolves.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -69436,7 +69665,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce having hooks in consistent order",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-hooks-in-order.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-hooks-in-order.md",
                       },
                       "messages": {
                         "reorderHooks": "`{{ currentHook }}` hooks should be before any `{{ previousHook }}` hooks",
@@ -69452,7 +69681,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce having hooks before any test cases",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-hooks-on-top.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-hooks-on-top.md",
                       },
                       "messages": {
                         "noHookOnTop": "Hooks should come before test cases",
@@ -69475,10 +69704,11 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce lowercase titles",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-lowercase-title.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-lowercase-title.md",
                       },
                       "fixable": "code",
                       "messages": {
+                        "fullyLowerCaseTitle": "`{{ method }}`s should be lowercase",
                         "lowerCaseTitle": "`{{ method }}`s should begin with lowercase",
                       },
                       "schema": [
@@ -69525,7 +69755,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce mock resolved/rejected shorthands for promises",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-mock-promise-shorthand.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-mock-promise-shorthand.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -69544,7 +69774,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce including a hint with external snapshots",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-snapshot-hint.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-snapshot-hint.md",
                       },
                       "messages": {
                         "missingHint": "You should provide a hint for this snapshot",
@@ -69568,7 +69798,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using `vi.spyOn`",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-spy-on.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-spy-on.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -69585,7 +69815,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce strict equal over equal",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-strict-equal.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-strict-equal.md",
                       },
                       "hasSuggestions": true,
                       "messages": {
@@ -69603,7 +69833,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using toBe()",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -69624,7 +69854,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using toBeFalsy()",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be-falsy.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be-falsy.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -69641,7 +69871,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using toBeObject()",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be-object.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be-object.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -69658,7 +69888,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using `toBeTruthy`",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be-truthy.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be-truthy.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -69675,7 +69905,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using toContain()",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-contain.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-contain.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -69692,7 +69922,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using toHaveLength()",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-have-length.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-have-length.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -69709,7 +69939,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce using `test.todo`",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-todo.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-todo.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -69731,7 +69961,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "require setup and teardown to be within a hook",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/require-hook.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-hook.md",
                       },
                       "messages": {
                         "useHook": "This should be done within a hook",
@@ -69760,7 +69990,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "require local Test Context for concurrent snapshot tests",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/require-local-test-context-for-concurrent-snapshots.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-local-test-context-for-concurrent-snapshots.md",
                       },
                       "messages": {
                         "requireLocalTestContext": "Use local Test Context instead",
@@ -69776,7 +70006,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "require toThrow() to be called with an error message",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/require-to-throw-message.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-to-throw-message.md",
                       },
                       "messages": {
                         "addErrorMessage": "Add an error message to {{ matcherName }}()",
@@ -69794,7 +70024,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce that all tests are in a top-level describe",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/require-top-level-describe.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-top-level-describe.md",
                       },
                       "messages": {
                         "tooManyDescribes": "There should not be more than {{ max }} describe{{ s }} at the top level",
@@ -69823,7 +70053,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce valid describe callback",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/valid-describe-callback.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/valid-describe-callback.md",
                       },
                       "messages": {
                         "nameAndCallback": "Describe requires a name and callback arguments",
@@ -69852,7 +70082,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce valid `expect()` usage",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/valid-expect.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/valid-expect.md",
                       },
                       "messages": {
                         "asyncMustBeAwaited": "Async assertions must be awaited{{orReturned}}",
@@ -69905,7 +70135,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                       "docs": {
                         "description": "enforce valid titles",
                         "recommended": false,
-                        "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/valid-title.md",
+                        "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/valid-title.md",
                       },
                       "fixable": "code",
                       "messages": {
@@ -70024,7 +70254,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
         },
         "meta": {
           "name": "vitest",
-          "version": "1.0.5",
+          "version": "1.1.3",
         },
         "rules": {
           "consistent-test-filename": {
@@ -70040,7 +70270,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                 "description": "require .spec test file pattern",
                 "recommended": false,
                 "requiresTypeChecking": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/consistent-test-filename.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/consistent-test-filename.md",
               },
               "messages": {
                 "consistentTestFilename": "use test file name pattern {{pattern}}",
@@ -70076,7 +70306,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce using test or it but not both",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/consistent-test-it.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/consistent-test-it.md",
               },
               "fixable": "code",
               "messages": {
@@ -70123,7 +70353,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce having expectation in test body",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/expect-expect.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/expect-expect.md",
               },
               "messages": {
                 "noAssertions": "Test has no assertions",
@@ -70165,7 +70395,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                 "description": "enforce a maximum number of expect per test",
                 "recommended": false,
                 "requiresTypeChecking": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/max-expects.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/max-expects.md",
               },
               "messages": {
                 "maxExpect": "Too many assertion calls ({{count}}). Maximum is {{max}}.",
@@ -70195,7 +70425,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "require describe block to be less than set max value or default value",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/max-nested-describe.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/max-nested-describe.md",
               },
               "messages": {
                 "maxNestedDescribe": "Nested describe block should be less than set max value.",
@@ -70222,7 +70452,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                 "description": "disallow alias methods",
                 "recommended": false,
                 "requiresTypeChecking": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-alias-methods.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-alias-methods.md",
               },
               "fixable": "code",
               "messages": {
@@ -70240,7 +70470,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                 "description": "disallow commented out tests",
                 "recommended": false,
                 "requiresTypeChecking": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-commented-out-tests.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-commented-out-tests.md",
               },
               "messages": {
                 "noCommentedOutTests": "Remove commented out tests. You may want to use `skip` or `only` instead.",
@@ -70257,7 +70487,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                 "description": "disallow conditional expects",
                 "recommended": false,
                 "requiresTypeChecking": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-conditional-expect.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-conditional-expect.md",
               },
               "messages": {
                 "noConditionalExpect": "Avoid calling `expect` inside conditional statements",
@@ -70274,7 +70504,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                 "description": "disallow conditional tests",
                 "recommended": false,
                 "requiresTypeChecking": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-conditional-in-test.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-conditional-in-test.md",
               },
               "messages": {
                 "noConditionalInTest": "Remove conditional tests",
@@ -70290,7 +70520,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "disallow conditional tests",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-conditional-tests.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-conditional-tests.md",
               },
               "messages": {
                 "noConditionalTests": "Avoid using if conditions in a test.",
@@ -70306,7 +70536,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "disallow disabled tests",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-disabled-tests.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-disabled-tests.md",
               },
               "messages": {
                 "disabledSuite": "Disabled test suite. If you want to skip a test suite temporarily, use .todo() instead.",
@@ -70328,7 +70558,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "disallow using a callback in asynchronous tests and hooks",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-done-callback.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-done-callback.md",
               },
               "hasSuggestions": true,
               "messages": {
@@ -70348,7 +70578,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
                 "description": "disallow duplicate hooks and teardown hooks",
                 "recommended": false,
                 "requiresTypeChecking": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-duplicate-hooks.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-duplicate-hooks.md",
               },
               "messages": {
                 "noDuplicateHooks": "Duplicate {{hook}} in describe block.",
@@ -70368,7 +70598,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "disallow focused tests",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-focused-tests.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-focused-tests.md",
               },
               "fixable": "code",
               "messages": {
@@ -70400,7 +70630,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "disallow setup and teardown hooks",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-hooks.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-hooks.md",
               },
               "messages": {
                 "unexpectedHook": "Unexpected '{{ hookName }}' hook",
@@ -70432,7 +70662,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "disallow identical titles",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-identical-title.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-identical-title.md",
               },
               "fixable": "code",
               "messages": {
@@ -70450,7 +70680,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "disallow importing `node:test`",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-import-node-test.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-import-node-test.md",
               },
               "fixable": "code",
               "messages": {
@@ -70467,7 +70697,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "disallow string interpolation in snapshots",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-interpolation-in-snapshots.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-interpolation-in-snapshots.md",
               },
               "fixable": "code",
               "messages": {
@@ -70486,7 +70716,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "disallow large snapshots",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-large-snapshots.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-large-snapshots.md",
               },
               "messages": {
                 "noSnapShot": "`{{ lineCount }}`s should begin with lowercase",
@@ -70522,7 +70752,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "disallow importing from __mocks__ directory",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-mocks-import.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-mocks-import.md",
               },
               "messages": {
                 "noMocksImport": "Mocks should not be manually imported from a __mocks__ directory. Instead use `jest.mock` and import from the original module path.",
@@ -70604,7 +70834,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "disallow the use of certain matchers",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-restricted-matchers.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-restricted-matchers.md",
               },
               "messages": {
                 "restrictedChain": "use of {{ restriction }} is disallowed",
@@ -70633,7 +70863,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "disallow specific `vi.` methods",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-restricted-vi-methods.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-restricted-vi-methods.md",
               },
               "messages": {
                 "restrictedViMethod": "Use of `{{ restriction }}` is disallowed",
@@ -70664,7 +70894,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "disallow using `expect` outside of `it` or `test` blocks",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-standalone-expect.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-standalone-expect.md",
               },
               "messages": {
                 "noStandaloneExpect": "Expect must be called inside a test block",
@@ -70692,7 +70922,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "disallow using `test` as a prefix",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-test-prefixes.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-test-prefixes.md",
               },
               "fixable": "code",
               "messages": {
@@ -70709,7 +70939,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "disallow return statements in tests",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-test-return-statement.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-test-return-statement.md",
               },
               "messages": {
                 "noTestReturnStatement": "Return statements are not allowed in tests",
@@ -70725,7 +70955,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "deprecated": false,
               "docs": {
                 "description": "Enforce padding around `afterAll` blocks",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-after-all-blocks.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-after-all-blocks.md",
               },
               "fixable": "whitespace",
               "messages": {
@@ -70742,7 +70972,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "deprecated": false,
               "docs": {
                 "description": "Enforce padding around `afterEach` blocks",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-after-each-blocks.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-after-each-blocks.md",
               },
               "fixable": "whitespace",
               "messages": {
@@ -70759,7 +70989,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "deprecated": false,
               "docs": {
                 "description": "Enforce padding around vitest functions",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-all.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-all.md",
               },
               "fixable": "whitespace",
               "messages": {
@@ -70776,7 +71006,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "deprecated": false,
               "docs": {
                 "description": "Enforce padding around `beforeAll` blocks",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-before-all-blocks.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-before-all-blocks.md",
               },
               "fixable": "whitespace",
               "messages": {
@@ -70793,7 +71023,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "deprecated": false,
               "docs": {
                 "description": "Enforce padding around `beforeEach` blocks",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-before-each-blocks.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-before-each-blocks.md",
               },
               "fixable": "whitespace",
               "messages": {
@@ -70810,7 +71040,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "deprecated": false,
               "docs": {
                 "description": "Enforce padding around `describe` blocks",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-describe-blocks.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-describe-blocks.md",
               },
               "fixable": "whitespace",
               "messages": {
@@ -70827,7 +71057,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "deprecated": false,
               "docs": {
                 "description": "Enforce padding around `expect` groups",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-expect-groups.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-expect-groups.md",
               },
               "fixable": "whitespace",
               "messages": {
@@ -70844,7 +71074,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "deprecated": false,
               "docs": {
                 "description": "Enforce padding around afterAll blocks",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/padding-around-test-blocks.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-test-blocks.md",
               },
               "fixable": "whitespace",
               "messages": {
@@ -70861,7 +71091,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce using `toBeCalledWith()` or `toHaveBeenCalledWith()`",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-called-with.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-called-with.md",
               },
               "fixable": "code",
               "messages": {
@@ -70878,7 +71108,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce using the built-in comparison matchers",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-comparison-matcher.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-comparison-matcher.md",
               },
               "fixable": "code",
               "messages": {
@@ -70895,7 +71125,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce using `each` rather than manual loops",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-each.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-each.md",
               },
               "messages": {
                 "preferEach": "Prefer using `{{ fn }}.each` rather than a manual loop",
@@ -70911,7 +71141,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce using the built-in quality matchers",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-equality-matcher.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-equality-matcher.md",
               },
               "hasSuggestions": true,
               "messages": {
@@ -70935,7 +71165,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce using expect assertions instead of callbacks",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-expect-assertions.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-expect-assertions.md",
               },
               "hasSuggestions": true,
               "messages": {
@@ -70974,7 +71204,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce using `expect().resolves` over `expect(await ...)` syntax",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-expect-resolves.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-expect-resolves.md",
               },
               "fixable": "code",
               "messages": {
@@ -70991,7 +71221,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce having hooks in consistent order",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-hooks-in-order.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-hooks-in-order.md",
               },
               "messages": {
                 "reorderHooks": "`{{ currentHook }}` hooks should be before any `{{ previousHook }}` hooks",
@@ -71007,7 +71237,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce having hooks before any test cases",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-hooks-on-top.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-hooks-on-top.md",
               },
               "messages": {
                 "noHookOnTop": "Hooks should come before test cases",
@@ -71030,10 +71260,11 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce lowercase titles",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-lowercase-title.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-lowercase-title.md",
               },
               "fixable": "code",
               "messages": {
+                "fullyLowerCaseTitle": "`{{ method }}`s should be lowercase",
                 "lowerCaseTitle": "`{{ method }}`s should begin with lowercase",
               },
               "schema": [
@@ -71080,7 +71311,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce mock resolved/rejected shorthands for promises",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-mock-promise-shorthand.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-mock-promise-shorthand.md",
               },
               "fixable": "code",
               "messages": {
@@ -71099,7 +71330,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce including a hint with external snapshots",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-snapshot-hint.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-snapshot-hint.md",
               },
               "messages": {
                 "missingHint": "You should provide a hint for this snapshot",
@@ -71123,7 +71354,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce using `vi.spyOn`",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-spy-on.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-spy-on.md",
               },
               "fixable": "code",
               "messages": {
@@ -71140,7 +71371,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce strict equal over equal",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-strict-equal.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-strict-equal.md",
               },
               "hasSuggestions": true,
               "messages": {
@@ -71158,7 +71389,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce using toBe()",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be.md",
               },
               "fixable": "code",
               "messages": {
@@ -71179,7 +71410,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce using toBeFalsy()",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be-falsy.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be-falsy.md",
               },
               "fixable": "code",
               "messages": {
@@ -71196,7 +71427,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce using toBeObject()",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be-object.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be-object.md",
               },
               "fixable": "code",
               "messages": {
@@ -71213,7 +71444,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce using `toBeTruthy`",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be-truthy.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be-truthy.md",
               },
               "fixable": "code",
               "messages": {
@@ -71230,7 +71461,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce using toContain()",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-contain.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-contain.md",
               },
               "fixable": "code",
               "messages": {
@@ -71247,7 +71478,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce using toHaveLength()",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-have-length.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-have-length.md",
               },
               "fixable": "code",
               "messages": {
@@ -71264,7 +71495,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce using `test.todo`",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-todo.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-todo.md",
               },
               "fixable": "code",
               "messages": {
@@ -71286,7 +71517,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "require setup and teardown to be within a hook",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/require-hook.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-hook.md",
               },
               "messages": {
                 "useHook": "This should be done within a hook",
@@ -71315,7 +71546,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "require local Test Context for concurrent snapshot tests",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/require-local-test-context-for-concurrent-snapshots.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-local-test-context-for-concurrent-snapshots.md",
               },
               "messages": {
                 "requireLocalTestContext": "Use local Test Context instead",
@@ -71331,7 +71562,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "require toThrow() to be called with an error message",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/require-to-throw-message.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-to-throw-message.md",
               },
               "messages": {
                 "addErrorMessage": "Add an error message to {{ matcherName }}()",
@@ -71349,7 +71580,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce that all tests are in a top-level describe",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/require-top-level-describe.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-top-level-describe.md",
               },
               "messages": {
                 "tooManyDescribes": "There should not be more than {{ max }} describe{{ s }} at the top level",
@@ -71378,7 +71609,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce valid describe callback",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/valid-describe-callback.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/valid-describe-callback.md",
               },
               "messages": {
                 "nameAndCallback": "Describe requires a name and callback arguments",
@@ -71407,7 +71638,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce valid `expect()` usage",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/valid-expect.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/valid-expect.md",
               },
               "messages": {
                 "asyncMustBeAwaited": "Async assertions must be awaited{{orReturned}}",
@@ -71460,7 +71691,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
               "docs": {
                 "description": "enforce valid titles",
                 "recommended": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/valid-title.md",
+                "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/valid-title.md",
               },
               "fixable": "code",
               "messages": {
@@ -92132,6 +92363,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
       "style/comma-dangle": "off",
       "style/eol-last": "off",
       "ts/consistent-type-imports": "off",
+      "ts/explicit-function-return-type": "off",
       "ts/no-namespace": "off",
       "ts/no-redeclare": "off",
       "ts/no-require-imports": "off",
@@ -92396,21 +92628,23 @@ If your function does not access `this`, you can annotate it with `this: void`, 
   },
   {
     "files": [
-      "scripts/**/*.?([cm])[jt]s?(x)",
+      "**/scripts/**/*.?([cm])[jt]s?(x)",
     ],
     "name": "antfu/disables/scripts",
     "rules": {
+      "antfu/no-top-level-await": "off",
       "no-console": "off",
       "ts/explicit-function-return-type": "off",
     },
   },
   {
     "files": [
-      "cli/**/*.?([cm])[jt]s?(x)",
-      "cli.?([cm])[jt]s?(x)",
+      "**/cli/**/*.?([cm])[jt]s?(x)",
+      "**/cli.?([cm])[jt]s?(x)",
     ],
     "name": "antfu/disables/cli",
     "rules": {
+      "antfu/no-top-level-await": "off",
       "no-console": "off",
     },
   },
@@ -92443,6 +92677,7 @@ If your function does not access `this`, you can annotate it with `this: void`, 
     ],
     "name": "antfu/disables/test",
     "rules": {
+      "antfu/no-top-level-await": "off",
       "no-unused-expressions": "off",
     },
   },
@@ -92454,6 +92689,18 @@ If your function does not access `this`, you can annotate it with `this: void`, 
     "name": "antfu/disables/cjs",
     "rules": {
       "ts/no-require-imports": "off",
+    },
+  },
+  {
+    "files": [
+      "**/*.config.?([cm])[jt]s?(x)",
+      "**/*.config.*.?([cm])[jt]s?(x)",
+    ],
+    "name": "antfu/disables/config-files",
+    "rules": {
+      "antfu/no-top-level-await": "off",
+      "no-console": "off",
+      "ts/explicit-function-return-type": "off",
     },
   },
   {
