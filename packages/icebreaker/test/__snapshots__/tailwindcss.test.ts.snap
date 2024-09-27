@@ -7945,13 +7945,13 @@
                 "examples": {
                   "meta": {
                     "name": "eslint-plugin-jsdoc/processor",
-                    "version": "50.2.5",
+                    "version": "50.3.0",
                   },
                   "processors": {
                     "examples": {
                       "meta": {
                         "name": "eslint-plugin-jsdoc/preprocessor",
-                        "version": "50.2.5",
+                        "version": "50.3.0",
                       },
                       "postprocess": [Function],
                       "preprocess": [Function],
@@ -8008,13 +8008,13 @@
                 "examples": {
                   "meta": {
                     "name": "eslint-plugin-jsdoc/processor",
-                    "version": "50.2.5",
+                    "version": "50.3.0",
                   },
                   "processors": {
                     "examples": {
                       "meta": {
                         "name": "eslint-plugin-jsdoc/preprocessor",
-                        "version": "50.2.5",
+                        "version": "50.3.0",
                       },
                       "postprocess": [Function],
                       "preprocess": [Function],
@@ -8053,13 +8053,13 @@
                 "examples": {
                   "meta": {
                     "name": "eslint-plugin-jsdoc/processor",
-                    "version": "50.2.5",
+                    "version": "50.3.0",
                   },
                   "processors": {
                     "examples": {
                       "meta": {
                         "name": "eslint-plugin-jsdoc/preprocessor",
-                        "version": "50.2.5",
+                        "version": "50.3.0",
                       },
                       "postprocess": [Function],
                       "preprocess": [Function],
@@ -11002,6 +11002,9 @@
                         "type": "string",
                       },
                       "type": "array",
+                    },
+                    "ignoreWhenAllParamsMissing": {
+                      "type": "boolean",
                     },
                     "unnamedRootBase": {
                       "items": {
@@ -29516,7 +29519,7 @@
       "command": {
         "meta": {
           "name": "command",
-          "version": "0.2.5",
+          "version": "0.2.6",
         },
         "rules": {
           "command": {
@@ -72832,6 +72835,8 @@ If your function does not access `this`, you can annotate it with `this: void`, 
     ],
     "name": "antfu/test/rules",
     "rules": {
+      "antfu/no-top-level-await": "off",
+      "no-unused-expressions": "off",
       "node/prefer-global/process": "off",
       "test/consistent-test-it": [
         "error",
@@ -93719,16 +93724,6 @@ If your function does not access `this`, you can annotate it with `this: void`, 
       "import/no-duplicates": "off",
       "no-restricted-syntax": "off",
       "unused-imports/no-unused-vars": "off",
-    },
-  },
-  {
-    "files": [
-      "**/*.{test,spec}.([tj])s?(x)",
-    ],
-    "name": "antfu/disables/test",
-    "rules": {
-      "antfu/no-top-level-await": "off",
-      "no-unused-expressions": "off",
     },
   },
   {
