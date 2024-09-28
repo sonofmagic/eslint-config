@@ -2,7 +2,7 @@ import type { Linter } from 'eslint'
 import type { UserConfigItem, UserDefinedOptions } from './types'
 import { interopDefault } from './antfu'
 
-export function getPresets(options: UserDefinedOptions) {
+export function getPresets(options: UserDefinedOptions, mode?: 'legacy') {
   const {
     tailwindcss: enableTailwindcss,
     mdx: enableMDX,
@@ -20,6 +20,11 @@ export function getPresets(options: UserDefinedOptions) {
     'no-unused-vars': 'off',
     'unused-imports/no-unused-vars': 'off',
 
+  }
+  const isLegacy = mode === 'legacy'
+  // legacy preset
+  if (isLegacy) {
+    presetRules['perfectionist/sort-imports'] = 'off'
   }
   if (enableVue) {
     Object.assign(presetRules, {

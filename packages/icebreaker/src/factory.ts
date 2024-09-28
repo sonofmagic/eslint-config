@@ -9,7 +9,7 @@ import { defu } from 'defu'
 import { antfu } from './antfu'
 import { getPresets } from './preset'
 
-export function getRestConfigAndPresets(options?: UserDefinedOptions): [OptionsConfig & TypedFlatConfigItem, ...UserConfigItem[]] {
+export function getRestConfigAndPresets(options?: UserDefinedOptions, mode?: 'legacy'): [OptionsConfig & TypedFlatConfigItem, ...UserConfigItem[]] {
   const opts = defu<UserDefinedOptions, UserDefinedOptions[]>(options, {
     formatters: true,
     typescript: {
@@ -39,7 +39,9 @@ export function getRestConfigAndPresets(options?: UserDefinedOptions): [OptionsC
       },
     },
   })
-  const presets = getPresets(opts)
+
+  const presets = getPresets(opts, mode)
+
   return [opts, ...presets]
 }
 
@@ -49,4 +51,11 @@ export function icebreaker(
   ...userConfigs: UserConfigItem[]
 ): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
   return antfu(...getRestConfigAndPresets(options), ...userConfigs)
+}
+
+export function icebreakerLegacy(
+  options: UserDefinedOptions = {},
+  ...userConfigs: UserConfigItem[]
+) {
+  return icebreaker(...getRestConfigAndPresets(options, 'legacy'), ...userConfigs)
 }

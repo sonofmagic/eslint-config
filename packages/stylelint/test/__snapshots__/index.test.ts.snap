@@ -7,6 +7,16 @@ exports[`index > common 1`] = `
     "stylelint-config-recommended-vue/scss",
   ],
   "overrides": [],
+  "rules": {
+    "unit-no-unknown": [
+      true,
+      {
+        "ignoreUnits": [
+          "rpx",
+        ],
+      },
+    ],
+  },
 }
 `;
 

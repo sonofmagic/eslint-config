@@ -1,5 +1,5 @@
-import { defu } from 'defu'
 import type { Config } from 'stylelint'
+import { defu } from 'defu'
 
 function createDefaultConfig(): Config {
   return {
@@ -18,6 +18,15 @@ function createDefaultConfig(): Config {
       //   },
       // },
     ],
+    rules: {
+      // https://stylelint.io/user-guide/rules/unit-no-unknown/#ignoreunits-regex-regex-string
+      'unit-no-unknown': [
+        true,
+        {
+          ignoreUnits: ['rpx'],
+        },
+      ],
+    },
   }
 }
 
