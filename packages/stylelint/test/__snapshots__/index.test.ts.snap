@@ -5,9 +5,11 @@ exports[`index > common 1`] = `
   "extends": [
     "stylelint-config-standard-scss",
     "stylelint-config-recommended-vue/scss",
+    "stylelint-config-recess-order",
   ],
   "overrides": [],
   "rules": {
+    "scss/selector-no-redundant-nesting-selector": true,
     "unit-no-unknown": [
       true,
       {

@@ -9,6 +9,7 @@ function createDefaultConfig(): Config {
       // https://github.com/ota-meshi/stylelint-config-recommended-vue/blob/main/lib/index.js
       // https://github.com/ota-meshi/stylelint-config-recommended-vue/blob/main/scss/index.js
       'stylelint-config-recommended-vue/scss',
+      'stylelint-config-recess-order',
     ], // .map(module => require.resolve(module)),
     overrides: [
       // {
@@ -26,6 +27,7 @@ function createDefaultConfig(): Config {
           ignoreUnits: ['rpx'],
         },
       ],
+      'scss/selector-no-redundant-nesting-selector': true,
     },
   }
 }
