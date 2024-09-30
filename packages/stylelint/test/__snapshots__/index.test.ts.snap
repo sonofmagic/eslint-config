@@ -9,6 +9,16 @@ exports[`index > common 1`] = `
   ],
   "overrides": [],
   "rules": {
+    "scss/at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "config",
+          "unocss",
+        ],
+      },
+    ],
     "scss/selector-no-redundant-nesting-selector": true,
     "unit-no-unknown": [
       true,
