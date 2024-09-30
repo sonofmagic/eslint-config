@@ -11,3 +11,52 @@ div {
   transition: opacity 300ms ease;
   width: 320px;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@config "./tailwind.site.config.js";
+@unocss preflights;
+@unocss default;
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+}
+
+@layer components {
+  .btn-blue {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  }
+}
+
+@layer utilities {
+  .filter-none {
+    filter: none;
+  }
+
+  .filter-grayscale {
+    filter: grayscale(100%);
+  }
+}
+
+.content-area {
+  height: calc(100vh - theme(spacing[2.5]));
+}
+
+.content-area1 {
+  height: calc(100vh - theme(spacing.12));
+}
+
+.btn-blue {
+  background-color: theme(colors.blue.500);
+}
+
+@media screen(sm) {
+  /* ... */
+}

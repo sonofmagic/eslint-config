@@ -28,6 +28,18 @@ function createDefaultConfig(): Config {
         },
       ],
       'scss/selector-no-redundant-nesting-selector': true,
+      'scss/at-rule-no-unknown': [
+        true,
+        {
+          ignoreAtRules: [
+            // tailwindcss
+            'tailwind',
+            'config',
+            // unocss
+            'unocss',
+          ],
+        },
+      ],
     },
   }
 }
