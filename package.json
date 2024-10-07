@@ -48,7 +48,7 @@
     "@eslint/config-inspector": "^0.5.4",
     "@eslint/eslintrc": "^3.1.0",
     "@icebreakers/eslint-config": "^0.5.4",
-    "@icebreakers/monorepo": "^0.5.7",
+    "@icebreakers/monorepo": "^0.6.0",
     "@icebreakers/stylelint-config": "^0.1.1",
     "@types/eslint__eslintrc": "^2.1.2",
     "@types/fs-extra": "^11.0.4",
