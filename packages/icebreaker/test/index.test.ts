@@ -1,9 +1,10 @@
+import os from 'node:os'
 import { icebreaker } from '@/index'
 import ci from 'ci-info'
 import { ESLint } from 'eslint'
 import path from 'pathe'
 
-describe.skipIf(ci.isCI)('index', () => {
+describe.skipIf(ci.isCI || os.platform() === 'win32')('index', () => {
   it('mdx', async () => {
     const plugins = await icebreaker({
       mdx: true,
@@ -27,6 +28,13 @@ describe.skipIf(ci.isCI)('index', () => {
   //   console.log(lint)
   //   lint.outputFixes()
   // })
+})
+
+describe('eslint', () => {
+  it('default', async () => {
+    const plugins = await icebreaker()
+    expect(plugins).toMatchFileSnapshot('./__snapshots__/default.test.ts.snap')
+  })
 
   it('eslint', async () => {
     const lint = new ESLint({

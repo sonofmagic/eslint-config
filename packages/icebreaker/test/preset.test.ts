@@ -1,22 +1,22 @@
-import { getRestConfigAndPresets } from '@/factory'
+import { getPresets } from '@/preset'
 
 describe('presets', () => {
   it('c', () => {
-    expect(getRestConfigAndPresets()).toMatchSnapshot()
+    expect(getPresets()).toMatchSnapshot()
   })
   it('c0', () => {
-    expect(getRestConfigAndPresets({ a11y: true })).toMatchSnapshot()
+    expect(getPresets({ a11y: true })).toMatchSnapshot()
   })
   it('c1', () => {
-    expect(getRestConfigAndPresets({ vue: true })).toMatchSnapshot()
+    expect(getPresets({ vue: true })).toMatchSnapshot()
   })
   it('c2', () => {
-    expect(getRestConfigAndPresets({ vue: {
+    expect(getPresets({ vue: {
       vueVersion: 3,
     } })).toMatchSnapshot()
   })
   it('c3', () => {
-    expect(getRestConfigAndPresets({
+    expect(getPresets({
       vue: {
         vueVersion: 2,
       },

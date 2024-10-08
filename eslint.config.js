@@ -3,6 +3,7 @@ import { icebreaker } from './packages/icebreaker/dist/index.js'
 
 export default icebreaker(
   {
+    vue: true,
     ignores: ['**/fixtures/**'],
   },
 )

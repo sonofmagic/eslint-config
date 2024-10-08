@@ -4,6 +4,18 @@ exports[`presets > c 1`] = `
 [
   {
     "formatters": true,
+    "javascript": {
+      "overrides": {
+        "curly": [
+          "error",
+          "all",
+        ],
+        "no-console": [
+          "warn",
+        ],
+        "no-unused-vars": "off",
+      },
+    },
     "typescript": {
       "overrides": {
         "ts/ban-ts-comment": "off",
@@ -33,14 +45,6 @@ exports[`presets > c 1`] = `
   },
   {
     "rules": {
-      "curly": [
-        "error",
-        "all",
-      ],
-      "no-console": [
-        "warn",
-      ],
-      "no-unused-vars": "off",
       "unused-imports/no-unused-vars": "off",
     },
   },
@@ -52,6 +56,18 @@ exports[`presets > c0 1`] = `
   {
     "a11y": true,
     "formatters": true,
+    "javascript": {
+      "overrides": {
+        "curly": [
+          "error",
+          "all",
+        ],
+        "no-console": [
+          "warn",
+        ],
+        "no-unused-vars": "off",
+      },
+    },
     "typescript": {
       "overrides": {
         "ts/ban-ts-comment": "off",
@@ -81,14 +97,6 @@ exports[`presets > c0 1`] = `
   },
   {
     "rules": {
-      "curly": [
-        "error",
-        "all",
-      ],
-      "no-console": [
-        "warn",
-      ],
-      "no-unused-vars": "off",
       "unused-imports/no-unused-vars": "off",
     },
   },
@@ -99,6 +107,18 @@ exports[`presets > c1 1`] = `
 [
   {
     "formatters": true,
+    "javascript": {
+      "overrides": {
+        "curly": [
+          "error",
+          "all",
+        ],
+        "no-console": [
+          "warn",
+        ],
+        "no-unused-vars": "off",
+      },
+    },
     "typescript": {
       "overrides": {
         "ts/ban-ts-comment": "off",
@@ -125,23 +145,27 @@ exports[`presets > c1 1`] = `
         "ts/prefer-ts-expect-error": "off",
       },
     },
-    "vue": true,
+    "vue": {
+      "overrides": {
+        "vue/attribute-hyphenation": "off",
+        "vue/custom-event-name-casing": "off",
+        "vue/no-mutating-props": "warn",
+        "vue/no-useless-v-bind": [
+          "error",
+          {
+            "ignoreIncludesComment": false,
+            "ignoreStringEscape": true,
+          },
+        ],
+        "vue/no-v-for-template-key": "off",
+        "vue/no-v-for-template-key-on-child": "error",
+        "vue/v-on-event-hyphenation": "off",
+      },
+    },
   },
   {
     "rules": {
-      "curly": [
-        "error",
-        "all",
-      ],
-      "no-console": [
-        "warn",
-      ],
-      "no-unused-vars": "off",
       "unused-imports/no-unused-vars": "off",
-      "vue/attribute-hyphenation": "off",
-      "vue/custom-event-name-casing": "off",
-      "vue/no-mutating-props": "warn",
-      "vue/v-on-event-hyphenation": "off",
     },
   },
 ]
@@ -151,6 +175,18 @@ exports[`presets > c2 1`] = `
 [
   {
     "formatters": true,
+    "javascript": {
+      "overrides": {
+        "curly": [
+          "error",
+          "all",
+        ],
+        "no-console": [
+          "warn",
+        ],
+        "no-unused-vars": "off",
+      },
+    },
     "typescript": {
       "overrides": {
         "ts/ban-ts-comment": "off",
@@ -178,26 +214,27 @@ exports[`presets > c2 1`] = `
       },
     },
     "vue": {
+      "overrides": {
+        "vue/attribute-hyphenation": "off",
+        "vue/custom-event-name-casing": "off",
+        "vue/no-mutating-props": "warn",
+        "vue/no-useless-v-bind": [
+          "error",
+          {
+            "ignoreIncludesComment": false,
+            "ignoreStringEscape": true,
+          },
+        ],
+        "vue/no-v-for-template-key": "off",
+        "vue/no-v-for-template-key-on-child": "error",
+        "vue/v-on-event-hyphenation": "off",
+      },
       "vueVersion": 3,
     },
   },
   {
     "rules": {
-      "curly": [
-        "error",
-        "all",
-      ],
-      "no-console": [
-        "warn",
-      ],
-      "no-unused-vars": "off",
       "unused-imports/no-unused-vars": "off",
-      "vue/attribute-hyphenation": "off",
-      "vue/custom-event-name-casing": "off",
-      "vue/no-mutating-props": "warn",
-      "vue/no-v-for-template-key": "off",
-      "vue/no-v-for-template-key-on-child": "error",
-      "vue/v-on-event-hyphenation": "off",
     },
   },
 ]
@@ -207,6 +244,18 @@ exports[`presets > c3 1`] = `
 [
   {
     "formatters": true,
+    "javascript": {
+      "overrides": {
+        "curly": [
+          "error",
+          "all",
+        ],
+        "no-console": [
+          "warn",
+        ],
+        "no-unused-vars": "off",
+      },
+    },
     "typescript": {
       "overrides": {
         "ts/ban-ts-comment": "off",
@@ -234,27 +283,28 @@ exports[`presets > c3 1`] = `
       },
     },
     "vue": {
+      "overrides": {
+        "vue/attribute-hyphenation": "off",
+        "vue/custom-event-name-casing": "off",
+        "vue/no-deprecated-v-bind-sync": "off",
+        "vue/no-mutating-props": "warn",
+        "vue/no-useless-v-bind": [
+          "error",
+          {
+            "ignoreIncludesComment": false,
+            "ignoreStringEscape": true,
+          },
+        ],
+        "vue/no-v-for-template-key": "error",
+        "vue/no-v-for-template-key-on-child": "off",
+        "vue/v-on-event-hyphenation": "off",
+      },
       "vueVersion": 2,
     },
   },
   {
     "rules": {
-      "curly": [
-        "error",
-        "all",
-      ],
-      "no-console": [
-        "warn",
-      ],
-      "no-unused-vars": "off",
       "unused-imports/no-unused-vars": "off",
-      "vue/attribute-hyphenation": "off",
-      "vue/custom-event-name-casing": "off",
-      "vue/no-deprecated-v-bind-sync": "off",
-      "vue/no-mutating-props": "warn",
-      "vue/no-v-for-template-key": "error",
-      "vue/no-v-for-template-key-on-child": "off",
-      "vue/v-on-event-hyphenation": "off",
     },
   },
 ]
