@@ -1,0 +1,747 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`lint > common > index.css 1`] = `
+{
+  "errorCount": 0,
+  "fatalErrorCount": 0,
+  "filePath": "/Users/icebreaker/Documents/GitHub/eslint-config/apps/mock/src/index.css",
+  "fixableErrorCount": 0,
+  "fixableWarningCount": 0,
+  "messages": [],
+  "suppressedMessages": [],
+  "usedDeprecatedRules": [],
+  "warningCount": 0,
+}
+`;
+
+exports[`lint > common > index.js 1`] = `
+{
+  "errorCount": 3,
+  "fatalErrorCount": 0,
+  "filePath": "/Users/icebreaker/Documents/GitHub/eslint-config/apps/mock/src/index.js",
+  "fixableErrorCount": 0,
+  "fixableWarningCount": 0,
+  "messages": [
+    {
+      "column": 21,
+      "endColumn": 2,
+      "endLine": 9,
+      "line": 7,
+      "message": "Empty block statement.",
+      "messageId": "unexpected",
+      "nodeType": "BlockStatement",
+      "ruleId": "no-empty",
+      "severity": 2,
+      "suggestions": [
+        {
+          "data": {
+            "type": "block",
+          },
+          "desc": "Add comment inside empty block statement.",
+          "fix": {
+            "range": [
+              80,
+              82,
+            ],
+            "text": " /* empty */ ",
+          },
+          "messageId": "suggestComment",
+        },
+      ],
+    },
+    {
+      "column": 1,
+      "endColumn": 6,
+      "endLine": 13,
+      "line": 13,
+      "message": "Expected an assignment or function call and instead saw an expression.",
+      "messageId": "unusedExpression",
+      "nodeType": "ExpressionStatement",
+      "ruleId": "no-unused-expressions",
+      "severity": 2,
+    },
+    {
+      "column": 1,
+      "endColumn": 11,
+      "endLine": 21,
+      "line": 21,
+      "message": "Do not use top-level await",
+      "messageId": "NoTopLevelAwait",
+      "nodeType": "AwaitExpression",
+      "ruleId": "antfu/no-top-level-await",
+      "severity": 2,
+    },
+  ],
+  "source": "function getCode() {
+  return undefined
+}
+
+const x = true
+
+if (x && getCode()) {
+
+}
+
+getCode()
+x && getCode()
+1 + 1
+
+const task = new Promise((r) => {
+  setTimeout(() => {
+    r(undefined)
+  }, 1000)
+})
+
+await task
+",
+  "suppressedMessages": [],
+  "usedDeprecatedRules": [],
+  "warningCount": 0,
+}
+`;
+
+exports[`lint > common > index.scss 1`] = `
+{
+  "errorCount": 0,
+  "fatalErrorCount": 0,
+  "filePath": "/Users/icebreaker/Documents/GitHub/eslint-config/apps/mock/src/index.scss",
+  "fixableErrorCount": 0,
+  "fixableWarningCount": 0,
+  "messages": [],
+  "suppressedMessages": [],
+  "usedDeprecatedRules": [],
+  "warningCount": 0,
+}
+`;
+
+exports[`lint > common > index.ts 1`] = `
+{
+  "errorCount": 3,
+  "fatalErrorCount": 0,
+  "filePath": "/Users/icebreaker/Documents/GitHub/eslint-config/apps/mock/src/index.ts",
+  "fixableErrorCount": 0,
+  "fixableWarningCount": 0,
+  "messages": [
+    {
+      "column": 21,
+      "endColumn": 2,
+      "endLine": 9,
+      "line": 7,
+      "message": "Empty block statement.",
+      "messageId": "unexpected",
+      "nodeType": "BlockStatement",
+      "ruleId": "no-empty",
+      "severity": 2,
+      "suggestions": [
+        {
+          "data": {
+            "type": "block",
+          },
+          "desc": "Add comment inside empty block statement.",
+          "fix": {
+            "range": [
+              80,
+              82,
+            ],
+            "text": " /* empty */ ",
+          },
+          "messageId": "suggestComment",
+        },
+      ],
+    },
+    {
+      "column": 1,
+      "endColumn": 6,
+      "endLine": 13,
+      "line": 13,
+      "message": "Expected an assignment or function call and instead saw an expression.",
+      "messageId": "unusedExpression",
+      "nodeType": "ExpressionStatement",
+      "ruleId": "ts/no-unused-expressions",
+      "severity": 2,
+    },
+    {
+      "column": 1,
+      "endColumn": 11,
+      "endLine": 21,
+      "line": 21,
+      "message": "Do not use top-level await",
+      "messageId": "NoTopLevelAwait",
+      "nodeType": "AwaitExpression",
+      "ruleId": "antfu/no-top-level-await",
+      "severity": 2,
+    },
+  ],
+  "source": "function getCode() {
+  return undefined
+}
+
+const x = true
+
+if (x && getCode()) {
+
+}
+
+getCode()
+x && getCode()
+1 + 1
+
+const task = new Promise((r) => {
+  setTimeout(() => {
+    r(undefined)
+  }, 1000)
+})
+
+await task
+",
+  "suppressedMessages": [],
+  "usedDeprecatedRules": [],
+  "warningCount": 0,
+}
+`;
+
+exports[`lint > common > index.tsx 1`] = `
+{
+  "errorCount": 3,
+  "fatalErrorCount": 0,
+  "filePath": "/Users/icebreaker/Documents/GitHub/eslint-config/apps/mock/src/index.tsx",
+  "fixableErrorCount": 0,
+  "fixableWarningCount": 0,
+  "messages": [
+    {
+      "column": 21,
+      "endColumn": 2,
+      "endLine": 9,
+      "line": 7,
+      "message": "Empty block statement.",
+      "messageId": "unexpected",
+      "nodeType": "BlockStatement",
+      "ruleId": "no-empty",
+      "severity": 2,
+      "suggestions": [
+        {
+          "data": {
+            "type": "block",
+          },
+          "desc": "Add comment inside empty block statement.",
+          "fix": {
+            "range": [
+              80,
+              82,
+            ],
+            "text": " /* empty */ ",
+          },
+          "messageId": "suggestComment",
+        },
+      ],
+    },
+    {
+      "column": 1,
+      "endColumn": 6,
+      "endLine": 13,
+      "line": 13,
+      "message": "Expected an assignment or function call and instead saw an expression.",
+      "messageId": "unusedExpression",
+      "nodeType": "ExpressionStatement",
+      "ruleId": "ts/no-unused-expressions",
+      "severity": 2,
+    },
+    {
+      "column": 1,
+      "endColumn": 11,
+      "endLine": 21,
+      "line": 21,
+      "message": "Do not use top-level await",
+      "messageId": "NoTopLevelAwait",
+      "nodeType": "AwaitExpression",
+      "ruleId": "antfu/no-top-level-await",
+      "severity": 2,
+    },
+  ],
+  "source": "function getCode() {
+  return undefined
+}
+
+const x = true
+
+if (x && getCode()) {
+
+}
+
+getCode()
+x && getCode()
+1 + 1
+
+const task = new Promise((r) => {
+  setTimeout(() => {
+    r(undefined)
+  }, 1000)
+})
+
+await task
+",
+  "suppressedMessages": [],
+  "usedDeprecatedRules": [],
+  "warningCount": 0,
+}
+`;
+
+exports[`lint > common > index.vue 1`] = `
+{
+  "errorCount": 4,
+  "fatalErrorCount": 0,
+  "filePath": "/Users/icebreaker/Documents/GitHub/eslint-config/apps/mock/src/index.vue",
+  "fixableErrorCount": 0,
+  "fixableWarningCount": 0,
+  "messages": [
+    {
+      "column": 7,
+      "endColumn": 9,
+      "endLine": 4,
+      "line": 4,
+      "message": "'xx' is assigned a value but never used. Allowed unused vars must match /^_/u.",
+      "messageId": "unusedVar",
+      "nodeType": null,
+      "ruleId": "ts/no-unused-vars",
+      "severity": 2,
+    },
+    {
+      "column": 7,
+      "endColumn": 9,
+      "endLine": 5,
+      "line": 5,
+      "message": "'yy' is assigned a value but never used. Allowed unused vars must match /^_/u.",
+      "messageId": "unusedVar",
+      "nodeType": null,
+      "ruleId": "ts/no-unused-vars",
+      "severity": 2,
+    },
+    {
+      "column": 14,
+      "endColumn": 19,
+      "endLine": 10,
+      "line": 10,
+      "message": "'xxx' is defined as ref, but never used.",
+      "messageId": "unused",
+      "nodeType": "VLiteral",
+      "ruleId": "vue/no-unused-refs",
+      "severity": 2,
+    },
+    {
+      "column": 10,
+      "endColumn": 36,
+      "endLine": 12,
+      "line": 12,
+      "message": "Unexpected \`v-bind\` with a string literal value.",
+      "messageId": "unexpected",
+      "nodeType": "VAttribute",
+      "ruleId": "vue/no-useless-v-bind",
+      "severity": 2,
+    },
+  ],
+  "source": "<script setup lang="ts">
+import { ref } from 'vue'
+
+const xx = ref()
+const yy = ref()
+</script>
+
+<template>
+  <div>
+    <div ref="xxx" :label="'Curt. Exclusive\\nPrice'" />
+    <div label="Curt. Exclusive\\nPrice" />
+    <div :foo="'bar' /* comment */" />
+  </div>
+</template>
+
+<style lang="scss" scoped>
+a {
+  grid-template-areas:
+    'a a'
+    'b b b';
+  colr: hsl(20deg 10% 30% / 5%);
+}
+
+a {
+  --Foo: 1rem;
+}
+</style>
+",
+  "suppressedMessages": [],
+  "usedDeprecatedRules": [],
+  "warningCount": 0,
+}
+`;
+
+exports[`lint > legacy > index.css 1`] = `
+{
+  "errorCount": 0,
+  "fatalErrorCount": 0,
+  "filePath": "/Users/icebreaker/Documents/GitHub/eslint-config/apps/mock/src/index.css",
+  "fixableErrorCount": 0,
+  "fixableWarningCount": 0,
+  "messages": [],
+  "suppressedMessages": [],
+  "usedDeprecatedRules": [],
+  "warningCount": 0,
+}
+`;
+
+exports[`lint > legacy > index.js 1`] = `
+{
+  "errorCount": 3,
+  "fatalErrorCount": 0,
+  "filePath": "/Users/icebreaker/Documents/GitHub/eslint-config/apps/mock/src/index.js",
+  "fixableErrorCount": 0,
+  "fixableWarningCount": 0,
+  "messages": [
+    {
+      "column": 21,
+      "endColumn": 2,
+      "endLine": 9,
+      "line": 7,
+      "message": "Empty block statement.",
+      "messageId": "unexpected",
+      "nodeType": "BlockStatement",
+      "ruleId": "no-empty",
+      "severity": 2,
+      "suggestions": [
+        {
+          "data": {
+            "type": "block",
+          },
+          "desc": "Add comment inside empty block statement.",
+          "fix": {
+            "range": [
+              80,
+              82,
+            ],
+            "text": " /* empty */ ",
+          },
+          "messageId": "suggestComment",
+        },
+      ],
+    },
+    {
+      "column": 1,
+      "endColumn": 6,
+      "endLine": 13,
+      "line": 13,
+      "message": "Expected an assignment or function call and instead saw an expression.",
+      "messageId": "unusedExpression",
+      "nodeType": "ExpressionStatement",
+      "ruleId": "no-unused-expressions",
+      "severity": 2,
+    },
+    {
+      "column": 1,
+      "endColumn": 11,
+      "endLine": 21,
+      "line": 21,
+      "message": "Do not use top-level await",
+      "messageId": "NoTopLevelAwait",
+      "nodeType": "AwaitExpression",
+      "ruleId": "antfu/no-top-level-await",
+      "severity": 2,
+    },
+  ],
+  "source": "function getCode() {
+  return undefined
+}
+
+const x = true
+
+if (x && getCode()) {
+
+}
+
+getCode()
+x && getCode()
+1 + 1
+
+const task = new Promise((r) => {
+  setTimeout(() => {
+    r(undefined)
+  }, 1000)
+})
+
+await task
+",
+  "suppressedMessages": [],
+  "usedDeprecatedRules": [],
+  "warningCount": 0,
+}
+`;
+
+exports[`lint > legacy > index.scss 1`] = `
+{
+  "errorCount": 0,
+  "fatalErrorCount": 0,
+  "filePath": "/Users/icebreaker/Documents/GitHub/eslint-config/apps/mock/src/index.scss",
+  "fixableErrorCount": 0,
+  "fixableWarningCount": 0,
+  "messages": [],
+  "suppressedMessages": [],
+  "usedDeprecatedRules": [],
+  "warningCount": 0,
+}
+`;
+
+exports[`lint > legacy > index.ts 1`] = `
+{
+  "errorCount": 3,
+  "fatalErrorCount": 0,
+  "filePath": "/Users/icebreaker/Documents/GitHub/eslint-config/apps/mock/src/index.ts",
+  "fixableErrorCount": 0,
+  "fixableWarningCount": 0,
+  "messages": [
+    {
+      "column": 21,
+      "endColumn": 2,
+      "endLine": 9,
+      "line": 7,
+      "message": "Empty block statement.",
+      "messageId": "unexpected",
+      "nodeType": "BlockStatement",
+      "ruleId": "no-empty",
+      "severity": 2,
+      "suggestions": [
+        {
+          "data": {
+            "type": "block",
+          },
+          "desc": "Add comment inside empty block statement.",
+          "fix": {
+            "range": [
+              80,
+              82,
+            ],
+            "text": " /* empty */ ",
+          },
+          "messageId": "suggestComment",
+        },
+      ],
+    },
+    {
+      "column": 1,
+      "endColumn": 6,
+      "endLine": 13,
+      "line": 13,
+      "message": "Expected an assignment or function call and instead saw an expression.",
+      "messageId": "unusedExpression",
+      "nodeType": "ExpressionStatement",
+      "ruleId": "ts/no-unused-expressions",
+      "severity": 2,
+    },
+    {
+      "column": 1,
+      "endColumn": 11,
+      "endLine": 21,
+      "line": 21,
+      "message": "Do not use top-level await",
+      "messageId": "NoTopLevelAwait",
+      "nodeType": "AwaitExpression",
+      "ruleId": "antfu/no-top-level-await",
+      "severity": 2,
+    },
+  ],
+  "source": "function getCode() {
+  return undefined
+}
+
+const x = true
+
+if (x && getCode()) {
+
+}
+
+getCode()
+x && getCode()
+1 + 1
+
+const task = new Promise((r) => {
+  setTimeout(() => {
+    r(undefined)
+  }, 1000)
+})
+
+await task
+",
+  "suppressedMessages": [],
+  "usedDeprecatedRules": [],
+  "warningCount": 0,
+}
+`;
+
+exports[`lint > legacy > index.tsx 1`] = `
+{
+  "errorCount": 3,
+  "fatalErrorCount": 0,
+  "filePath": "/Users/icebreaker/Documents/GitHub/eslint-config/apps/mock/src/index.tsx",
+  "fixableErrorCount": 0,
+  "fixableWarningCount": 0,
+  "messages": [
+    {
+      "column": 21,
+      "endColumn": 2,
+      "endLine": 9,
+      "line": 7,
+      "message": "Empty block statement.",
+      "messageId": "unexpected",
+      "nodeType": "BlockStatement",
+      "ruleId": "no-empty",
+      "severity": 2,
+      "suggestions": [
+        {
+          "data": {
+            "type": "block",
+          },
+          "desc": "Add comment inside empty block statement.",
+          "fix": {
+            "range": [
+              80,
+              82,
+            ],
+            "text": " /* empty */ ",
+          },
+          "messageId": "suggestComment",
+        },
+      ],
+    },
+    {
+      "column": 1,
+      "endColumn": 6,
+      "endLine": 13,
+      "line": 13,
+      "message": "Expected an assignment or function call and instead saw an expression.",
+      "messageId": "unusedExpression",
+      "nodeType": "ExpressionStatement",
+      "ruleId": "ts/no-unused-expressions",
+      "severity": 2,
+    },
+    {
+      "column": 1,
+      "endColumn": 11,
+      "endLine": 21,
+      "line": 21,
+      "message": "Do not use top-level await",
+      "messageId": "NoTopLevelAwait",
+      "nodeType": "AwaitExpression",
+      "ruleId": "antfu/no-top-level-await",
+      "severity": 2,
+    },
+  ],
+  "source": "function getCode() {
+  return undefined
+}
+
+const x = true
+
+if (x && getCode()) {
+
+}
+
+getCode()
+x && getCode()
+1 + 1
+
+const task = new Promise((r) => {
+  setTimeout(() => {
+    r(undefined)
+  }, 1000)
+})
+
+await task
+",
+  "suppressedMessages": [],
+  "usedDeprecatedRules": [],
+  "warningCount": 0,
+}
+`;
+
+exports[`lint > legacy > index.vue 1`] = `
+{
+  "errorCount": 4,
+  "fatalErrorCount": 0,
+  "filePath": "/Users/icebreaker/Documents/GitHub/eslint-config/apps/mock/src/index.vue",
+  "fixableErrorCount": 0,
+  "fixableWarningCount": 0,
+  "messages": [
+    {
+      "column": 7,
+      "endColumn": 9,
+      "endLine": 4,
+      "line": 4,
+      "message": "'xx' is assigned a value but never used. Allowed unused vars must match /^_/u.",
+      "messageId": "unusedVar",
+      "nodeType": null,
+      "ruleId": "ts/no-unused-vars",
+      "severity": 2,
+    },
+    {
+      "column": 7,
+      "endColumn": 9,
+      "endLine": 5,
+      "line": 5,
+      "message": "'yy' is assigned a value but never used. Allowed unused vars must match /^_/u.",
+      "messageId": "unusedVar",
+      "nodeType": null,
+      "ruleId": "ts/no-unused-vars",
+      "severity": 2,
+    },
+    {
+      "column": 14,
+      "endColumn": 19,
+      "endLine": 10,
+      "line": 10,
+      "message": "'xxx' is defined as ref, but never used.",
+      "messageId": "unused",
+      "nodeType": "VLiteral",
+      "ruleId": "vue/no-unused-refs",
+      "severity": 2,
+    },
+    {
+      "column": 10,
+      "endColumn": 36,
+      "endLine": 12,
+      "line": 12,
+      "message": "Unexpected \`v-bind\` with a string literal value.",
+      "messageId": "unexpected",
+      "nodeType": "VAttribute",
+      "ruleId": "vue/no-useless-v-bind",
+      "severity": 2,
+    },
+  ],
+  "source": "<script setup lang="ts">
+import { ref } from 'vue'
+
+const xx = ref()
+const yy = ref()
+</script>
+
+<template>
+  <div>
+    <div ref="xxx" :label="'Curt. Exclusive\\nPrice'" />
+    <div label="Curt. Exclusive\\nPrice" />
+    <div :foo="'bar' /* comment */" />
+  </div>
+</template>
+
+<style lang="scss" scoped>
+a {
+  grid-template-areas:
+    'a a'
+    'b b b';
+  colr: hsl(20deg 10% 30% / 5%);
+}
+
+a {
+  --Foo: 1rem;
+}
+</style>
+",
+  "suppressedMessages": [],
+  "usedDeprecatedRules": [],
+  "warningCount": 0,
+}
+`;
