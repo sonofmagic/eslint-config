@@ -1,10 +1,13 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 
+const xx = ref()
+const yy = ref()
 </script>
 
 <template>
   <div>
-    <div :label="'Curt. Exclusive\nPrice'" />
+    <div ref="xxx" :label="'Curt. Exclusive\nPrice'" />
     <div label="Curt. Exclusive\nPrice" />
     <div :foo="'bar' /* comment */" />
   </div>

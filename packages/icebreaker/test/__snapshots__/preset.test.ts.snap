@@ -150,6 +150,7 @@ exports[`presets > c1 1`] = `
         "vue/attribute-hyphenation": "off",
         "vue/custom-event-name-casing": "off",
         "vue/no-mutating-props": "warn",
+        "vue/no-unused-refs": "warn",
         "vue/no-useless-v-bind": [
           "error",
           {
@@ -218,6 +219,7 @@ exports[`presets > c2 1`] = `
         "vue/attribute-hyphenation": "off",
         "vue/custom-event-name-casing": "off",
         "vue/no-mutating-props": "warn",
+        "vue/no-unused-refs": "warn",
         "vue/no-useless-v-bind": [
           "error",
           {
@@ -288,6 +290,7 @@ exports[`presets > c3 1`] = `
         "vue/custom-event-name-casing": "off",
         "vue/no-deprecated-v-bind-sync": "off",
         "vue/no-mutating-props": "warn",
+        "vue/no-unused-refs": "warn",
         "vue/no-useless-v-bind": [
           "error",
           {

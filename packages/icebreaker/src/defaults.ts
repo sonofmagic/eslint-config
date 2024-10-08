@@ -18,6 +18,8 @@ export function getDefaultVueOptions() {
           ignoreStringEscape: true,
         },
       ],
+      // https://eslint.vuejs.org/rules/no-unused-refs.html
+      'vue/no-unused-refs': 'warn',
     },
 
   }
