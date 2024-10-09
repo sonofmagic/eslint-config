@@ -30,7 +30,7 @@ describe.skipIf(ci.isCI || os.platform() === 'win32')('index', () => {
   // })
 })
 
-describe.skipIf(ci.isCI)('eslint', () => {
+describe.skipIf(ci.isCI || os.platform() === 'win32')('eslint', () => {
   it('default', async () => {
     const plugins = await icebreaker()
     expect(plugins).toMatchFileSnapshot('./__snapshots__/default.test.ts.snap')
