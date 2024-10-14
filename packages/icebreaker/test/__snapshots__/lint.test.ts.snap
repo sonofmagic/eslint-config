@@ -51,8 +51,8 @@ exports[`lint > common > index.js 1`] = `
           "desc": "Add comment inside empty block statement.",
           "fix": {
             "range": [
-              86,
-              90,
+              80,
+              82,
             ],
             "text": " /* empty */ ",
           },
@@ -149,8 +149,8 @@ exports[`lint > common > index.ts 1`] = `
           "desc": "Add comment inside empty block statement.",
           "fix": {
             "range": [
-              86,
-              90,
+              80,
+              82,
             ],
             "text": " /* empty */ ",
           },
@@ -234,8 +234,8 @@ exports[`lint > common > index.tsx 1`] = `
           "desc": "Add comment inside empty block statement.",
           "fix": {
             "range": [
-              86,
-              90,
+              80,
+              82,
             ],
             "text": " /* empty */ ",
           },
@@ -431,8 +431,8 @@ exports[`lint > legacy > index.js 1`] = `
           "desc": "Add comment inside empty block statement.",
           "fix": {
             "range": [
-              86,
-              90,
+              80,
+              82,
             ],
             "text": " /* empty */ ",
           },
@@ -529,8 +529,8 @@ exports[`lint > legacy > index.ts 1`] = `
           "desc": "Add comment inside empty block statement.",
           "fix": {
             "range": [
-              86,
-              90,
+              80,
+              82,
             ],
             "text": " /* empty */ ",
           },
@@ -614,8 +614,8 @@ exports[`lint > legacy > index.tsx 1`] = `
           "desc": "Add comment inside empty block statement.",
           "fix": {
             "range": [
-              86,
-              90,
+              80,
+              82,
             ],
             "text": " /* empty */ ",
           },
