@@ -20,6 +20,14 @@ exports[`index > common 1`] = `
       },
     ],
     "scss/selector-no-redundant-nesting-selector": true,
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignoreTypes": [
+          "page",
+        ],
+      },
+    ],
     "unit-no-unknown": [
       true,
       {

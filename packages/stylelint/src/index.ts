@@ -27,6 +27,13 @@ function createDefaultConfig(): Config {
           ignoreUnits: ['rpx'],
         },
       ],
+      // https://stylelint.io/user-guide/rules/selector-type-no-unknown/
+      'selector-type-no-unknown': [
+        true,
+        {
+          ignoreTypes: ['page'],
+        },
+      ],
       'scss/selector-no-redundant-nesting-selector': true,
       'scss/at-rule-no-unknown': [
         true,
