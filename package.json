@@ -7,7 +7,7 @@
     "apps/*",
     "packages/*"
   ],
-  "packageManager": "pnpm@9.12.1",
+  "packageManager": "pnpm@9.12.3",
   "author": "ice breaker <1324318532@qq.com>",
   "repository": {
     "type": "git",
