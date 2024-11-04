@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 0.7.0
+
+### Minor Changes
+
+- [`084e7aa`](https://github.com/sonofmagic/eslint-config/commit/084e7aa46a05d1726506dec21d2186cc9f45bd2e) Thanks [@sonofmagic](https://github.com/sonofmagic)! - feat: 移除部分依赖和 mdx / unocss 的直接支持
+
 ## 0.7.0-alpha.0
 
 ### Minor Changes
