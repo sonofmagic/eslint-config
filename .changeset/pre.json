@@ -1,0 +1,11 @@
+{
+  "mode": "pre",
+  "tag": "alpha",
+  "initialVersions": {
+    "@icebreakers/mock": "0.0.0",
+    "@icebreakers/foo": "0.0.0",
+    "@icebreakers/eslint-config": "0.6.1",
+    "@icebreakers/stylelint-config": "0.1.2"
+  },
+  "changesets": []
+}
