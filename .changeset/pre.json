@@ -7,5 +7,7 @@
     "@icebreakers/eslint-config": "0.6.1",
     "@icebreakers/stylelint-config": "0.1.2"
   },
-  "changesets": []
+  "changesets": [
+    "slimy-otters-sneeze"
+  ]
 }
