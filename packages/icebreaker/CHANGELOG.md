@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 0.7.1
+
+### Patch Changes
+
+- [`a744e70`](https://github.com/sonofmagic/eslint-config/commit/a744e7044258b261c0383fd41e0b9dcb9c50ffdb) Thanks [@sonofmagic](https://github.com/sonofmagic)! - feat: add ionic and nest support
+
 ## 0.7.0
 
 ### Minor Changes
