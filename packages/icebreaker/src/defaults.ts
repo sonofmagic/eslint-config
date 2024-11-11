@@ -1,57 +1,71 @@
 import type { OptionsTypescript, OptionsVue } from './antfu'
-
-export function getDefaultVueOptions() {
+import type { UserDefinedOptions } from './types'
+//  'vue/no-deprecated-slot-attribute': 'off',
+export function getDefaultVueOptions(opts?: UserDefinedOptions) {
+  const overrides: OptionsVue['overrides'] = {
+    'vue/attribute-hyphenation': 'off',
+    'vue/v-on-event-hyphenation': 'off',
+    'vue/custom-event-name-casing': 'off',
+    'vue/no-mutating-props': 'warn',
+    // https://eslint.vuejs.org/rules/no-useless-v-bind.html
+    'vue/no-useless-v-bind': [
+      'error',
+      {
+        // 不允许注释
+        ignoreIncludesComment: false,
+        // 允许在里面使用转义
+        // 比如 v-bind:foo="'bar\nbaz'"
+        ignoreStringEscape: true,
+      },
+    ],
+    // https://eslint.vuejs.org/rules/no-unused-refs.html
+    'vue/no-unused-refs': 'warn',
+  }
+  if (opts?.ionic) {
+    overrides['vue/no-deprecated-slot-attribute'] = 'off'
+  }
   const vueOptions: OptionsVue = {
-    overrides: {
-      'vue/attribute-hyphenation': 'off',
-      'vue/v-on-event-hyphenation': 'off',
-      'vue/custom-event-name-casing': 'off',
-      'vue/no-mutating-props': 'warn',
-      // https://eslint.vuejs.org/rules/no-useless-v-bind.html
-      'vue/no-useless-v-bind': [
-        'error',
-        {
-          // 不允许注释
-          ignoreIncludesComment: false,
-          // 允许在里面使用转义
-          // 比如 v-bind:foo="'bar\nbaz'"
-          ignoreStringEscape: true,
-        },
-      ],
-      // https://eslint.vuejs.org/rules/no-unused-refs.html
-      'vue/no-unused-refs': 'warn',
-    },
-
+    overrides,
   }
   return vueOptions
 }
 
-export function getDefaultTypescriptOptions() {
+export function getDefaultTypescriptOptions(opts?: UserDefinedOptions) {
+  const overrides: OptionsTypescript['overrides'] = {
+    'ts/no-unused-vars': [
+      'error',
+      {
+        args: 'all',
+        argsIgnorePattern: '^_',
+        caughtErrors: 'all',
+        caughtErrorsIgnorePattern: '^_',
+        destructuredArrayIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        ignoreRestSiblings: true,
+      },
+    ],
+    'ts/prefer-ts-expect-error': 'off',
+    'ts/ban-ts-comment': 'off',
+    'ts/no-use-before-define': 'warn',
+    'ts/no-unused-expressions': [
+      'error',
+      {
+        allowShortCircuit: true,
+        allowTernary: true,
+      },
+    ],
+  }
+  if (opts?.nest) {
+    Object.assign(overrides, {
+      'ts/interface-name-prefix': 'off',
+      'ts/explicit-function-return-type': 'off',
+      'ts/explicit-module-boundary-types': 'off',
+      'ts/no-explicit-any': 'off',
+      'ts/consistent-type-imports': 'off',
+    })
+  }
   const typescriptOptions: OptionsTypescript = {
-    overrides: {
-      'ts/no-unused-vars': [
-        'error',
-        {
-          args: 'all',
-          argsIgnorePattern: '^_',
-          caughtErrors: 'all',
-          caughtErrorsIgnorePattern: '^_',
-          destructuredArrayIgnorePattern: '^_',
-          varsIgnorePattern: '^_',
-          ignoreRestSiblings: true,
-        },
-      ],
-      'ts/prefer-ts-expect-error': 'off',
-      'ts/ban-ts-comment': 'off',
-      'ts/no-use-before-define': 'warn',
-      'ts/no-unused-expressions': [
-        'error',
-        {
-          allowShortCircuit: true,
-          allowTernary: true,
-        },
-      ],
-    },
+    overrides,
   }
   return typescriptOptions
 }

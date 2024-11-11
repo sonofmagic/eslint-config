@@ -21,7 +21,7 @@ export function getPresets(options?: UserDefinedOptions, mode?: 'legacy'): [User
   })
   // #region vue rules
 
-  const vueOptions = getDefaultVueOptions()
+  const vueOptions = getDefaultVueOptions(options)
   if (opts.vue === true) {
     opts.vue = vueOptions
   }
@@ -31,7 +31,7 @@ export function getPresets(options?: UserDefinedOptions, mode?: 'legacy'): [User
   // #endregion
 
   // #region typescript start
-  const typescriptOptions = getDefaultTypescriptOptions()
+  const typescriptOptions = getDefaultTypescriptOptions(options)
   if (opts.typescript === undefined || opts.typescript === true) {
     opts.typescript = typescriptOptions
   }
