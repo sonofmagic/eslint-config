@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 0.7.2
+
+### Patch Changes
+
+- [`2e9b2fe`](https://github.com/sonofmagic/eslint-config/commit/2e9b2fe473de24520f4beee8a399df6676b2c444) Thanks [@sonofmagic](https://github.com/sonofmagic)! - fix: https://github.com/sonofmagic/monorepo-template/issues/110
+
 ## 0.7.1
 
 ### Patch Changes
