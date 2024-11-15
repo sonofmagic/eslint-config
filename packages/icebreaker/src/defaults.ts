@@ -1,5 +1,6 @@
 import type { OptionsTypescript, OptionsVue } from './antfu'
 import type { UserDefinedOptions } from './types'
+import INLINE_ELEMENTS from 'eslint-plugin-vue/lib/utils/inline-non-void-elements.json'
 //  'vue/no-deprecated-slot-attribute': 'off',
 export function getDefaultVueOptions(opts?: UserDefinedOptions) {
   const overrides: OptionsVue['overrides'] = {
@@ -23,6 +24,21 @@ export function getDefaultVueOptions(opts?: UserDefinedOptions) {
   }
   if (opts?.ionic) {
     overrides['vue/no-deprecated-slot-attribute'] = 'off'
+  }
+  if (opts?.weapp) {
+    overrides['vue/singleline-html-element-content-newline'] = [
+      'error',
+      {
+        ignoreWhenNoAttributes: true,
+        ignoreWhenEmpty: true,
+        ignores: [
+          // 小程序标签
+          'text',
+          ...INLINE_ELEMENTS,
+        ],
+        externalIgnores: [],
+      },
+    ]
   }
   const vueOptions: OptionsVue = {
     overrides,

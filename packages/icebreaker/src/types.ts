@@ -13,6 +13,7 @@ export type UserDefinedOptions = OptionsConfig &
     a11y?: boolean
     nest?: boolean
     ionic?: boolean
+    weapp?: boolean
   }
 
 export type UserConfigItem = Awaitable<
