@@ -34,6 +34,14 @@ describe.skipIf(ci.isCI || os.platform() === 'win32')('index', () => {
     expect(plugins).toMatchFileSnapshot('./__snapshots__/nest.test.ts.snap')
   })
 
+  it('weapp', async () => {
+    const plugins = await icebreaker({
+      vue: true,
+      weapp: true,
+    })
+    expect(plugins).toMatchFileSnapshot('./__snapshots__/weapp.test.ts.snap')
+  })
+
   // it('loadESLint', async () => {
   //   const cwd = path.resolve(__dirname, '../../..')
   //   process.chdir(cwd)

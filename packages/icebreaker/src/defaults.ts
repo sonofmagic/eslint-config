@@ -27,7 +27,7 @@ export function getDefaultVueOptions(opts?: UserDefinedOptions) {
   }
   if (opts?.weapp) {
     overrides['vue/singleline-html-element-content-newline'] = [
-      'error',
+      'warn',
       {
         ignoreWhenNoAttributes: true,
         ignoreWhenEmpty: true,
