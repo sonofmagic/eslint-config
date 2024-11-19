@@ -48,9 +48,9 @@
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.0",
     "@changesets/cli": "^2.27.9",
-    "@commitlint/cli": "^19.5.0",
-    "@commitlint/config-conventional": "^19.5.0",
-    "@commitlint/prompt-cli": "^19.5.0",
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@commitlint/prompt-cli": "^19.6.0",
     "@commitlint/types": "^19.5.0",
     "@eslint/config-inspector": "^0.5.6",
     "@eslint/eslintrc": "^3.2.0",
@@ -79,7 +79,7 @@
     "fast-glob": "^3.3.2",
     "fs-extra": "^11.2.0",
     "get-value": "^3.0.1",
-    "husky": "^9.1.6",
+    "husky": "^9.1.7",
     "jiti": "^2.4.0",
     "klaw": "^4.1.0",
     "lint-staged": "^15.2.10",
@@ -100,7 +100,7 @@
     "typescript": "^5.6.3",
     "unbuild": "^2.0.0",
     "vitest": "~2.1.5",
-    "yaml": "^2.6.0"
+    "yaml": "^2.6.1"
   },
   "publishConfig": {
     "access": "public",
