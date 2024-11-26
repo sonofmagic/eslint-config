@@ -136,7 +136,7 @@ describe('order', () => {
   it('import order 3', async () => {
     const res = await eslint.lintText(importCase3)
     expect(res.length).toBe(1)
-    expect(res[0].errorCount === 17).toBe(true)
+    expect(res[0].errorCount).toBe(18)
     expect(some(res[0].messages, (x) => {
       return x.ruleId === 'perfectionist/sort-imports'
     })).toBe(true)
