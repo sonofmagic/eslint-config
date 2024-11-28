@@ -1,7 +1,7 @@
 {
   "name": "@icebreakers/eslint-config",
   "type": "module",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "icebreakers's eslint config",
   "author": "ice breaker <1324318532@qq.com>",
   "license": "MIT",
@@ -48,7 +48,7 @@
     "sync": "cnpm sync @icebreakers/eslint-config"
   },
   "dependencies": {
-    "@antfu/eslint-config": "3.10.0",
+    "@antfu/eslint-config": "3.11.2",
     "@eslint-react/eslint-plugin": "^1.17.1",
     "eslint-plugin-format": "0.1.2",
     "eslint-plugin-jsx-a11y": "^6.10.2",
