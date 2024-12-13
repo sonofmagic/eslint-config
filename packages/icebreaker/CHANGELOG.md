@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 0.7.7
+
+### Patch Changes
+
+- [`b3f296e`](https://github.com/sonofmagic/eslint-config/commit/b3f296e3a9c8f2ad7748a8c4dcc7be889bed10b5) Thanks [@sonofmagic](https://github.com/sonofmagic)! - chore: upgrade deps
+
 ## 0.7.6
 
 ### Patch Changes
