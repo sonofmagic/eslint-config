@@ -121,7 +121,6 @@ export function getPresets(options?: UserDefinedOptions, mode?: 'legacy'): [User
     if (enableVue) {
       presets.push(
         interopDefault(
-          // @ts-ignore
           import('eslint-plugin-vuejs-accessibility'),
         ).then((pluginVueA11y) => {
           return pluginVueA11y.configs['flat/recommended']
