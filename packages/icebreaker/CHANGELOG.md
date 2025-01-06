@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 0.7.9
+
+### Patch Changes
+
+- [`739a357`](https://github.com/sonofmagic/eslint-config/commit/739a357bce0fce6180c5b6e976003493f50534a4) Thanks [@sonofmagic](https://github.com/sonofmagic)! - chore(deps): upgrade
+
 ## 0.7.8
 
 ### Patch Changes
