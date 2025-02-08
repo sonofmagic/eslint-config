@@ -84,6 +84,7 @@ export function getPresets(options?: UserDefinedOptions, mode?: 'legacy'): [User
   // https://github.com/francoismassart/eslint-plugin-tailwindcss/issues/335
   if (enableTailwindcss) {
     presets.push(
+      // @ts-ignore
       interopDefault(
         import('eslint-plugin-tailwindcss'),
       ).then((tailwind) => {
