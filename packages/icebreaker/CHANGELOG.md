@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 1.0.0
+
+### Major Changes
+
+- [`a3a085e`](https://github.com/sonofmagic/eslint-config/commit/a3a085e041267b66e6705d9f982bca213df90da4) Thanks [@sonofmagic](https://github.com/sonofmagic)! - feat: upgrade to latset version
+
 ## 0.7.9
 
 ### Patch Changes
