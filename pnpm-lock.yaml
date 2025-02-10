@@ -36,11 +36,11 @@ importers:
         specifier: workspace:*
         version: link:packages/icebreaker
       '@icebreakers/monorepo':
-        specifier: ^0.7.0
-        version: 0.7.0(@types/node@22.13.1)
+        specifier: ^0.7.1
+        version: 0.7.1(@types/node@22.13.1)
       '@icebreakers/stylelint-config':
-        specifier: ^0.1.4
-        version: 0.1.4(postcss@8.5.1)(stylelint@16.14.1(typescript@5.7.3))
+        specifier: ^1.0.0
+        version: 1.0.0(postcss@8.5.1)(stylelint@16.14.1(typescript@5.7.3))
       '@types/eslint-plugin-tailwindcss':
         specifier: ^3.17.0
         version: 3.17.0
@@ -141,8 +141,8 @@ importers:
         specifier: ^1.3.1
         version: 1.3.1
       prettier:
-        specifier: ^3.4.2
-        version: 3.4.2
+        specifier: ^3.5.0
+        version: 3.5.0
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
@@ -193,7 +193,7 @@ importers:
     dependencies:
       '@antfu/eslint-config':
         specifier: 4.1.1
-        version: 4.1.1(@eslint-react/eslint-plugin@1.26.2(eslint@9.20.0(jiti@2.4.2))(ts-api-utils@2.0.1(typescript@5.7.3))(typescript@5.7.3))(@typescript-eslint/utils@8.23.0(eslint@9.20.0(jiti@2.4.2))(typescript@5.7.3))(@unocss/eslint-plugin@65.4.3(eslint@9.20.0(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.20.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.1.0(eslint@9.20.0(jiti@2.4.2)))(eslint-plugin-react-refresh@0.4.18(eslint@9.20.0(jiti@2.4.2)))(eslint@9.20.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.5(@types/debug@4.1.12)(@types/node@22.13.1)(jiti@2.4.2)(tsx@4.19.2)(yaml@2.7.0))
+        version: 4.1.1(@eslint-react/eslint-plugin@1.26.2(eslint@9.20.0(jiti@2.4.2))(ts-api-utils@2.0.1(typescript@5.7.3))(typescript@5.7.3))(@typescript-eslint/utils@8.23.0(eslint@9.20.0(jiti@2.4.2))(typescript@5.7.3))(@unocss/eslint-plugin@65.4.3(eslint@9.20.0(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.20.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.1.0(eslint@9.20.0(jiti@2.4.2)))(eslint-plugin-react-refresh@0.4.19(eslint@9.20.0(jiti@2.4.2)))(eslint@9.20.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.5(@types/debug@4.1.12)(@types/node@22.13.1)(jiti@2.4.2)(tsx@4.19.2)(yaml@2.7.0))
       '@eslint-react/eslint-plugin':
         specifier: ^1.26.2
         version: 1.26.2(eslint@9.20.0(jiti@2.4.2))(ts-api-utils@2.0.1(typescript@5.7.3))(typescript@5.7.3)
@@ -207,8 +207,8 @@ importers:
         specifier: ^5.1.0
         version: 5.1.0(eslint@9.20.0(jiti@2.4.2))
       eslint-plugin-react-refresh:
-        specifier: ^0.4.18
-        version: 0.4.18(eslint@9.20.0(jiti@2.4.2))
+        specifier: ^0.4.19
+        version: 0.4.19(eslint@9.20.0(jiti@2.4.2))
       eslint-plugin-tailwindcss:
         specifier: 3.18.0
         version: 3.18.0(tailwindcss@3.4.13(ts-node@10.9.2(@types/node@22.13.1)(typescript@5.7.3)))
@@ -1006,12 +1006,12 @@ packages:
     resolution: {integrity: sha512-c7hNEllBlenFTHBky65mhq8WD2kbN9Q6gk0bTk8lSBvc554jpXSkST1iePudpt7+A/AQvuHs9EMqjHDXMY1lrA==}
     engines: {node: '>=18.18'}
 
-  '@icebreakers/monorepo@0.7.0':
-    resolution: {integrity: sha512-s2F5DADsj0pHXdfKRKozi+p7z8pT32tMqwFzbqLX9WftpuyvM1wL94sZnQmAT+Cia3DQDqVthVvNo2pnW/4zKw==}
+  '@icebreakers/monorepo@0.7.1':
+    resolution: {integrity: sha512-TjNzvTlKQe2r9o0A1qWM8NQ/wMQgdYOAXRWzNuj2Vg96UoJqaA2tG18lqsiX2O5GWGm9e4BIjnt/h4vWXFXivw==}
     hasBin: true
 
-  '@icebreakers/stylelint-config@0.1.4':
-    resolution: {integrity: sha512-o9pzbr5vE6i1aJaN9zvAAoYft27QhqAvk2Oo7eAYdHvObI2sImTRCQB0VeovOFsG/3M8YU+BSPH+5Uf6zkl1sQ==}
+  '@icebreakers/stylelint-config@1.0.0':
+    resolution: {integrity: sha512-cJnfqlXU7WwX7Bgg/IwKBTdLb/WV7qn0FpQQ0Ns3KarcQG78JNxqoEIxo3kYvZ2CUi74THc+tLrmVpKiLbZ6VQ==}
     hasBin: true
 
   '@inquirer/checkbox@4.1.1':
@@ -2422,10 +2422,6 @@ packages:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
     engines: {node: '>= 8'}
 
-  cross-spawn@7.0.5:
-    resolution: {integrity: sha512-ZVJrKKYunU38/76t0RMOulHOnUcbU9GbpWKAOZ0mhjr7CX6FVrH+4FrAapSOekrgFQ3f/8gwMEuIft0aKq6Hug==}
-    engines: {node: '>= 8'}
-
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
@@ -2920,8 +2916,8 @@ packages:
       typescript:
         optional: true
 
-  eslint-plugin-react-refresh@0.4.18:
-    resolution: {integrity: sha512-IRGEoFn3OKalm3hjfolEWGqoF/jPqeEYFp+C8B0WMzwGwBMvlRDQd06kghDhF0C61uJ6WfSDhEZE/sAQjduKgw==}
+  eslint-plugin-react-refresh@0.4.19:
+    resolution: {integrity: sha512-eyy8pcr/YxSYjBoqIFSrlbn9i/xvxUFa8CjzAYo9cFjgGXqq1hyjihcpZvxRLalpaWmueWR81xn7vuKmAFijDQ==}
     peerDependencies:
       eslint: '>=8.40'
 
@@ -4951,6 +4947,11 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
+  prettier@3.5.0:
+    resolution: {integrity: sha512-quyMrVt6svPS7CjQ9gKb3GLEX/rl3BCL2oa/QkNcXv4YNVBC9olt3s+H7ukto06q7B1Qz46PbrKLO34PR6vXcA==}
+    engines: {node: '>=14'}
+    hasBin: true
+
   pretty-bytes@5.6.0:
     resolution: {integrity: sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==}
     engines: {node: '>=6'}
@@ -6109,7 +6110,7 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.8
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@antfu/eslint-config@4.1.1(@eslint-react/eslint-plugin@1.26.2(eslint@9.20.0(jiti@2.4.2))(ts-api-utils@2.0.1(typescript@5.7.3))(typescript@5.7.3))(@typescript-eslint/utils@8.23.0(eslint@9.20.0(jiti@2.4.2))(typescript@5.7.3))(@unocss/eslint-plugin@65.4.3(eslint@9.20.0(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.20.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.1.0(eslint@9.20.0(jiti@2.4.2)))(eslint-plugin-react-refresh@0.4.18(eslint@9.20.0(jiti@2.4.2)))(eslint@9.20.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.5(@types/debug@4.1.12)(@types/node@22.13.1)(jiti@2.4.2)(tsx@4.19.2)(yaml@2.7.0))':
+  '@antfu/eslint-config@4.1.1(@eslint-react/eslint-plugin@1.26.2(eslint@9.20.0(jiti@2.4.2))(ts-api-utils@2.0.1(typescript@5.7.3))(typescript@5.7.3))(@typescript-eslint/utils@8.23.0(eslint@9.20.0(jiti@2.4.2))(typescript@5.7.3))(@unocss/eslint-plugin@65.4.3(eslint@9.20.0(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.20.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.1.0(eslint@9.20.0(jiti@2.4.2)))(eslint-plugin-react-refresh@0.4.19(eslint@9.20.0(jiti@2.4.2)))(eslint@9.20.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.5(@types/debug@4.1.12)(@types/node@22.13.1)(jiti@2.4.2)(tsx@4.19.2)(yaml@2.7.0))':
     dependencies:
       '@antfu/install-pkg': 1.0.0
       '@clack/prompts': 0.9.1
@@ -6152,7 +6153,7 @@ snapshots:
       '@unocss/eslint-plugin': 65.4.3(eslint@9.20.0(jiti@2.4.2))(typescript@5.7.3)
       eslint-plugin-format: 1.0.1(eslint@9.20.0(jiti@2.4.2))
       eslint-plugin-react-hooks: 5.1.0(eslint@9.20.0(jiti@2.4.2))
-      eslint-plugin-react-refresh: 0.4.18(eslint@9.20.0(jiti@2.4.2))
+      eslint-plugin-react-refresh: 0.4.19(eslint@9.20.0(jiti@2.4.2))
     transitivePeerDependencies:
       - '@eslint/json'
       - '@typescript-eslint/utils'
@@ -6978,7 +6979,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.1': {}
 
-  '@icebreakers/monorepo@0.7.0(@types/node@22.13.1)':
+  '@icebreakers/monorepo@0.7.1(@types/node@22.13.1)':
     dependencies:
       '@inquirer/checkbox': 4.1.1(@types/node@22.13.1)
       '@inquirer/confirm': 5.1.5(@types/node@22.13.1)
@@ -7000,7 +7001,7 @@ snapshots:
       - '@types/node'
       - supports-color
 
-  '@icebreakers/stylelint-config@0.1.4(postcss@8.5.1)(stylelint@16.14.1(typescript@5.7.3))':
+  '@icebreakers/stylelint-config@1.0.0(postcss@8.5.1)(stylelint@16.14.1(typescript@5.7.3))':
     dependencies:
       comment-json: 4.2.5
       postcss-html: 1.8.0
@@ -8544,12 +8545,6 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
-  cross-spawn@7.0.5:
-    dependencies:
-      path-key: 3.1.1
-      shebang-command: 2.0.0
-      which: 2.0.2
-
   cross-spawn@7.0.6:
     dependencies:
       path-key: 3.1.1
@@ -9240,7 +9235,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-react-refresh@0.4.18(eslint@9.20.0(jiti@2.4.2)):
+  eslint-plugin-react-refresh@0.4.19(eslint@9.20.0(jiti@2.4.2)):
     dependencies:
       eslint: 9.20.0(jiti@2.4.2)
 
@@ -9613,7 +9608,7 @@ snapshots:
 
   foreground-child@3.3.0:
     dependencies:
-      cross-spawn: 7.0.5
+      cross-spawn: 7.0.6
       signal-exit: 4.1.0
 
   fraction.js@4.3.7: {}
@@ -11678,6 +11673,8 @@ snapshots:
   prettier@2.8.8: {}
 
   prettier@3.4.2: {}
+
+  prettier@3.5.0: {}
 
   pretty-bytes@5.6.0: {}
 
