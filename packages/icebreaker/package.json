@@ -1,7 +1,7 @@
 {
   "name": "@icebreakers/eslint-config",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "icebreakers's eslint config",
   "author": "ice breaker <1324318532@qq.com>",
   "license": "MIT",
@@ -48,8 +48,8 @@
     "sync": "cnpm sync @icebreakers/eslint-config"
   },
   "dependencies": {
-    "@antfu/eslint-config": "4.1.1",
-    "@eslint-react/eslint-plugin": "^1.26.2",
+    "@antfu/eslint-config": "4.3.0",
+    "@eslint-react/eslint-plugin": "^1.27.0",
     "eslint-plugin-format": "1.0.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react-hooks": "^5.1.0",
@@ -58,7 +58,7 @@
     "eslint-plugin-vuejs-accessibility": "^2.4.1"
   },
   "optionalDependencies": {
-    "@unocss/eslint-plugin": "^65.4.3",
+    "@unocss/eslint-plugin": "^66.0.0",
     "eslint-plugin-mdx": "3.1.5"
   },
   "publishConfig": {
