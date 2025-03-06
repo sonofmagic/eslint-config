@@ -8,15 +8,7 @@ exports[`lint > common > import.js 1`] = `
   "fixableWarningCount": 0,
   "messages": [],
   "suppressedMessages": [],
-  "usedDeprecatedRules": [
-    {
-      "info": undefined,
-      "replacedBy": [
-        "unicorn/no-instanceof-builtins",
-      ],
-      "ruleId": "unicorn/no-instanceof-array",
-    },
-  ],
+  "usedDeprecatedRules": [],
   "warningCount": 0,
 }
 `;
@@ -29,15 +21,7 @@ exports[`lint > common > index.css 1`] = `
   "fixableWarningCount": 0,
   "messages": [],
   "suppressedMessages": [],
-  "usedDeprecatedRules": [
-    {
-      "info": undefined,
-      "replacedBy": [
-        "unicorn/no-instanceof-builtins",
-      ],
-      "ruleId": "unicorn/no-instanceof-array",
-    },
-  ],
+  "usedDeprecatedRules": [],
   "warningCount": 0,
 }
 `;
@@ -122,15 +106,7 @@ const task = new Promise((r) => {
 await task
 ",
   "suppressedMessages": [],
-  "usedDeprecatedRules": [
-    {
-      "info": undefined,
-      "replacedBy": [
-        "unicorn/no-instanceof-builtins",
-      ],
-      "ruleId": "unicorn/no-instanceof-array",
-    },
-  ],
+  "usedDeprecatedRules": [],
   "warningCount": 0,
 }
 `;
@@ -143,15 +119,7 @@ exports[`lint > common > index.scss 1`] = `
   "fixableWarningCount": 0,
   "messages": [],
   "suppressedMessages": [],
-  "usedDeprecatedRules": [
-    {
-      "info": undefined,
-      "replacedBy": [
-        "unicorn/no-instanceof-builtins",
-      ],
-      "ruleId": "unicorn/no-instanceof-array",
-    },
-  ],
+  "usedDeprecatedRules": [],
   "warningCount": 0,
 }
 `;
@@ -236,15 +204,7 @@ const task = new Promise((r) => {
 await task
 ",
   "suppressedMessages": [],
-  "usedDeprecatedRules": [
-    {
-      "info": undefined,
-      "replacedBy": [
-        "unicorn/no-instanceof-builtins",
-      ],
-      "ruleId": "unicorn/no-instanceof-array",
-    },
-  ],
+  "usedDeprecatedRules": [],
   "warningCount": 0,
 }
 `;
@@ -329,15 +289,7 @@ const task = new Promise((r) => {
 await task
 ",
   "suppressedMessages": [],
-  "usedDeprecatedRules": [
-    {
-      "info": undefined,
-      "replacedBy": [
-        "unicorn/no-instanceof-builtins",
-      ],
-      "ruleId": "unicorn/no-instanceof-array",
-    },
-  ],
+  "usedDeprecatedRules": [],
   "warningCount": 0,
 }
 `;
@@ -423,15 +375,7 @@ a {
 </style>
 ",
   "suppressedMessages": [],
-  "usedDeprecatedRules": [
-    {
-      "info": undefined,
-      "replacedBy": [
-        "unicorn/no-instanceof-builtins",
-      ],
-      "ruleId": "unicorn/no-instanceof-array",
-    },
-  ],
+  "usedDeprecatedRules": [],
   "warningCount": 0,
 }
 `;
@@ -444,15 +388,7 @@ exports[`lint > legacy > import.js 1`] = `
   "fixableWarningCount": 0,
   "messages": [],
   "suppressedMessages": [],
-  "usedDeprecatedRules": [
-    {
-      "info": undefined,
-      "replacedBy": [
-        "unicorn/no-instanceof-builtins",
-      ],
-      "ruleId": "unicorn/no-instanceof-array",
-    },
-  ],
+  "usedDeprecatedRules": [],
   "warningCount": 0,
 }
 `;
@@ -465,15 +401,7 @@ exports[`lint > legacy > index.css 1`] = `
   "fixableWarningCount": 0,
   "messages": [],
   "suppressedMessages": [],
-  "usedDeprecatedRules": [
-    {
-      "info": undefined,
-      "replacedBy": [
-        "unicorn/no-instanceof-builtins",
-      ],
-      "ruleId": "unicorn/no-instanceof-array",
-    },
-  ],
+  "usedDeprecatedRules": [],
   "warningCount": 0,
 }
 `;
@@ -558,15 +486,7 @@ const task = new Promise((r) => {
 await task
 ",
   "suppressedMessages": [],
-  "usedDeprecatedRules": [
-    {
-      "info": undefined,
-      "replacedBy": [
-        "unicorn/no-instanceof-builtins",
-      ],
-      "ruleId": "unicorn/no-instanceof-array",
-    },
-  ],
+  "usedDeprecatedRules": [],
   "warningCount": 0,
 }
 `;
@@ -579,15 +499,7 @@ exports[`lint > legacy > index.scss 1`] = `
   "fixableWarningCount": 0,
   "messages": [],
   "suppressedMessages": [],
-  "usedDeprecatedRules": [
-    {
-      "info": undefined,
-      "replacedBy": [
-        "unicorn/no-instanceof-builtins",
-      ],
-      "ruleId": "unicorn/no-instanceof-array",
-    },
-  ],
+  "usedDeprecatedRules": [],
   "warningCount": 0,
 }
 `;
@@ -672,15 +584,7 @@ const task = new Promise((r) => {
 await task
 ",
   "suppressedMessages": [],
-  "usedDeprecatedRules": [
-    {
-      "info": undefined,
-      "replacedBy": [
-        "unicorn/no-instanceof-builtins",
-      ],
-      "ruleId": "unicorn/no-instanceof-array",
-    },
-  ],
+  "usedDeprecatedRules": [],
   "warningCount": 0,
 }
 `;
@@ -765,15 +669,7 @@ const task = new Promise((r) => {
 await task
 ",
   "suppressedMessages": [],
-  "usedDeprecatedRules": [
-    {
-      "info": undefined,
-      "replacedBy": [
-        "unicorn/no-instanceof-builtins",
-      ],
-      "ruleId": "unicorn/no-instanceof-array",
-    },
-  ],
+  "usedDeprecatedRules": [],
   "warningCount": 0,
 }
 `;
@@ -859,15 +755,7 @@ a {
 </style>
 ",
   "suppressedMessages": [],
-  "usedDeprecatedRules": [
-    {
-      "info": undefined,
-      "replacedBy": [
-        "unicorn/no-instanceof-builtins",
-      ],
-      "ruleId": "unicorn/no-instanceof-array",
-    },
-  ],
+  "usedDeprecatedRules": [],
   "warningCount": 0,
 }
 `;
