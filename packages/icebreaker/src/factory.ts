@@ -18,6 +18,12 @@ export function icebreaker(
 export function icebreakerLegacy(
   options: UserDefinedOptions = {},
   ...userConfigs: UserConfigItem[]
-) {
+): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
   return antfu(...getPresets(options, 'legacy'), ...userConfigs)
+}
+
+export type {
+  ConfigNames,
+  FlatConfigComposer,
+  TypedFlatConfigItem,
 }
