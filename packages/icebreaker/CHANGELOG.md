@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 1.1.0
+
+### Minor Changes
+
+- [`302c8b5`](https://github.com/sonofmagic/eslint-config/commit/302c8b558649479c259fd0683b2f27f1eebb2d0d) Thanks [@sonofmagic](https://github.com/sonofmagic)! - chore(deps): upgrade
+
 ## 1.0.0
 
 ### Major Changes
