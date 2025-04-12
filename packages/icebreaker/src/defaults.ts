@@ -22,9 +22,12 @@ export function getDefaultVueOptions(opts?: UserDefinedOptions) {
     // https://eslint.vuejs.org/rules/no-unused-refs.html
     'vue/no-unused-refs': 'warn',
   }
+  // ionic 启用
+  // 这是因为 ionic vue 也是依赖 web component 的 slot 的，这个会和 vue slot 有冲突
   if (opts?.ionic) {
     overrides['vue/no-deprecated-slot-attribute'] = 'off'
   }
+  // 小程序启用
   if (opts?.weapp) {
     overrides['vue/singleline-html-element-content-newline'] = [
       'warn',

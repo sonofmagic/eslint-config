@@ -1,16 +1,16 @@
+// import ci from 'ci-info'
+import type { TypedFlatConfigItem, UserDefinedOptions } from '../src/types'
 import { join, resolve } from 'node:path'
 import { execa } from 'execa'
 import fg from 'fast-glob'
 import fs from 'fs-extra'
 import { it } from 'vitest'
-// import ci from 'ci-info'
-import type { TypedFlatConfigItem, UserDefinedOptions } from '../src/types'
 
 function runWithConfig(name: string, configs: UserDefinedOptions, ...items: TypedFlatConfigItem[]) {
   it.concurrent(name, async ({ expect }) => {
-    const from = resolve('fixtures/input')
-    const output = resolve('fixtures/output', name)
-    const target = resolve('_fixtures', name)
+    const from = resolve(import.meta.dirname, '../fixtures/input')
+    const output = resolve(import.meta.dirname, '../fixtures/output', name)
+    const target = resolve(import.meta.dirname, '../_fixtures', name)
 
     await fs.copy(from, target, {
       filter: (src) => {
@@ -55,7 +55,7 @@ ${JSON.stringify(configs)},
   }, 30_000)
 }
 
-describe.skipIf(true)('fixtures', () => {
+describe('fixtures', () => {
   beforeAll(async () => {
     await fs.rm('_fixtures', { recursive: true, force: true })
   })
