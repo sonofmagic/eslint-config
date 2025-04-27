@@ -30,7 +30,7 @@
     "prepare": "husky",
     "commit": "commit",
     "sync": "turbo run sync",
-    "inspector": "@eslint/config-inspector",
+    "inspector": "npx @eslint/config-inspector",
     "build:inspector": "pnpm build && npx @eslint/config-inspector build",
     "script:init": "monorepo init",
     "script:sync": "monorepo sync",

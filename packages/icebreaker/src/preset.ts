@@ -16,6 +16,7 @@ export function getPresets(options?: UserDefinedOptions, mode?: 'legacy'): [User
         // 'unused-imports/no-unused-imports': 'error',
         // https://typescript-eslint.io/rules/no-unused-vars/
         'no-unused-vars': 'off',
+        'prefer-const': 'off',
       },
     },
   })
