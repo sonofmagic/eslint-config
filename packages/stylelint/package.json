@@ -40,9 +40,9 @@
     "comment-json": "^4.2.5",
     "postcss-html": "^1.8.0",
     "stylelint-config-recess-order": "^6.0.0",
-    "stylelint-config-recommended-scss": "^14.1.0",
+    "stylelint-config-recommended-scss": "^15.0.1",
     "stylelint-config-recommended-vue": "^1.6.0",
-    "stylelint-config-standard-scss": "^14.0.0"
+    "stylelint-config-standard-scss": "^15.0.1"
   },
   "publishConfig": {
     "access": "public",
