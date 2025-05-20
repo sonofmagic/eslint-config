@@ -1,6 +1,6 @@
-import { icebreaker, icebreakerLegacy } from '@/index'
 import { ESLint } from 'eslint'
 import { every, some } from 'lodash-es'
+import { icebreaker, icebreakerLegacy } from '@/index'
 
 const importCase0 = `import Vue from 'vue'
 

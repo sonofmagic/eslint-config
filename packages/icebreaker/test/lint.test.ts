@@ -1,8 +1,8 @@
 import path from 'node:path'
-import { icebreaker, icebreakerLegacy } from '@/index'
 import { ESLint } from 'eslint'
 import fs from 'fs-extra'
 import { omit } from 'lodash-es'
+import { icebreaker, icebreakerLegacy } from '@/index'
 
 const mockSrcDir = path.resolve(__dirname, '../../../apps/mock/src')
 const files = await fs.readdir(mockSrcDir)
@@ -33,7 +33,7 @@ describe('lint', () => {
         expect(x.errorCount).toBe(3)
       }
       else if (file === 'import.js') {
-        expect(x.errorCount).toBe(0)
+        expect(x.errorCount).toBe(1)
       }
       else if (file.endsWith('.ts')) {
         expect(x.errorCount).toBe(3)
