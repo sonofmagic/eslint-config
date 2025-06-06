@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 1.1.8
+
+### Patch Changes
+
+- [`fb48f3b`](https://github.com/sonofmagic/eslint-config/commit/fb48f3bae625a2c9a4d1b76118302c51f46a732b) Thanks [@sonofmagic](https://github.com/sonofmagic)! - chore: upgrade eslint config
+
 ## 1.1.7
 
 ### Patch Changes
