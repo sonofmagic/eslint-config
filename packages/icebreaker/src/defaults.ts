@@ -1,6 +1,7 @@
 import type { OptionsTypescript, OptionsVue } from './antfu'
 import type { UserDefinedOptions } from './types'
 import INLINE_ELEMENTS from 'eslint-plugin-vue/lib/utils/inline-non-void-elements.json'
+
 //  'vue/no-deprecated-slot-attribute': 'off',
 export function getDefaultVueOptions(opts?: UserDefinedOptions) {
   const overrides: OptionsVue['overrides'] = {
