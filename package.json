@@ -55,7 +55,7 @@
     "@eslint/config-inspector": "^1.1.0",
     "@eslint/eslintrc": "^3.3.1",
     "@icebreakers/eslint-config": "workspace:*",
-    "@icebreakers/monorepo": "^1.0.2",
+    "@icebreakers/monorepo": "^1.0.3",
     "@icebreakers/stylelint-config": "^1.0.2",
     "@types/eslint-plugin-tailwindcss": "^3.17.0",
     "@types/fs-extra": "^11.0.4",

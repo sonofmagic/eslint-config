@@ -36,8 +36,8 @@ importers:
         specifier: workspace:*
         version: link:packages/icebreaker
       '@icebreakers/monorepo':
-        specifier: ^1.0.2
-        version: 1.0.2(@types/node@22.15.30)(typanion@3.14.0)
+        specifier: ^1.0.3
+        version: 1.0.3(@types/node@22.15.30)(typanion@3.14.0)
       '@icebreakers/stylelint-config':
         specifier: ^1.0.2
         version: 1.0.2(postcss@8.5.3)(stylelint@16.20.0(typescript@5.8.3))
@@ -1249,8 +1249,8 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
-  '@icebreakers/monorepo@1.0.2':
-    resolution: {integrity: sha512-65uN7N96pHVeyZceLWKzvbmqTRbgCfLoP3q1C9f+sujF6GmzIXkYBnlBg2HIrVdXO9xOgEiVbDU+IG5sKLO/vw==}
+  '@icebreakers/monorepo@1.0.3':
+    resolution: {integrity: sha512-u6HGxXLwsRBCNHSFNfyqKVe0ba/WJn97QGC8FzSQoMXbn2TGuMGXqPMPLvwqy8xRiaREidjdYUfQV/jB3Ci79w==}
     hasBin: true
 
   '@icebreakers/stylelint-config@1.0.2':
@@ -6241,8 +6241,8 @@ packages:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
 
-  simple-git@3.27.0:
-    resolution: {integrity: sha512-ivHoFS9Yi9GY49ogc6/YAi3Fl9ROnF4VyubNylgCkA+RVqLaKWnDSzXOVzya8csELIaWaYNutsEuAhZrtOjozA==}
+  simple-git@3.28.0:
+    resolution: {integrity: sha512-Rs/vQRwsn1ILH1oBUy8NucJlXmnnLeLCfcvbSehkPzbv3wwoFWIdtfd6Ndo6ZPhlPsCZ60CPI4rxurnwAa+a2w==}
 
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
@@ -8151,7 +8151,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@icebreakers/monorepo@1.0.2(@types/node@22.15.30)(typanion@3.14.0)':
+  '@icebreakers/monorepo@1.0.3(@types/node@22.15.30)(typanion@3.14.0)':
     dependencies:
       '@inquirer/checkbox': 4.1.8(@types/node@22.15.30)
       '@inquirer/confirm': 5.1.12(@types/node@22.15.30)
@@ -8171,7 +8171,7 @@ snapshots:
       p-queue: 8.1.0
       pathe: 2.0.3
       picocolors: 1.1.1
-      simple-git: 3.27.0
+      simple-git: 3.28.0
     transitivePeerDependencies:
       - '@types/node'
       - domexception
@@ -14155,7 +14155,7 @@ snapshots:
 
   signal-exit@4.1.0: {}
 
-  simple-git@3.27.0:
+  simple-git@3.28.0:
     dependencies:
       '@kwsites/file-exists': 1.1.1
       '@kwsites/promise-deferred': 1.1.1
