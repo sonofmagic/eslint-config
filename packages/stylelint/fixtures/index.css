@@ -1,3 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Satoshi", "sans-serif";
+}
+
+@source "../node_modules/@my-company/ui-lib";
+
+@utility tab-4 {
+  tab-size: 4;
+}
+
+@variant dark {
+  background: black;
+}
+
+@custom-variant theme-midnight (&:where([data-theme="midnight"] *));
+@reference "../../app.css";
 /* stylelint-disable order/properties-order */
 div {
   background-color: slategray;
@@ -47,4 +65,16 @@ page {
   .filter-grayscale {
     filter: grayscale(100%);
   }
+}
+
+.btnBlue {
+  @apply btn-blue;
+}
+
+.my-element {
+  color: --alpha(var(--color-lime-300) / 50%);
+}
+
+.my-element2 {
+  margin: --spacing(4);
 }

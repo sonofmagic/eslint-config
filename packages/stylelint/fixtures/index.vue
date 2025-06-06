@@ -54,6 +54,11 @@ div {
     filter: grayscale(100%);
   }
 }
+
+.btnBlue {
+  @apply btn-blue;
+}
+
 </style>
 
 <style lang="scss" scoped>

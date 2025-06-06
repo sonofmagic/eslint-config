@@ -9,12 +9,38 @@ exports[`index > common 1`] = `
   ],
   "overrides": [],
   "rules": {
+    "at-rule-no-deprecated": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "theme",
+          "apply",
+          "source",
+          "utility",
+          "variant",
+          "custom-variant",
+          "reference",
+          "config",
+          "plugin",
+          "unocss",
+        ],
+      },
+    ],
     "scss/at-rule-no-unknown": [
       true,
       {
         "ignoreAtRules": [
           "tailwind",
+          "theme",
+          "apply",
+          "source",
+          "utility",
+          "variant",
+          "custom-variant",
+          "reference",
           "config",
+          "plugin",
           "unocss",
         ],
       },

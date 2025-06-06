@@ -1,6 +1,21 @@
 import type { Config } from 'stylelint'
 import { defu } from 'defu'
 
+const ignoreAtRules = [
+  // tailwindcss
+  'tailwind',
+  'theme',
+  'apply',
+  'source',
+  'utility',
+  'variant',
+  'custom-variant',
+  'reference',
+  'config',
+  'plugin',
+  // unocss
+  'unocss',
+]
 function createDefaultConfig(): Config {
   return {
     extends: [
@@ -34,17 +49,17 @@ function createDefaultConfig(): Config {
           ignoreTypes: ['page'],
         },
       ],
+      'at-rule-no-deprecated': [
+        true,
+        {
+          ignoreAtRules,
+        },
+      ],
       'scss/selector-no-redundant-nesting-selector': true,
       'scss/at-rule-no-unknown': [
         true,
         {
-          ignoreAtRules: [
-            // tailwindcss
-            'tailwind',
-            'config',
-            // unocss
-            'unocss',
-          ],
+          ignoreAtRules,
         },
       ],
     },

@@ -66,3 +66,7 @@ page {
 @media screen(sm) {
   /* ... */
 }
+
+.btnBlue {
+  @apply btn-blue;
+}
