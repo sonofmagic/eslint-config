@@ -136,22 +136,22 @@ describe('order', () => {
   it('import order 3', async () => {
     const res = await eslint.lintText(importCase3)
     expect(res.length).toBe(1)
-    expect(res[0].errorCount).toBe(13)
+    expect(res[0].errorCount).toBe(18)
     expect(some(res[0].messages, (x) => {
       return x.ruleId === 'perfectionist/sort-imports'
     })).toBe(true)
     expect(some(res[0].messages, (x) => {
       return x.ruleId === 'import/first'
-    })).toBe(false)
+    })).toBe(true)
   })
 
   it('import order 3 legacy', async () => {
     const res = await legacyEslint.lintText(importCase3)
     expect(res.length).toBe(1)
-    expect(res[0].errorCount).toBe(11)
+    expect(res[0].errorCount).toBe(16)
     expect(res[0].messages.findIndex(x => x.ruleId === 'perfectionist/sort-imports') > -1).toBe(false)
     expect(some(res[0].messages, (x) => {
       return x.ruleId === 'import/first'
-    })).toBe(false)
+    })).toBe(true)
   })
 })
