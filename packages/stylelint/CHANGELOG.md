@@ -1,5 +1,11 @@
 # @icebreakers/stylelint-config
 
+## 1.1.0
+
+### Minor Changes
+
+- [`cd6f624`](https://github.com/sonofmagic/eslint-config/commit/cd6f624b3ab5c572b8147e8332cfd3786e5a74f2) Thanks [@sonofmagic](https://github.com/sonofmagic)! - chore: bump version
+
 ## 1.0.2
 
 ### Patch Changes
