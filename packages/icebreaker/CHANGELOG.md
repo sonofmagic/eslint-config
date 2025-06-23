@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 1.2.1
+
+### Patch Changes
+
+- [`1dbd303`](https://github.com/sonofmagic/eslint-config/commit/1dbd3034a43b07ed2414aceab65147b85434d320) Thanks [@sonofmagic](https://github.com/sonofmagic)! - chore: upgrade deps
+
 ## 1.2.0
 
 ### Minor Changes
@@ -155,7 +161,6 @@
 ### Patch Changes
 
 - [`aaccc60`](https://github.com/sonofmagic/eslint-config/commit/aaccc60d1fcb298daf04cea582a427c49c9402c1) Thanks [@sonofmagic](https://github.com/sonofmagic)! - 0.4.0
-
   - add `ally` support
   - fix ts enum error
 
