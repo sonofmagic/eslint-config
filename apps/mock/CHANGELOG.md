@@ -1,5 +1,12 @@
 # @icebreakers/mock
 
+## 0.0.6
+
+### Patch Changes
+
+- Updated dependencies [[`d3dbad4`](https://github.com/sonofmagic/eslint-config/commit/d3dbad46db6d3a2a8db252072917dda32aeeef8d)]:
+  - @icebreakers/stylelint-config@1.1.1
+
 ## 0.0.5
 
 ### Patch Changes
