@@ -58,8 +58,8 @@
     "eslint-plugin-vuejs-accessibility": "^2.4.1"
   },
   "optionalDependencies": {
-    "@unocss/eslint-plugin": "66.3.2",
-    "eslint-plugin-mdx": "3.5.0"
+    "@unocss/eslint-plugin": "66.3.3",
+    "eslint-plugin-mdx": "3.6.0"
   },
   "publishConfig": {
     "access": "public",
