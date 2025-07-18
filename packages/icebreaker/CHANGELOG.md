@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 1.2.4
+
+### Patch Changes
+
+- [`cd0ef9d`](https://github.com/sonofmagic/eslint-config/commit/cd0ef9d8d51979c6c2a337af5e4877b5cddfa5f1) Thanks [@sonofmagic](https://github.com/sonofmagic)! - chore: bump version
+
 ## 1.2.3
 
 ### Patch Changes
