@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 1.3.0
+
+### Minor Changes
+
+- [`0bd82f6`](https://github.com/sonofmagic/eslint-config/commit/0bd82f66524c0f7c3d4648ddd2fdf0d70261bbde) Thanks [@sonofmagic](https://github.com/sonofmagic)! - feat: add nextjs support
+
 ## 1.2.5
 
 ### Patch Changes
