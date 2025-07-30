@@ -13,7 +13,6 @@ exports[`presets > c 1`] = `
         "no-console": [
           "warn",
         ],
-        "no-unused-vars": "off",
       },
     },
     "typescript": {
@@ -65,7 +64,6 @@ exports[`presets > c0 1`] = `
         "no-console": [
           "warn",
         ],
-        "no-unused-vars": "off",
       },
     },
     "typescript": {
@@ -116,7 +114,6 @@ exports[`presets > c1 1`] = `
         "no-console": [
           "warn",
         ],
-        "no-unused-vars": "off",
       },
     },
     "typescript": {
@@ -185,7 +182,6 @@ exports[`presets > c2 1`] = `
         "no-console": [
           "warn",
         ],
-        "no-unused-vars": "off",
       },
     },
     "typescript": {
@@ -255,7 +251,6 @@ exports[`presets > c3 1`] = `
         "no-console": [
           "warn",
         ],
-        "no-unused-vars": "off",
       },
     },
     "typescript": {
