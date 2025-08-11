@@ -1,14 +1,9 @@
 # eslint-config
 
-[文档地址](https://eslint.icebreaker.top)
-
-[备用文档地址](https://ice-eslint.netlify.app)
-
-[sonofmagic](https://github.com/sonofmagic)
-
 ## Projects
 
 - [@icebreakers/mock](apps/mock)
+- [@icebreakers/commitlint-config](packages/commitlint) - commitlint
 - [@icebreakers/foo](packages/foo) - my foo your bar pkg
 - [@icebreakers/eslint-config](packages/icebreaker) - icebreakers's eslint config
 - [@icebreakers/stylelint-config](packages/stylelint) - icebreaker's stylelint config
