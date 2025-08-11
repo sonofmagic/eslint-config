@@ -1,7 +1,7 @@
 {
   "name": "@icebreakers/commitlint-config",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "icebreaker's commitlint config",
   "author": "ice breaker <1324318532@qq.com>",
   "license": "MIT",
@@ -41,6 +41,7 @@
   "publishConfig": {},
   "dependencies": {
     "@commitlint/config-conventional": "^19.8.1",
-    "@commitlint/types": "^19.8.1"
+    "@commitlint/types": "^19.8.1",
+    "conventional-changelog-conventionalcommits": "^9.1.0"
   }
 }
