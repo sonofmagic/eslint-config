@@ -39,8 +39,8 @@
   "dependencies": {
     "comment-json": "^4.2.5",
     "postcss-html": "^1.8.0",
-    "stylelint-config-recess-order": "^7.1.0",
-    "stylelint-config-recommended-scss": "^15.0.1",
+    "stylelint-config-recess-order": "^7.2.0",
+    "stylelint-config-recommended-scss": "^16.0.0",
     "stylelint-config-recommended-vue": "^1.6.1",
     "stylelint-config-standard-scss": "^15.0.1"
   },
