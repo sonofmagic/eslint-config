@@ -4,10 +4,9 @@ import { join, resolve } from 'node:path'
 import { execa } from 'execa'
 import fg from 'fast-glob'
 import fs from 'fs-extra'
-import { it } from 'vitest'
 
 function runWithConfig(name: string, configs: UserDefinedOptions, ...items: TypedFlatConfigItem[]) {
-  it.concurrent(name, async ({ expect }) => {
+  it.concurrent(name, async () => {
     const from = resolve(import.meta.dirname, '../fixtures/input')
     const output = resolve(import.meta.dirname, '../fixtures/output', name)
     const target = resolve(import.meta.dirname, '../_fixtures', name)
@@ -50,7 +49,7 @@ ${JSON.stringify(configs)},
         // }
         return
       }
-      await expect.soft(content).toMatchFileSnapshot(join(output, file))
+      await expect(content).toMatchFileSnapshot(join(output, file))
     }))
   }, 30_000)
 }

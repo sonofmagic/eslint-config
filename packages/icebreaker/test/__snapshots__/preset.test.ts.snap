@@ -15,6 +15,13 @@ exports[`presets > c 1`] = `
         ],
       },
     },
+    "test": {
+      "overrides": {
+        "test/prefer-lowercase-title": [
+          "off",
+        ],
+      },
+    },
     "typescript": {
       "overrides": {
         "ts/ban-ts-comment": "off",
@@ -66,6 +73,13 @@ exports[`presets > c0 1`] = `
         ],
       },
     },
+    "test": {
+      "overrides": {
+        "test/prefer-lowercase-title": [
+          "off",
+        ],
+      },
+    },
     "typescript": {
       "overrides": {
         "ts/ban-ts-comment": "off",
@@ -113,6 +127,13 @@ exports[`presets > c1 1`] = `
         ],
         "no-console": [
           "warn",
+        ],
+      },
+    },
+    "test": {
+      "overrides": {
+        "test/prefer-lowercase-title": [
+          "off",
         ],
       },
     },
@@ -184,6 +205,13 @@ exports[`presets > c2 1`] = `
         ],
       },
     },
+    "test": {
+      "overrides": {
+        "test/prefer-lowercase-title": [
+          "off",
+        ],
+      },
+    },
     "typescript": {
       "overrides": {
         "ts/ban-ts-comment": "off",
@@ -250,6 +278,13 @@ exports[`presets > c3 1`] = `
         ],
         "no-console": [
           "warn",
+        ],
+      },
+    },
+    "test": {
+      "overrides": {
+        "test/prefer-lowercase-title": [
+          "off",
         ],
       },
     },

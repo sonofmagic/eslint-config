@@ -5,6 +5,8 @@ import { interopDefault } from './antfu'
 import { getDefaultTypescriptOptions, getDefaultVueOptions } from './defaults'
 import { isObject } from './utils'
 
+// http://github.com/antfu/eslint-config?tab=readme-ov-file#editor-specific-disables
+
 export function getPresets(options?: UserDefinedOptions, mode?: 'legacy'): [UserDefinedOptions, ...UserConfigItem[]] {
   const opts = defu<UserDefinedOptions, UserDefinedOptions[]>(options, {
     formatters: true,
@@ -19,6 +21,11 @@ export function getPresets(options?: UserDefinedOptions, mode?: 'legacy'): [User
         // 'no-unused-vars': 'error',
         // 'no-undef': 'error',
         // 'prefer-const': 'off',
+      },
+    },
+    test: {
+      overrides: {
+        'test/prefer-lowercase-title': ['off'],
       },
     },
   })
