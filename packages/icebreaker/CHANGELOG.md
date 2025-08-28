@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 1.3.6
+
+### Patch Changes
+
+- [`114949c`](https://github.com/sonofmagic/eslint-config/commit/114949c4212d3094dab363617b58cc755ff018d2) Thanks [@sonofmagic](https://github.com/sonofmagic)! - chore: add vitest rules overrides
+
 ## 1.3.5
 
 ### Patch Changes
