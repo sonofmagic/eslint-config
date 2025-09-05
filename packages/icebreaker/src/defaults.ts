@@ -75,7 +75,7 @@ export function getDefaultTypescriptOptions(opts?: UserDefinedOptions) {
       },
     ],
   }
-  if (opts?.nest) {
+  if (opts?.nestjs) {
     Object.assign(overrides, {
       'ts/interface-name-prefix': 'off',
       'ts/explicit-function-return-type': 'off',

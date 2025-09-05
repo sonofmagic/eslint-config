@@ -93,19 +93,48 @@ export function getPresets(options?: UserDefinedOptions, mode?: 'legacy'): [User
 
   // https://github.com/francoismassart/eslint-plugin-tailwindcss/issues/335
   if (enableTailwindcss) {
-    presets.push(
-      // @ts-ignore
-      interopDefault(
-        import('eslint-plugin-tailwindcss'),
-      ).then((tailwind) => {
-        return tailwind.configs['flat/recommended']
-      }),
-    )
-    presets.push({
-      rules: {
-        'tailwindcss/no-custom-classname': 'off',
-      },
-    })
+    if (typeof enableTailwindcss === 'object') {
+      presets.push(
+        interopDefault(
+          import('eslint-plugin-better-tailwindcss'),
+        ).then((eslintPluginBetterTailwindcss) => {
+          return {
+            plugins: {
+              'better-tailwindcss': eslintPluginBetterTailwindcss,
+            },
+            rules: {
+              // enable all recommended rules to report a warning
+              ...eslintPluginBetterTailwindcss.configs['recommended-warn'].rules,
+              // enable all recommended rules to report an error
+              ...eslintPluginBetterTailwindcss.configs['recommended-error'].rules,
+            },
+            settings: {
+              'better-tailwindcss': {
+                // tailwindcss 4: the path to the entry file of the css based tailwind config (eg: `src/global.css`)
+                entryPoint: enableTailwindcss.entryPoint,
+                // tailwindcss 3: the path to the tailwind config file (eg: `tailwind.config.js`)
+                tailwindConfig: enableTailwindcss.tailwindConfig,
+              },
+            },
+          }
+        }),
+      )
+    }
+    else {
+      presets.push(
+        // @ts-ignore
+        interopDefault(
+          import('eslint-plugin-tailwindcss'),
+        ).then((tailwind) => {
+          return tailwind.configs['flat/recommended']
+        }),
+      )
+      presets.push({
+        rules: {
+          'tailwindcss/no-custom-classname': 'off',
+        },
+      })
+    }
   }
 
   if (enableMDX) {
