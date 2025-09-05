@@ -1,5 +1,13 @@
 # @icebreakers/eslint-config
 
+## 1.4.0
+
+### Minor Changes
+
+- [`c4a1e7f`](https://github.com/sonofmagic/eslint-config/commit/c4a1e7f7511a16d76a507711adf040a41029d063) Thanks [@sonofmagic](https://github.com/sonofmagic)! - feat: 添加 `eslint-plugin-better-tailwindcss` 支持
+
+  chore: 重命名 `nest` 到 `nestjs`
+
 ## 1.3.6
 
 ### Patch Changes
