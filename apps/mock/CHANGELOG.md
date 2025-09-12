@@ -1,5 +1,12 @@
 # @icebreakers/mock
 
+## 0.0.9
+
+### Patch Changes
+
+- Updated dependencies [[`ff56985`](https://github.com/sonofmagic/eslint-config/commit/ff5698537710eb3faedbdf6902d47b50f8243cd0)]:
+  - @icebreakers/stylelint-config@1.1.4
+
 ## 0.0.8
 
 ### Patch Changes
