@@ -1,6 +1,6 @@
 /* eslint-disable style/no-tabs */
-import { icebreaker } from '@/index'
 import stylelint from 'stylelint'
+import { icebreaker } from '@/index'
 
 const incorrectOrder = `
 	div {
@@ -55,7 +55,7 @@ describe('stylelint', () => {
       code: incorrectOrder,
     })
     expect(result.results.length).toBe(1)
-    expect(result.results[0].warnings.length).toBe(4)
+    expect(result.results[0].warnings.length).toBe(5)
     expect(result.results[0].warnings[0].text.trim()).toBe(`Expected "box-sizing" to come before "background-color" (order/properties-order)`)
 
     // 'Expected "box-sizing" to come before "background-color" (order/properties-order)',
@@ -68,6 +68,7 @@ describe('stylelint', () => {
       code: correctOrder,
     })
     expect(result.results.length).toBe(1)
-    expect(result.results[0].warnings.length).toBe(0)
+    expect(result.results[0].warnings.length).toBe(1)
+    expect(result.results[0].warnings[0].text.trim()).toBe(`Expected "grid-gap" to be "gap" (property-no-deprecated)`)
   })
 })
