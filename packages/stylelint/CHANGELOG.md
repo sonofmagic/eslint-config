@@ -1,5 +1,11 @@
 # @icebreakers/stylelint-config
 
+## 1.1.4
+
+### Patch Changes
+
+- [`ff56985`](https://github.com/sonofmagic/eslint-config/commit/ff5698537710eb3faedbdf6902d47b50f8243cd0) Thanks [@sonofmagic](https://github.com/sonofmagic)! - chore(deps): upgrade
+
 ## 1.1.3
 
 ### Patch Changes
