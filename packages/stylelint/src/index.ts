@@ -19,6 +19,7 @@ const ignoreAtRules = [
 function createDefaultConfig(): Config {
   return {
     extends: [
+      // https://www.npmjs.com/package/stylelint-config-standard-scss
       // extends: ['stylelint-config-standard', 'stylelint-config-recommended-scss']
       'stylelint-config-standard-scss',
       // https://github.com/ota-meshi/stylelint-config-recommended-vue/blob/main/lib/index.js
