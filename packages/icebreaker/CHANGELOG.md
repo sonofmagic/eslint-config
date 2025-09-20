@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 1.4.4
+
+### Patch Changes
+
+- [`ac3f818`](https://github.com/sonofmagic/eslint-config/commit/ac3f81863c89583556e25448dfe26fce68d6ccda) Thanks [@sonofmagic](https://github.com/sonofmagic)! - chore(deps): upgrade
+
 ## 1.4.3
 
 ### Patch Changes
