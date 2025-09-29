@@ -37,10 +37,10 @@
     "sync": "cnpm sync @icebreakers/stylelint-config"
   },
   "dependencies": {
-    "comment-json": "^4.2.5",
+    "comment-json": "^4.3.0",
     "postcss-html": "^1.8.0",
     "stylelint-config-recess-order": "^7.3.0",
-    "stylelint-config-recommended-scss": "^16.0.1",
+    "stylelint-config-recommended-scss": "^16.0.2",
     "stylelint-config-recommended-vue": "^1.6.1",
     "stylelint-config-standard-scss": "^16.0.0"
   },
