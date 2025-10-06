@@ -1,5 +1,12 @@
+import { createRequire } from 'node:module'
 import { createStylelintConfig, icebreaker } from '@/index'
 import { setVscodeSettingsJson } from '@/shared'
+
+const testRequire = createRequire(import.meta.url)
+
+const PRESET_PATH_STANDARD_SCSS = testRequire.resolve('stylelint-config-standard-scss')
+const PRESET_PATH_VUE_SCSS = testRequire.resolve('stylelint-config-recommended-vue/scss')
+const PRESET_PATH_RECESS_ORDER = testRequire.resolve('stylelint-config-recess-order')
 
 describe('index', () => {
   it('setVscodeSettingsJson case 0', () => {
@@ -17,7 +24,22 @@ describe('index', () => {
   })
 
   it('common', () => {
-    expect(icebreaker()).toMatchSnapshot()
+    const config = icebreaker()
+
+    expect(config.extends).toEqual([
+      PRESET_PATH_STANDARD_SCSS,
+      PRESET_PATH_VUE_SCSS,
+      PRESET_PATH_RECESS_ORDER,
+    ])
+
+    expect({
+      ...config,
+      extends: [
+        'stylelint-config-standard-scss',
+        'stylelint-config-recommended-vue/scss',
+        'stylelint-config-recess-order',
+      ],
+    }).toMatchSnapshot()
   })
 
   it('createStylelintConfig toggles presets', () => {
@@ -30,7 +52,7 @@ describe('index', () => {
     })
 
     expect(config.extends).toEqual([
-      'stylelint-config-standard-scss',
+      PRESET_PATH_STANDARD_SCSS,
       'my-custom-config',
     ])
   })

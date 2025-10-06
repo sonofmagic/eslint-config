@@ -1,18 +1,25 @@
 import type { Config } from 'stylelint'
 import type { IcebreakerStylelintOptions, PresetToggles } from './types'
+import { createRequire } from 'node:module'
 import { PRESET_RECESS_ORDER, PRESET_STANDARD_SCSS, PRESET_VUE_SCSS } from './constants'
 import { normalizeExtends, resolveIgnoreList, toArray, unique } from './utils'
+
+const requireFromConfig = createRequire(import.meta.url)
+
+const PRESET_PATH_STANDARD_SCSS = requireFromConfig.resolve(PRESET_STANDARD_SCSS)
+const PRESET_PATH_VUE_SCSS = requireFromConfig.resolve(PRESET_VUE_SCSS)
+const PRESET_PATH_RECESS_ORDER = requireFromConfig.resolve(PRESET_RECESS_ORDER)
 
 function resolvePresetExtends(presets: PresetToggles | undefined): string[] {
   const entries: string[] = []
   if (presets?.scss !== false) {
-    entries.push(PRESET_STANDARD_SCSS)
+    entries.push(PRESET_PATH_STANDARD_SCSS)
   }
   if (presets?.vue !== false) {
-    entries.push(PRESET_VUE_SCSS)
+    entries.push(PRESET_PATH_VUE_SCSS)
   }
   if (presets?.order !== false) {
-    entries.push(PRESET_RECESS_ORDER)
+    entries.push(PRESET_PATH_RECESS_ORDER)
   }
   return entries
 }
