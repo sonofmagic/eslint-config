@@ -1,7 +1,7 @@
 {
   "name": "@icebreakers/eslint-config",
   "type": "module",
-  "version": "1.4.6",
+  "version": "1.5.0",
   "description": "icebreakers's eslint config",
   "author": "ice breaker <1324318532@qq.com>",
   "license": "MIT",

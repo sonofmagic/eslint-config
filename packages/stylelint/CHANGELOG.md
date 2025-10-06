@@ -1,5 +1,13 @@
 # @icebreakers/stylelint-config
 
+## 1.2.0
+
+### Minor Changes
+
+- [`fe94f59`](https://github.com/sonofmagic/eslint-config/commit/fe94f591a991b38845c1122693ba9e88f610cce9) Thanks [@sonofmagic](https://github.com/sonofmagic)! - - 重构核心配置工厂，新增 `createStylelintConfig` 以支持开关预设、扩展忽略列表并保持 `icebreaker()` 向后兼容
+  - 精简 VS Code 初始化逻辑，移除 `get-value`/`set-value` 依赖，保留原有设置输出
+  - 更新包导出结构与 README 用法示例，覆盖 CLI、构建产物和文档说明
+
 ## 1.1.6
 
 ### Patch Changes
