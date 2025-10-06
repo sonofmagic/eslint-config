@@ -1,5 +1,5 @@
 ---
-'@icebreakers/stylelint-config': major
+'@icebreakers/stylelint-config': minor
 ---
 
 - 重构核心配置工厂，新增 `createStylelintConfig` 以支持开关预设、扩展忽略列表并保持 `icebreaker()` 向后兼容
