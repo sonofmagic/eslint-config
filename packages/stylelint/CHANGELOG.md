@@ -1,5 +1,11 @@
 # @icebreakers/stylelint-config
 
+## 1.2.1
+
+### Patch Changes
+
+- [`e9e9faf`](https://github.com/sonofmagic/eslint-config/commit/e9e9faf3c55e368d61330da5d1251758f9bb0f62) Thanks [@sonofmagic](https://github.com/sonofmagic)! - fix: use requireFromConfig.resolve to get config preset
+
 ## 1.2.0
 
 ### Minor Changes
