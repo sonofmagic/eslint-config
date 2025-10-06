@@ -7,7 +7,7 @@
     "apps/*",
     "packages/*"
   ],
-  "packageManager": "pnpm@10.17.1",
+  "packageManager": "pnpm@10.18.1",
   "author": "ice breaker <1324318532@qq.com>",
   "repository": {
     "type": "git",
@@ -58,7 +58,7 @@
     "@eslint/eslintrc": "^3.3.1",
     "@icebreakers/commitlint-config": "workspace:*",
     "@icebreakers/eslint-config": "workspace:*",
-    "@icebreakers/monorepo": "^2.0.2",
+    "@icebreakers/monorepo": "^2.0.3",
     "@icebreakers/stylelint-config": "workspace:*",
     "@types/eslint-plugin-tailwindcss": "^3.17.0",
     "@types/fs-extra": "^11.0.4",

@@ -1,4 +1,4 @@
-import { icebreaker } from '@/index'
+import { createStylelintConfig, icebreaker } from '@/index'
 import { setVscodeSettingsJson } from '@/shared'
 
 describe('index', () => {
@@ -18,5 +18,48 @@ describe('index', () => {
 
   it('common', () => {
     expect(icebreaker()).toMatchSnapshot()
+  })
+
+  it('createStylelintConfig toggles presets', () => {
+    const config = createStylelintConfig({
+      presets: {
+        vue: false,
+        order: false,
+      },
+      extends: 'my-custom-config',
+    })
+
+    expect(config.extends).toEqual([
+      'stylelint-config-standard-scss',
+      'my-custom-config',
+    ])
+  })
+
+  it('createStylelintConfig custom ignores', () => {
+    const config = createStylelintConfig({
+      ignores: {
+        units: [],
+        addUnits: ['upx'],
+        atRules: ['tailwind'],
+        addAtRules: ['uno-layer'],
+      },
+    })
+
+    expect(config.rules?.['unit-no-unknown']).toEqual([
+      true,
+      {
+        ignoreUnits: ['upx'],
+      },
+    ])
+
+    expect(config.rules?.['scss/at-rule-no-unknown']).toEqual([
+      true,
+      {
+        ignoreAtRules: [
+          'tailwind',
+          'uno-layer',
+        ],
+      },
+    ])
   })
 })

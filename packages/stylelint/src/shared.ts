@@ -1,14 +1,23 @@
-import get from 'get-value'
-import set from 'set-value'
+export type VscodeSettings = Record<string, unknown>
 
-export function setVscodeSettingsJson(json: any = {}) {
-  set(json, 'css\\.validate', false)
-  set(json, 'less\\.validate', false)
-  set(json, 'scss\\.validate', false)
-  const stylelintValidates = new Set(get(json, 'stylelint\\.validate', { default: [] }) as string[])
-  stylelintValidates.add('vue')
-  stylelintValidates.add('css')
-  stylelintValidates.add('scss')
-  set(json, 'stylelint\\.validate', Array.from(stylelintValidates))
+function asStringArray(value: unknown): string[] {
+  if (!Array.isArray(value)) {
+    return []
+  }
+
+  return value.filter((entry): entry is string => typeof entry === 'string')
+}
+
+export function setVscodeSettingsJson(json: VscodeSettings = {}): VscodeSettings {
+  json['css.validate'] = false
+  json['less.validate'] = false
+  json['scss.validate'] = false
+
+  const existing = new Set(asStringArray(json['stylelint.validate']))
+  existing.add('vue')
+  existing.add('css')
+  existing.add('scss')
+
+  json['stylelint.validate'] = Array.from(existing)
   return json
 }

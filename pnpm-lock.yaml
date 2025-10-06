@@ -39,8 +39,8 @@ importers:
         specifier: workspace:*
         version: link:packages/icebreaker
       '@icebreakers/monorepo':
-        specifier: ^2.0.2
-        version: 2.0.2(@types/node@24.7.0)(magicast@0.3.5)(typanion@3.14.0)
+        specifier: ^2.0.3
+        version: 2.0.3(@types/node@24.7.0)(magicast@0.3.5)(typanion@3.14.0)
       '@icebreakers/stylelint-config':
         specifier: workspace:*
         version: link:packages/stylelint
@@ -1344,8 +1344,8 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
-  '@icebreakers/monorepo@2.0.2':
-    resolution: {integrity: sha512-Z/0wIx+g8xIISpQYv7tUFc13syeF2F2RbK8qZc9AD8XDz/YnBBSigqv8HeKHDguiC8hG4epX8C20p9diMIq8tg==}
+  '@icebreakers/monorepo@2.0.3':
+    resolution: {integrity: sha512-CxGlJV3Nw+nMb1eKpkDy9GQoypWKi9XWn7B4ZG7eJLaI5wT3Bo8E9oDesY6s4WkFk4wfe2JJWV8QdbljI0xGkQ==}
     hasBin: true
 
   '@inquirer/ansi@1.0.0':
@@ -8702,7 +8702,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@icebreakers/monorepo@2.0.2(@types/node@24.7.0)(magicast@0.3.5)(typanion@3.14.0)':
+  '@icebreakers/monorepo@2.0.3(@types/node@24.7.0)(magicast@0.3.5)(typanion@3.14.0)':
     dependencies:
       '@inquirer/checkbox': 4.2.4(@types/node@24.7.0)
       '@inquirer/confirm': 5.1.18(@types/node@24.7.0)
