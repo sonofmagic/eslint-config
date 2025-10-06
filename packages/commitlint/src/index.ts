@@ -1,24 +1,30 @@
 import type { UserConfig } from '@commitlint/types'
-// import preset from '@commitlint/config-conventional'
-import {
-  RuleConfigCondition,
-  RuleConfigSeverity,
-  TargetCaseType,
-} from '@commitlint/types'
-import { defu } from 'defu'
-// https://github.com/conventional-changelog/commitlint/blob/master/%40commitlint/config-conventional/src/index.ts
-export function icebreaker(config?: UserConfig): UserConfig {
-  return defu<UserConfig, UserConfig[]>(config, {
-    extends: ['@commitlint/config-conventional'],
-  })
-}
+import type { IcebreakerCommitlintOptions } from './types'
+import { createIcebreakerCommitlintConfig } from './config'
 
+export { createIcebreakerCommitlintConfig }
 export {
-  RuleConfigCondition,
-  RuleConfigSeverity,
-  TargetCaseType,
+  DEFAULT_COMMIT_TYPES,
+  DEFAULT_EXTENDS,
+  DEFAULT_SUBJECT_FORBIDDEN_CASES,
+  DEFAULT_TYPES,
+} from './constants'
+export type {
+  CommitTypeDefinition,
+  HeaderRuleOptions,
+  IcebreakerCommitlintOptions,
+  ScopeRuleOptions,
+  SubjectRuleOptions,
+  TypeRuleOptions,
+} from './types'
+export { RuleConfigCondition, RuleConfigSeverity, TargetCaseType } from '@commitlint/types'
+
+export function createCommitlintConfig(
+  options?: IcebreakerCommitlintOptions,
+): UserConfig {
+  return createIcebreakerCommitlintConfig(options)
 }
 
-export type {
-  UserConfig,
+export function icebreaker(options?: IcebreakerCommitlintOptions): UserConfig {
+  return createIcebreakerCommitlintConfig(options)
 }
