@@ -5,23 +5,26 @@ import type {
 } from '@antfu/eslint-config'
 import type { Linter } from 'eslint'
 import type { FlatConfigComposer } from 'eslint-flat-config-utils'
-import { } from 'eslint-plugin-better-tailwindcss'
+
+export interface TailwindcssOption {
+  /**
+   * Tailwind CSS v4 entry point, e.g. `src/global.css`.
+   */
+  entryPoint?: string
+  /**
+   * Tailwind CSS v3 config file path, e.g. `tailwind.config.js`.
+   */
+  tailwindConfig?: string
+}
+
+export type TailwindcssConfig = boolean | TailwindcssOption
 
 export type UserDefinedOptions = OptionsConfig & TypedFlatConfigItem & {
   /**
    * Enable TailwindCSS support
    * @default false
    */
-  tailwindcss?: boolean | {
-    /**
-     * tailwindcss 4: the path to the entry file of the css based tailwind config (eg: `src/global.css`)
-     */
-    entryPoint?: string
-    /**
-     * tailwindcss 3: the path to the tailwind config file (eg: `tailwind.config.js`)
-     */
-    tailwindConfig?: string
-  }
+  tailwindcss?: TailwindcssConfig
   /**
    * Enable MDX support
    * @default false

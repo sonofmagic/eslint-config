@@ -1,3 +1,8 @@
 export * from './factory'
 export * from './preset'
-export type { UserConfigItem, UserDefinedOptions } from './types'
+export type {
+  TailwindcssConfig,
+  TailwindcssOption,
+  UserConfigItem,
+  UserDefinedOptions,
+} from './types'
