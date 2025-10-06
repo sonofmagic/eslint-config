@@ -1,5 +1,13 @@
 # @icebreakers/eslint-config
 
+## 1.5.0
+
+### Minor Changes
+
+- [`ce5ac2d`](https://github.com/sonofmagic/eslint-config/commit/ce5ac2d46badac3943aad225f02d32628c5d362b) Thanks [@sonofmagic](https://github.com/sonofmagic)! - - 重构选项解析为独立模块，确保 Vue/TypeScript 默认和 Tailwind、MDX、无障碍插件按需加载
+  - 新增 `TailwindcssOption` 类型导出，明确 v3/v4 配置入口字段
+  - 更新 README，说明如何组合可选预设并扩展 @antfu/eslint-config 配置
+
 ## 1.4.6
 
 ### Patch Changes
