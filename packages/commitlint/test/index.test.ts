@@ -1,6 +1,10 @@
 import conventionalConfig from '@commitlint/config-conventional'
 import { describe, expect, it } from 'vitest'
-import { createIcebreakerCommitlintConfig, RuleConfigSeverity } from '../src'
+import {
+  createIcebreakerCommitlintConfig,
+  icebreaker,
+  RuleConfigSeverity,
+} from '../src'
 
 describe('createIcebreakerCommitlintConfig', () => {
   it('returns the default configuration', () => {
@@ -140,12 +144,20 @@ describe('createIcebreakerCommitlintConfig', () => {
     })
 
     const prompt = config.prompt?.questions
-    expect(prompt?.type?.enum?.deps?.title).toBe('Dependencies')
+    const typeEnum = prompt?.type?.enum as
+      | Record<string, { title?: string, description?: string, emoji?: string }>
+      | undefined
+    expect(typeEnum?.deps?.title).toBe('Dependencies')
     expect(prompt?.scope?.description).toBe('What part of the project changed?')
 
     const conventionalPrompt = conventionalConfig.prompt?.questions
-    expect(conventionalPrompt?.type?.enum?.deps).toBeUndefined()
-    expect(conventionalPrompt?.scope?.description).not.toBe('What part of the project changed?')
+    const conventionalTypeEnum = conventionalPrompt?.type?.enum as
+      | Record<string, unknown>
+      | undefined
+    expect(conventionalTypeEnum?.deps).toBeUndefined()
+    expect(conventionalPrompt?.scope?.description).not.toBe(
+      'What part of the project changed?',
+    )
   })
 
   it('honors custom subject empty severities when a subject is required', () => {
@@ -173,5 +185,21 @@ describe('createIcebreakerCommitlintConfig', () => {
       'always',
       ['core', 'docs'],
     ])
+  })
+
+  it('exposes icebreaker as a callable alias', () => {
+    const aliasConfig = icebreaker({
+      header: {
+        maxLength: 72,
+      },
+    })
+
+    expect(aliasConfig).toEqual(
+      createIcebreakerCommitlintConfig({
+        header: {
+          maxLength: 72,
+        },
+      }),
+    )
   })
 })
