@@ -1,3 +1,4 @@
+import conventionalConfig from '@commitlint/config-conventional'
 import { describe, expect, it } from 'vitest'
 import { createIcebreakerCommitlintConfig, RuleConfigSeverity } from '../src'
 
@@ -115,5 +116,62 @@ describe('createIcebreakerCommitlintConfig', () => {
 
     const headerRule = config.rules?.['header-max-length'] as [number, string, number]
     expect(headerRule).toEqual([RuleConfigSeverity.Warning, 'always', 120])
+  })
+
+  it('merges prompt metadata while keeping the conventional preset immutable', () => {
+    const config = createIcebreakerCommitlintConfig({
+      types: {
+        definitions: [
+          {
+            value: 'deps',
+            title: 'Dependencies',
+            description: 'Dependency updates',
+            emoji: '📦',
+          },
+        ],
+      },
+      prompt: {
+        questions: {
+          scope: {
+            description: 'What part of the project changed?',
+          },
+        },
+      },
+    })
+
+    const prompt = config.prompt?.questions
+    expect(prompt?.type?.enum?.deps?.title).toBe('Dependencies')
+    expect(prompt?.scope?.description).toBe('What part of the project changed?')
+
+    const conventionalPrompt = conventionalConfig.prompt?.questions
+    expect(conventionalPrompt?.type?.enum?.deps).toBeUndefined()
+    expect(conventionalPrompt?.scope?.description).not.toBe('What part of the project changed?')
+  })
+
+  it('honors custom subject empty severities when a subject is required', () => {
+    const config = createIcebreakerCommitlintConfig({
+      subject: {
+        allowEmpty: false,
+        allowEmptySeverity: RuleConfigSeverity.Warning,
+      },
+    })
+
+    const subjectEmpty = config.rules?.['subject-empty'] as [number, string]
+    expect(subjectEmpty).toEqual([RuleConfigSeverity.Warning, 'never'])
+  })
+
+  it('builds scope enums without duplicates', () => {
+    const config = createIcebreakerCommitlintConfig({
+      scopes: {
+        values: ['core', 'core', 'docs'],
+      },
+    })
+
+    const scopeEnum = config.rules?.['scope-enum'] as [number, string, string[]]
+    expect(scopeEnum).toEqual([
+      RuleConfigSeverity.Error,
+      'always',
+      ['core', 'docs'],
+    ])
   })
 })
