@@ -1,10 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import {
-  createIcebreakerCommitlintConfig,
-  DEFAULT_COMMIT_TYPES,
-  DEFAULT_TYPES,
-  RuleConfigSeverity,
-} from '../src'
+import { createIcebreakerCommitlintConfig, RuleConfigSeverity } from '../src'
 
 describe('createIcebreakerCommitlintConfig', () => {
   it('returns the default configuration', () => {
@@ -13,15 +8,8 @@ describe('createIcebreakerCommitlintConfig', () => {
     expect(config.extends).toEqual(['@commitlint/config-conventional'])
     expect(config.parserPreset).toBe('conventional-changelog-conventionalcommits')
 
-    const typeRule = config.rules?.['type-enum'] as [number, string, string[]]
-    expect(typeRule[0]).toBe(RuleConfigSeverity.Error)
-    expect(typeRule[1]).toBe('always')
-    expect(typeRule[2]).toEqual(DEFAULT_TYPES)
-
-    const promptTypes = config.prompt?.questions?.type?.enum
-    for (const definition of DEFAULT_COMMIT_TYPES) {
-      expect(promptTypes?.[definition.value]?.title).toBe(definition.title)
-    }
+    expect(config.rules).toBeUndefined()
+    expect(config.prompt).toBeUndefined()
   })
 
   it('allows extending commit types with prompt metadata', () => {
