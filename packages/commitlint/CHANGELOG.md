@@ -1,5 +1,11 @@
 # @icebreakers/commitlint-config
 
+## 1.1.1
+
+### Patch Changes
+
+- [`87c3e2e`](https://github.com/sonofmagic/eslint-config/commit/87c3e2e9c3f4562e01c22197c6aabc5d853bfd01) Thanks [@sonofmagic](https://github.com/sonofmagic)! - refactor: code
+
 ## 1.1.0
 
 ### Minor Changes
