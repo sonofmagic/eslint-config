@@ -1,5 +1,12 @@
 # @icebreakers/commitlint-config
 
+## 1.2.0
+
+### Minor Changes
+
+- [`2fede36`](https://github.com/sonofmagic/eslint-config/commit/2fede366a29ed990a435c1bd7947504cbcfeda45) Thanks [@sonofmagic](https://github.com/sonofmagic)! - - 重构内部模块结构，拆分规则构建、提示合并与工具函数，提升可维护性并覆盖全面单元测试
+  - 新增中文 README，推荐通过 `icebreaker` 快速生成可定制的 commitlint 配置
+
 ## 1.1.1
 
 ### Patch Changes
