@@ -1,3 +1,3 @@
-import { createIcebreakerCommitlintConfig } from '@icebreakers/commitlint-config'
+import { icebreaker } from '@icebreakers/commitlint-config'
 
-export default createIcebreakerCommitlintConfig()
+export default icebreaker()
