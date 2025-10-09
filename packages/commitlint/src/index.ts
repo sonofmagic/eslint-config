@@ -1,6 +1,7 @@
 import type { RulesConfig, UserConfig } from '@commitlint/types'
-
 import type { IcebreakerCommitlintOptions } from './types'
+
+import conventionalConfig from '@commitlint/config-conventional'
 import {
   buildHeaderRules,
   buildScopeRules,
@@ -9,7 +10,7 @@ import {
 } from './builders'
 import { DEFAULT_EXTENDS, DEFAULT_PARSER_PRESET } from './constants'
 import { mergePrompts } from './prompt'
-import { mergeUnique } from './utils'
+import { asArray, mergeUnique } from './utils'
 
 export {
   type CommitHeaderOptions,
@@ -29,10 +30,16 @@ export function createIcebreakerCommitlintConfig(
 
   const extendsList = mergeUnique([
     ...DEFAULT_EXTENDS,
-    ...mergeUnique(options.extends ?? []),
+    ...asArray(
+      conventionalConfig
+      // @ts-ignore
+        .extends,
+    ),
+    ...asArray(options.extends),
   ])
 
   const rules: Partial<RulesConfig> = {
+    ...(conventionalConfig.rules ?? {}),
     ...buildScopeRules(scopes),
     ...buildSubjectRules(subject),
     ...buildHeaderRules(header),
@@ -48,11 +55,12 @@ export function createIcebreakerCommitlintConfig(
     ...(options.rules ?? {}),
   }
 
-  const prompt = mergePrompts(typesConfig.prompt, options.prompt)
+  const promptBase = typesConfig.prompt ?? conventionalConfig.prompt
+  const prompt = mergePrompts(promptBase, options.prompt)
 
   return {
-    extends: extendsList,
-    parserPreset: DEFAULT_PARSER_PRESET,
+    ...(extendsList.length > 0 ? { extends: extendsList } : {}),
+    parserPreset: conventionalConfig.parserPreset ?? DEFAULT_PARSER_PRESET,
     ...(Object.keys(mergedRules).length > 0 ? { rules: mergedRules } : {}),
     ...(prompt ? { prompt } : {}),
   }

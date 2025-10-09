@@ -18,7 +18,7 @@ import { asArray, mergeUnique } from '../src/utils'
 
 describe('constants', () => {
   it('exposes default extends and parser preset', () => {
-    expect(DEFAULT_EXTENDS).toEqual(['@commitlint/config-conventional'])
+    expect(DEFAULT_EXTENDS).toEqual([])
     expect(DEFAULT_PARSER_PRESET).toBe('conventional-changelog-conventionalcommits')
   })
 })

@@ -10,11 +10,13 @@ describe('createIcebreakerCommitlintConfig', () => {
   it('returns the default configuration', () => {
     const config = createIcebreakerCommitlintConfig()
 
-    expect(config.extends).toEqual(['@commitlint/config-conventional'])
-    expect(config.parserPreset).toBe('conventional-changelog-conventionalcommits')
+    expect(config.extends).toBeUndefined()
+    expect(config.parserPreset).toBe(
+      conventionalConfig.parserPreset ?? 'conventional-changelog-conventionalcommits',
+    )
 
-    expect(config.rules).toBeUndefined()
-    expect(config.prompt).toBeUndefined()
+    expect(config.rules).toEqual(conventionalConfig.rules)
+    expect(config.prompt).toEqual(conventionalConfig.prompt)
   })
 
   it('allows extending commit types with prompt metadata', () => {
