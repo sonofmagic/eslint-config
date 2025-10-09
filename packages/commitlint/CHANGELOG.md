@@ -1,5 +1,11 @@
 # @icebreakers/commitlint-config
 
+## 1.2.1
+
+### Patch Changes
+
+- [`17f4de2`](https://github.com/sonofmagic/eslint-config/commit/17f4de206a6a5301c38bb050c19076fae93e4880) Thanks [@sonofmagic](https://github.com/sonofmagic)! - Inline the conventional preset defaults so downstream commitlint consumers no longer need to install `@commitlint/config-conventional` manually.
+
 ## 1.2.0
 
 ### Minor Changes
