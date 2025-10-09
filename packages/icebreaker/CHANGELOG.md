@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 1.5.1
+
+### Patch Changes
+
+- [`d6f5d2c`](https://github.com/sonofmagic/eslint-config/commit/d6f5d2c167ea65577714ab1c5f45fa82a577efe3) Thanks [@sonofmagic](https://github.com/sonofmagic)! - feat: "eslint-plugin-react-hooks": "^7.0.0"
+
 ## 1.5.0
 
 ### Minor Changes
