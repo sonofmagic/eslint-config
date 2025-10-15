@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 1.5.2
+
+### Patch Changes
+
+- [`4f717f5`](https://github.com/sonofmagic/eslint-config/commit/4f717f5353f11f72853936045fde8ae546a2b9ea) Thanks [@sonofmagic](https://github.com/sonofmagic)! - feat: upgrade @antfu/eslint-config to 6.0.0
+
 ## 1.5.1
 
 ### Patch Changes
