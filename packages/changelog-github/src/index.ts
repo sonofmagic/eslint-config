@@ -307,9 +307,13 @@ const changelogFunctions: ChangelogFunctions = {
     )
     const detailBlock = buildDetailCallout(resolvedType, details)
 
-    return detailBlock
-      ? `\n\n${headline}\n${detailBlock}`
-      : `\n\n${headline}`
+    if (!detailBlock) {
+      return `\n\n${headline}`
+    }
+
+    // Render callout adjacent to the headline instead of nesting under lists,
+    // so GitHub's parser preserves the block styling.
+    return `\n\n${detailBlock}\n\n${headline}`
   },
 }
 
