@@ -61,11 +61,11 @@ describe('getReleaseLine', () => {
     expect(result).toContain('- ✨ **Add new lint rule**')
     expect(result).toContain('> [!TIP]')
     expect(result).toContain('> Minor release details:')
-    expect(result).toContain('> - 📝 ensure coverage for edge cases')
-    expect(result).toContain('> - 🔗 [#123](https://github.com/sonofmagic/dev-configs/pull/123)')
-    expect(result).toContain('> - 🧾 [`abcdef1`](https://github.com/sonofmagic/dev-configs/commit/abcdef1234567890)')
-    expect(result).toContain('> - 🙌 Thanks [@lint-bot](https://github.com/lint-bot)!')
-    expect(result).toContain('> - 🏷️ Minor release')
+    expect(result).toContain('> 📝 ensure coverage for edge cases')
+    expect(result).toContain('> 🔗 [#123](https://github.com/sonofmagic/dev-configs/pull/123)')
+    expect(result).toContain('> 🧾 [`abcdef1`](https://github.com/sonofmagic/dev-configs/commit/abcdef1234567890)')
+    expect(result).toContain('> 🙌 Thanks [@lint-bot](https://github.com/lint-bot)!')
+    expect(result).toContain('> 🏷️ Minor release')
     expect(getInfoFromPullRequestMock).toHaveBeenCalledWith({
       repo,
       pull: 123,

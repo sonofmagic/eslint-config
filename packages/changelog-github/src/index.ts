@@ -226,22 +226,22 @@ function buildDetailLines(
   userMentions: string,
   type: ReleaseTypeKey,
 ): string[] {
-  const details = detailLines.map(line => `- 📝 ${line}`)
+  const details = detailLines.map(line => `📝 ${line}`)
 
   if (links.pull) {
-    details.push(`- 🔗 ${links.pull}`)
+    details.push(`🔗 ${links.pull}`)
   }
 
   if (links.commit) {
-    details.push(`- 🧾 ${links.commit}`)
+    details.push(`🧾 ${links.commit}`)
   }
 
   if (userMentions) {
-    details.push(`- 🙌 Thanks ${userMentions}!`)
+    details.push(`🙌 Thanks ${userMentions}!`)
   }
 
   if (type !== 'none') {
-    details.push(`- 🏷️ ${releaseTypeMap[type].label} release`)
+    details.push(`🏷️ ${releaseTypeMap[type].label} release`)
   }
 
   return details
