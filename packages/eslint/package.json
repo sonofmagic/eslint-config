@@ -50,7 +50,7 @@
   "dependencies": {
     "@antfu/eslint-config": "6.0.0",
     "@eslint-react/eslint-plugin": "^2.2.2",
-    "@next/eslint-plugin-next": "^15.5.5",
+    "@next/eslint-plugin-next": "^15.5.6",
     "eslint-plugin-better-tailwindcss": "^3.7.10",
     "eslint-plugin-format": "1.0.2",
     "eslint-plugin-jsx-a11y": "^6.10.2",
