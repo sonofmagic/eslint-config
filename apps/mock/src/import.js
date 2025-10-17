@@ -1,6 +1,6 @@
+import Vue from 'vue'
 import { pinia } from '@/plugins'
 import Directives from '@/plugins/Directives'
-import Vue from 'vue'
 
 import App from './App.vue'
 import '@/plugins/vue/element-ui'

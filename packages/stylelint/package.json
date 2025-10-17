@@ -2,18 +2,20 @@
   "name": "@icebreakers/stylelint-config",
   "type": "module",
   "version": "1.2.1",
-  "description": "icebreaker's stylelint config",
+  "description": "Stylelint preset from Icebreaker's dev-configs",
   "author": "ice breaker <1324318532@qq.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sonofmagic/eslint-config.git",
+    "url": "git+https://github.com/sonofmagic/dev-configs.git",
     "directory": "packages/stylelint"
   },
   "bugs": {
-    "url": "https://github.com/sonofmagic/eslint-config/issues"
+    "url": "https://github.com/sonofmagic/dev-configs/issues"
   },
   "keywords": [
+    "dev-configs",
+    "icebreakers",
     "stylelint"
   ],
   "sideEffects": false,

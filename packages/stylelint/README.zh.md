@@ -2,10 +2,7 @@
 
 ## 概览
 
-`@icebreakers/stylelint-config` 为 Vue + SCSS 技术栈提供开箱即用的
-Stylelint 预设，并附带一个 CLI，可快速生成编辑器配置。它在上游
-推荐规则的基础上，补充了常用的单位白名单、UnoCSS / Tailwind
-指令忽略项，同时保留对预设开关和自定义规则的控制能力。
+`@icebreakers/stylelint-config` 为 Vue + SCSS 技术栈提供开箱即用的 Stylelint 预设，并附带一个 CLI，可快速生成编辑器配置。它在上游推荐规则的基础上，补充了常用的单位白名单、UnoCSS / Tailwind 指令忽略项，同时保留对预设开关和自定义规则的控制能力。
 
 ## 环境要求
 
@@ -24,9 +21,7 @@ pnpm add -D stylelint @icebreakers/stylelint-config
 npx @icebreakers/stylelint-config
 ```
 
-该命令会创建或更新 `.vscode/settings.json`，为 VS Code 添加
-`stylelint.validate` 条目，确保代码诊断来自 Stylelint 而非内置 CSS
-校验器。
+该命令会创建或更新 `.vscode/settings.json`，为 VS Code 添加 `stylelint.validate` 条目，确保代码诊断来自 Stylelint 而非内置 CSS 校验器。
 
 ## 基本用法
 
@@ -41,8 +36,7 @@ export default icebreaker()
 
 ## 进阶配置
 
-若需细粒度控制预设、忽略列表或规则，可使用
-`createStylelintConfig`：
+若需细粒度控制预设、忽略列表或规则，可使用 `createStylelintConfig`：
 
 ```ts
 import { createStylelintConfig } from '@icebreakers/stylelint-config'
@@ -90,14 +84,10 @@ export default createStylelintConfig({
 ## 推荐脚本
 
 - `pnpm --filter @icebreakers/stylelint-config build` 构建 `dist/` 产物。
-- 在应用内新增 `lint:styles` 脚本，例如
-  `stylelint \"src/**/*.{css,scss,vue}\" --fix`。
+- 在应用内新增 `lint:styles` 脚本，例如 `stylelint "src/**/*.{css,scss,vue}" --fix`。
 
 ## 常见问题
 
-- Tailwind 指令需要在 `postcss.config.*` 中配合忽略列表，否则可能误报，
-  可通过 `ignores.addAtRules` 添加新指令。
-- 如果 Stylelint 无法解析预设，请确认包已安装在当前 workspace 的
-  `devDependencies` 中，或已正确 hoist。
-- 建议使用 CLI 生成的 VS Code 设置，避免内置 CSS 校验与 Stylelint
-  重复报错。
+- Tailwind 指令需要在 `postcss.config.*` 中配合忽略列表，否则可能误报，可通过 `ignores.addAtRules` 添加新指令。
+- 如果 Stylelint 无法解析预设，请确认包已安装在当前 workspace 的 `devDependencies` 中，或已正确 hoist。
+- 建议使用 CLI 生成的 VS Code 设置，避免内置 CSS 校验与 Stylelint 重复报错。

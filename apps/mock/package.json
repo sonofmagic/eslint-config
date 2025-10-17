@@ -1,18 +1,22 @@
 {
   "name": "@icebreakers/mock",
   "version": "0.0.13",
-  "description": "",
+  "description": "Mock application demonstrating Icebreaker's dev-configs presets",
   "author": "ice breaker <1324318532@qq.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sonofmagic/eslint-config.git",
+    "url": "git+https://github.com/sonofmagic/dev-configs.git",
     "directory": "apps/mock"
   },
   "bugs": {
-    "url": "https://github.com/sonofmagic/eslint-config/issues"
+    "url": "https://github.com/sonofmagic/dev-configs/issues"
   },
-  "keywords": [],
+  "keywords": [
+    "dev-configs",
+    "stylelint",
+    "mock"
+  ],
   "scripts": {
     "stylelint": "npx @icebreakers/stylelint-config"
   },

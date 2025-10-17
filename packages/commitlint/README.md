@@ -4,11 +4,7 @@
 
 ## Overview
 
-`@icebreakers/commitlint-config` wraps
-`@commitlint/config-conventional`, exposes a typed factory API, and keeps
-commit prompts in sync with any custom types you add. Use it to enforce
-Conventional Commits across monorepos while tailoring type, scope, and
-subject rules per team.
+`@icebreakers/commitlint-config` wraps `@commitlint/config-conventional`, exposes a typed factory API, and keeps commit prompts in sync with any custom types you add. Use it to enforce Conventional Commits across monorepos while tailoring type, scope, and subject rules per team.
 
 ## Installation
 
@@ -32,14 +28,11 @@ Add a script or Husky hook to run commitlint:
 pnpm commitlint --from=HEAD~1
 ```
 
-When you need explicit naming, use
-`createIcebreakerCommitlintConfig(options)`—it returns the same value as
-`icebreaker`.
+When you need explicit naming, use `createIcebreakerCommitlintConfig(options)`—it returns the same value as `icebreaker`.
 
 ## Customising Rules
 
-The factory accepts targeted option groups so you can extend the default
-convention without re-implementing every rule:
+The factory accepts targeted option groups so you can extend the default convention without re-implementing every rule:
 
 ```ts
 import {
@@ -72,23 +65,18 @@ export default icebreaker({
 })
 ```
 
-- `types` – add new entries, merge prompt metadata, or tighten the
-  `type-enum` rule.
+- `types` – add new entries, merge prompt metadata, or tighten the `type-enum` rule.
 - `scopes` – whitelist scope values, enforce casing, or require scopes.
-- `subject` – forbid casing styles, configure punctuation, and allow empty
-  subjects for merge commits when needed.
+- `subject` – forbid casing styles, configure punctuation, and allow empty subjects for merge commits when needed.
 - `header` – override maximum length or severity.
-- `extends` / `rules` – append extra commitlint configs or raw rule
-  overrides.
+- `extends` / `rules` – append extra commitlint configs or raw rule overrides.
 - `prompt` – merge additional prompt groups for interactive commit tools.
 
 All rule severities use `RuleConfigSeverity` from `@commitlint/types`.
 
 ## Prompt Synchronisation
 
-The factory keeps commit prompts in sync with any custom type definitions.
-If you pass a `prompt` block, it deep merges with the conventional preset,
-so your CLI prompt automatically reflects newly added types or scopes.
+The factory keeps commit prompts in sync with any custom type definitions. If you pass a `prompt` block, it deep merges with the conventional preset, so your CLI prompt automatically reflects newly added types or scopes.
 
 ## Suggested Workflow
 
@@ -97,14 +85,10 @@ so your CLI prompt automatically reflects newly added types or scopes.
    pnpm husky add .husky/commit-msg "pnpm commitlint --edit \"$1\""
    ```
 2. Use `pnpm commit` (Changeset prompt) or your own CLI for guided commits.
-3. Add `pnpm lint` and `pnpm test` to CI so commits fail fast when rules
-   change.
+3. Add `pnpm lint` and `pnpm test` to CI so commits fail fast when rules change.
 
 ## Troubleshooting
 
-- If commitlint cannot find the config file, ensure it is named
-  `commitlint.config.ts` (or `.cjs`) at the repository root.
-- For workspaces that ship custom prompts, pass a `prompt` object instead
-  of re-building the schema by hand.
-- To disable commits in scripts (e.g. release bots), set
-  `COMMITLINT_DISABLED=true` and skip the hook execution.
+- If commitlint cannot find the config file, ensure it is named `commitlint.config.ts` (or `.cjs`) at the repository root.
+- For workspaces that ship custom prompts, pass a `prompt` object instead of re-building the schema by hand.
+- To disable commits in scripts (e.g. release bots), set `COMMITLINT_DISABLED=true` and skip the hook execution.

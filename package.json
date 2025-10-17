@@ -4,14 +4,22 @@
   "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@10.18.3",
+  "description": "Icebreaker's dev-configs monorepo for shared linting presets",
   "author": "ice breaker <1324318532@qq.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sonofmagic/eslint-config.git"
+    "url": "git+https://github.com/sonofmagic/dev-configs.git"
   },
   "bugs": {
-    "url": "https://github.com/sonofmagic/eslint-config/issues"
+    "url": "https://github.com/sonofmagic/dev-configs/issues"
   },
+  "keywords": [
+    "dev-configs",
+    "eslint",
+    "stylelint",
+    "commitlint",
+    "icebreakers"
+  ],
   "engines": {
     "node": ">=18.0.0"
   },
@@ -44,11 +52,11 @@
     "commitlint": "commitlint --edit"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "^0.5.1",
     "@changesets/cli": "^2.29.7",
     "@commitlint/cli": "^20.1.0",
     "@eslint/config-inspector": "^1.3.0",
     "@eslint/eslintrc": "^3.3.1",
+    "@icebreakers/changelog-github": "workspace:*",
     "@icebreakers/commitlint-config": "workspace:*",
     "@icebreakers/eslint-config": "workspace:*",
     "@icebreakers/monorepo": "^2.0.11",
