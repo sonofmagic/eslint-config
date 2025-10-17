@@ -61,25 +61,25 @@ async function collectDependencyReferences(
   return references.filter((link): link is string => Boolean(link))
 }
 
-function buildDependencyLines(
+function buildDependencyCallout(
   references: string[],
   dependenciesUpdated: Parameters<
     ChangelogFunctions['getDependencyReleaseLine']
   >[1],
-): string[] {
-  const lines = ['- 📦 **Updated dependencies**']
+): string {
+  const lines = ['> [!NOTE]', '> 📦 **Updated dependencies**']
 
   if (references.length > 0) {
-    lines.push(`  - 🔗 ${references.join(' · ')}`)
+    lines.push(`> - 🔗 ${references.join(' · ')}`)
   }
 
   for (const dependency of dependenciesUpdated) {
     lines.push(
-      `  - ⬆️ \`${dependency.name}\` @ ${dependency.newVersion}`,
+      `> - ⬆️ \`${dependency.name}\` @ ${dependency.newVersion}`,
     )
   }
 
-  return lines
+  return lines.join('\n')
 }
 
 interface ParsedSummary {
@@ -188,31 +188,79 @@ function createHeadline(
   return `- ${releaseTypeMap[type].icon} **${headlineText}**`
 }
 
+type CalloutTag
+  = | '[!IMPORTANT]'
+    | '[!TIP]'
+    | '[!NOTE]'
+    | '[!WARNING]'
+    | '[!CAUTION]'
+
+function calloutTagForType(
+  type: ReleaseTypeKey,
+  detailLines: string[],
+): CalloutTag {
+  const normalized = detailLines.map(line => line.toLowerCase())
+
+  if (normalized.some(line => line.includes('breaking'))) {
+    return '[!WARNING]'
+  }
+
+  if (normalized.some(line => line.includes('deprecat'))) {
+    return '[!CAUTION]'
+  }
+
+  if (type === 'major') {
+    return '[!IMPORTANT]'
+  }
+
+  if (type === 'minor') {
+    return '[!TIP]'
+  }
+
+  return '[!NOTE]'
+}
+
 function buildDetailLines(
   detailLines: string[],
   links: GitHubLinks,
   userMentions: string,
   type: ReleaseTypeKey,
 ): string[] {
-  const details = detailLines.map(line => `  - 📝 ${line}`)
+  const details = detailLines.map(line => `- 📝 ${line}`)
 
   if (links.pull) {
-    details.push(`  - 🔗 ${links.pull}`)
+    details.push(`- 🔗 ${links.pull}`)
   }
 
   if (links.commit) {
-    details.push(`  - 🧾 ${links.commit}`)
+    details.push(`- 🧾 ${links.commit}`)
   }
 
   if (userMentions) {
-    details.push(`  - 🙌 Thanks ${userMentions}!`)
+    details.push(`- 🙌 Thanks ${userMentions}!`)
   }
 
   if (type !== 'none') {
-    details.push(`  - 🏷️ ${releaseTypeMap[type].label} release`)
+    details.push(`- 🏷️ ${releaseTypeMap[type].label} release`)
   }
 
   return details
+}
+
+function buildDetailCallout(
+  type: ReleaseTypeKey,
+  details: string[],
+): string {
+  if (details.length === 0) {
+    return ''
+  }
+
+  const calloutTag = calloutTagForType(type, details)
+  const header = `> ${calloutTag}`
+  const intro = `> ${releaseTypeMap[type].label} release details:`
+  const body = details.map(line => `> ${line}`)
+
+  return [header, intro, ...body].join('\n')
 }
 
 const changelogFunctions: ChangelogFunctions = {
@@ -229,7 +277,7 @@ const changelogFunctions: ChangelogFunctions = {
       repo,
     )
 
-    return buildDependencyLines(references, dependenciesUpdated).join('\n')
+    return buildDependencyCallout(references, dependenciesUpdated)
   },
 
   async getReleaseLine(changeset, type, options) {
@@ -257,10 +305,11 @@ const changelogFunctions: ChangelogFunctions = {
       userMentions,
       resolvedType,
     )
+    const detailBlock = buildDetailCallout(resolvedType, details)
 
-    const detailBlock = details.length > 0 ? `\n${details.join('\n')}` : ''
-
-    return `\n\n${headline}${detailBlock}`
+    return detailBlock
+      ? `\n\n${headline}\n${detailBlock}`
+      : `\n\n${headline}`
   },
 }
 
