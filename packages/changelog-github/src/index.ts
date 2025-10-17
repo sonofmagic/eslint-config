@@ -220,47 +220,64 @@ function calloutTagForType(
   return '[!NOTE]'
 }
 
-function buildDetailLines(
+interface ReleaseDetailSections {
+  calloutLines: string[]
+  metaLines: string[]
+}
+
+function buildDetailSections(
   detailLines: string[],
   links: GitHubLinks,
   userMentions: string,
   type: ReleaseTypeKey,
-): string[] {
-  const details = detailLines.map(line => `📝 ${line}`)
+): ReleaseDetailSections {
+  const calloutLines = detailLines.map(line => `📝 ${line}`)
+  const metaLines: string[] = []
 
   if (links.pull) {
-    details.push(`🔗 ${links.pull}`)
+    metaLines.push(`- 🔗 ${links.pull}`)
   }
 
   if (links.commit) {
-    details.push(`🧾 ${links.commit}`)
+    metaLines.push(`- 🧾 ${links.commit}`)
   }
 
   if (userMentions) {
-    details.push(`🙌 Thanks ${userMentions}!`)
+    metaLines.push(`- 🙌 Thanks ${userMentions}!`)
   }
 
   if (type !== 'none') {
-    details.push(`🏷️ ${releaseTypeMap[type].label} release`)
+    metaLines.push(`- 🏷️ ${releaseTypeMap[type].label} release`)
   }
 
-  return details
+  return {
+    calloutLines,
+    metaLines,
+  }
 }
 
 function buildDetailCallout(
   type: ReleaseTypeKey,
-  details: string[],
+  calloutLines: string[],
 ): string {
-  if (details.length === 0) {
+  const baseLine = `${releaseTypeMap[type].label} release`
+  const lines = calloutLines.length > 0
+    ? [baseLine, ...calloutLines]
+    : [baseLine]
+
+  if (lines.length === 0) {
     return ''
   }
 
-  const calloutTag = calloutTagForType(type, details)
+  const calloutTag = calloutTagForType(type, calloutLines)
   const header = `> ${calloutTag}`
-  const intro = `> ${releaseTypeMap[type].label} release details:`
-  const body = details.map(line => `> ${line}`)
+  const body = lines.map(line => `> ${line}`)
 
-  return [header, intro, ...body].join('\n')
+  return [header, ...body].join('\n')
+}
+
+function buildMetaBlock(metaLines: string[]): string {
+  return metaLines.join('\n')
 }
 
 const changelogFunctions: ChangelogFunctions = {
@@ -299,21 +316,28 @@ const changelogFunctions: ChangelogFunctions = {
     )
 
     const headline = createHeadline(parsedSummary.headline, resolvedType)
-    const details = buildDetailLines(
+    const { calloutLines, metaLines } = buildDetailSections(
       parsedSummary.detailLines,
       links,
       userMentions,
       resolvedType,
     )
-    const detailBlock = buildDetailCallout(resolvedType, details)
+    const detailBlock = buildDetailCallout(resolvedType, calloutLines)
+    const metaBlock = buildMetaBlock(metaLines)
 
-    if (!detailBlock) {
-      return `\n\n${headline}`
+    const sections: string[] = []
+
+    if (detailBlock) {
+      sections.push(detailBlock)
     }
 
-    // Render callout adjacent to the headline instead of nesting under lists,
-    // so GitHub's parser preserves the block styling.
-    return `\n\n${detailBlock}\n\n${headline}`
+    if (metaBlock) {
+      sections.push(metaBlock)
+    }
+
+    sections.push(headline)
+
+    return `\n\n${sections.join('\n\n')}`
   },
 }
 
