@@ -1,45 +1,117 @@
 # @icebreakers/eslint-config
 
-> extend [@antfu/eslint-config](https://www.npmjs.com/package/@antfu/eslint-config) and add `tailwindcss` , `mdx` , and `prettier` format support!
+- [简体中文指南](./README.zh.md)
 
-## Usage
+## Overview
+
+`@icebreakers/eslint-config` extends the `@antfu/eslint-config` flat
+presets and layers extra rules for Tailwind CSS, MDX, Vue accessibility,
+and Icebreaker specific TypeScript defaults. It returns a
+`FlatConfigComposer`, so you can opt into only the presets you need and
+keep adding workspace specific overrides.
+
+## Requirements
+
+- Node.js 18 or newer
+- ESLint 9 with flat config support
+- Install optional peer plugins when you turn on Tailwind (`eslint-plugin-tailwindcss`
+  or `eslint-plugin-better-tailwindcss`), MDX (`eslint-plugin-mdx`), or UnoCSS
+  (`@unocss/eslint-plugin`)
+
+## Installation
 
 ```bash
-pnpm i -D eslint @icebreakers/eslint-config
+pnpm add -D eslint @icebreakers/eslint-config
 ```
 
+## Quick Start
+
+Create `eslint.config.ts` (or `.mjs`) in your project root:
+
 ```ts
-// eslint.config.mjs
 import { icebreaker } from '@icebreakers/eslint-config'
 
 export default icebreaker()
 ```
 
-`icebreaker()` returns a `FlatConfigComposer`, so you can opt into extra presets by passing the options documented below and still append workspace-specific rules.
+Run ESLint via your package manager:
 
-## Available options
+```bash
+pnpm eslint "src/**/*.ts"
+```
+
+If you need the legacy array config, call `icebreakerLegacy()` instead.
+
+## Enabling Presets
+
+Each optional preset mirrors the flags in `@antfu/eslint-config` and adds
+Icebreaker tweaks:
 
 ```ts
 import { icebreaker } from '@icebreakers/eslint-config'
 
 export default icebreaker({
-  vue: true,
+  vue: true, // or { vueVersion: 2 }
+  react: true,
   typescript: true,
+  test: true,
   tailwindcss: {
     tailwindConfig: './tailwind.config.ts',
   },
-  mdx: process.env.ENABLE_MDX === 'true',
-  a11y: true, // load JSX + Vue accessibility helpers
+  mdx: process.env.LINT_MDX === 'true',
+  a11y: true,
+  nestjs: true,
+  ionic: true,
+  weapp: true,
+  formatters: true,
 })
 ```
 
-- `tailwindcss` – enable Tailwind presets (`true`) or provide entry paths for Tailwind v3/v4.
-- `mdx` – enable linting for `.mdx` files with Remark-powered processors.
-- `a11y` – adds accessibility rules for whichever of `vue`/`react` you enable via @antfu.
-- `vue`, `typescript`, `javascript`, `test` – extend the upstream `@antfu/eslint-config` options; the defaults bundle stricter unused checks and Vue fixes for Ionic/Weapp projects.
+- `vue` – enables Vue + optionally version specific overrides (Vue 2/3) and
+  ionic/weapp adjustments.
+- `react` – defers to the upstream React preset and unlocks accessibility
+  helpers when `a11y` is enabled.
+- `tailwindcss` – pass `true` to use the built-in Tailwind flat config or
+  provide `{ entryPoint, tailwindConfig }` for Tailwind v4/v3 projects.
+- `mdx` – activates MDX linting via `eslint-plugin-mdx`.
+- `a11y` – wires in JSX (React) and Vue accessibility plugins.
+- `typescript` – extends the TypeScript preset and applies stricter unused
+  diagnostics plus NestJS conveniences when `nestjs` is true.
+- `formatters` – keeps the built-in formatting rules enabled by default.
+- `test` – relaxes certain Vitest/Jest style rules (`test/prefer-lowercase-title`).
 
-## VS Code support
+## Adding Extra Config Items
 
-Install [VS Code ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+Because `icebreaker()` returns a composer you can append overrides:
 
-Version: ( >=`3.0.10`)
+```ts
+import { icebreaker } from '@icebreakers/eslint-config'
+
+export default icebreaker(
+  { typescript: true },
+  {
+    files: ['*.vue'],
+    rules: {
+      'vue/no-undef-components': 'off',
+    },
+  },
+)
+```
+
+You may also pass other flat configs (e.g. from in-house presets) as
+additional arguments.
+
+## IDE Integration
+
+- Install the VS Code ESLint extension (`>=3.0.10`).
+- Set `"eslint.experimental.useFlatConfig": true` for older VS Code builds.
+- Use `pnpm lint -- --fix` in a pre-commit hook for consistent formatting.
+
+## Troubleshooting
+
+- Missing plugin errors usually mean the optional dependency is not
+  installed in the current workspace. Add it with `pnpm add -D`.
+- When combining legacy `.eslintrc` projects, prefer `icebreakerLegacy()`
+  and move overrides into flat config format incrementally.
+- Tailwind class validation reads from your `tailwind.config.*`; double check
+  the path when using monorepo roots or custom build tooling.
