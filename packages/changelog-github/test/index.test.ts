@@ -16,7 +16,7 @@ vi.mock('@changesets/get-github-info', () => ({
 const getInfoMock = vi.mocked(getInfo)
 const getInfoFromPullRequestMock = vi.mocked(getInfoFromPullRequest)
 
-const repo = 'icebreaker/eslint-config'
+const repo = 'sonofmagic/dev-configs'
 
 beforeEach(() => {
   vi.clearAllMocks()
@@ -42,9 +42,12 @@ describe('getReleaseLine', () => {
 
   it('formats summary with metadata inline', async () => {
     getInfoFromPullRequestMock.mockResolvedValueOnce({
+      user: null,
+      commit: null,
       links: {
-        pull: '[#123](https://github.com/icebreaker/eslint-config/pull/123)',
-        commit: '[`a1b2c3d`](https://github.com/icebreaker/eslint-config/commit/a1b2c3d)',
+        pull: '[#123](https://github.com/sonofmagic/dev-configs/pull/123)',
+        commit:
+          '[`a1b2c3d`](https://github.com/sonofmagic/dev-configs/commit/a1b2c3d)',
         user: '[@core-dev](https://github.com/core-dev)',
       },
     })
@@ -55,12 +58,12 @@ describe('getReleaseLine', () => {
       { repo },
     )
 
-    expect(result).toContain('- Add new lint rule')
-    expect(result).toContain('[#123](https://github.com/icebreaker/eslint-config/pull/123)')
-    expect(result).toContain('[`abcdef1`](https://github.com/icebreaker/eslint-config/commit/abcdef1234567890)')
-    expect(result).toContain('Thanks [@lint-bot](https://github.com/lint-bot)!')
-    expect(result).toContain('  - ensure coverage for edge cases')
-    expect(result).toContain('> MINOR release')
+    expect(result).toContain('- ✨ **Add new lint rule**')
+    expect(result).toContain('  - 📝 ensure coverage for edge cases')
+    expect(result).toContain('  - 🔗 [#123](https://github.com/sonofmagic/dev-configs/pull/123)')
+    expect(result).toContain('  - 🧾 [`abcdef1`](https://github.com/sonofmagic/dev-configs/commit/abcdef1234567890)')
+    expect(result).toContain('  - 🙌 Thanks [@lint-bot](https://github.com/lint-bot)!')
+    expect(result).toContain('  - 🏷️ Minor release')
     expect(getInfoFromPullRequestMock).toHaveBeenCalledWith({
       repo,
       pull: 123,
@@ -88,9 +91,11 @@ describe('getDependencyReleaseLine', () => {
 
   it('lists updated dependencies with commit references', async () => {
     getInfoMock.mockResolvedValue({
+      user: null,
+      pull: null,
       links: {
         commit:
-          '[`abcdef1`](https://github.com/icebreaker/eslint-config/commit/abcdef1234567890)',
+          '[`abcdef1`](https://github.com/sonofmagic/dev-configs/commit/abcdef1234567890)',
         pull: null,
         user: null,
       },
@@ -109,9 +114,10 @@ describe('getDependencyReleaseLine', () => {
       { repo },
     )
 
-    expect(line).toContain('- Updated dependencies ([`abcdef1`](https://github.com/icebreaker/eslint-config/commit/abcdef1234567890))')
-    expect(line).toContain('  - `@icebreakers/eslint-config` @ 1.2.3')
-    expect(line).toContain('  - `vitest` @ 1.0.0')
+    expect(line).toContain('- 📦 **Updated dependencies**')
+    expect(line).toContain('  - 🔗 [`abcdef1`](https://github.com/sonofmagic/dev-configs/commit/abcdef1234567890)')
+    expect(line).toContain('  - ⬆️ `@icebreakers/eslint-config` @ 1.2.3')
+    expect(line).toContain('  - ⬆️ `vitest` @ 1.0.0')
     expect(getInfoMock).toHaveBeenCalledWith({
       repo,
       commit: 'abcdef1234567890',

@@ -7,6 +7,28 @@ loadEnv()
 type ReleaseLineFn = NonNullable<ChangelogFunctions['getReleaseLine']>
 type GeneratorOptions = Parameters<ReleaseLineFn>[2]
 
+interface GitHubLinks {
+  commit: string | null
+  pull: string | null
+  user: string | null
+}
+
+const releaseTypeMap = {
+  major: { icon: '🚀', label: 'Major' },
+  minor: { icon: '✨', label: 'Minor' },
+  patch: { icon: '🐛', label: 'Patch' },
+  none: { icon: '📝', label: 'Update' },
+} as const
+
+type ReleaseTypeKey = keyof typeof releaseTypeMap
+
+function resolveReleaseType(type: string | undefined): ReleaseTypeKey {
+  if (type && type in releaseTypeMap) {
+    return type as ReleaseTypeKey
+  }
+  return 'none'
+}
+
 function assertRepo(
   options: GeneratorOptions | undefined,
 ): asserts options is GeneratorOptions & { repo: string } {
@@ -15,6 +37,182 @@ function assertRepo(
       'Please provide a repo to this changelog generator like this:\n"changelog": ["@icebreakers/changelog-github", { "repo": "org/repo" }]',
     )
   }
+}
+
+async function collectDependencyReferences(
+  changesets: Parameters<ChangelogFunctions['getDependencyReleaseLine']>[0],
+  repo: string,
+): Promise<string[]> {
+  const references = await Promise.all(
+    changesets.map(async (cs) => {
+      if (!cs.commit) {
+        return null
+      }
+
+      const { links } = await getInfo({
+        repo,
+        commit: cs.commit,
+      })
+
+      return links.commit
+    }),
+  )
+
+  return references.filter((link): link is string => Boolean(link))
+}
+
+function buildDependencyLines(
+  references: string[],
+  dependenciesUpdated: Parameters<
+    ChangelogFunctions['getDependencyReleaseLine']
+  >[1],
+): string[] {
+  const lines = ['- 📦 **Updated dependencies**']
+
+  if (references.length > 0) {
+    lines.push(`  - 🔗 ${references.join(' · ')}`)
+  }
+
+  for (const dependency of dependenciesUpdated) {
+    lines.push(
+      `  - ⬆️ \`${dependency.name}\` @ ${dependency.newVersion}`,
+    )
+  }
+
+  return lines
+}
+
+interface ParsedSummary {
+  headline: string
+  detailLines: string[]
+  prNumber?: number
+  commitRef?: string
+  users: string[]
+}
+
+function parseSummary(summary: string): ParsedSummary {
+  let prNumber: number | undefined
+  let commitRef: string | undefined
+  const users: string[] = []
+
+  const cleanedSummary = summary
+    .replace(/^\s*(?:pr|pull|pull\s+request):\s*#?(\d+)/im, (_, pr) => {
+      const num = Number(pr)
+      if (!Number.isNaN(num)) {
+        prNumber = num
+      }
+      return ''
+    })
+    .replace(/^\s*commit:\s*(\S+)/im, (_, commit) => {
+      commitRef = commit
+      return ''
+    })
+    .replace(/^\s*(?:author|user):\s*@?(\S+)/gim, (_, user) => {
+      users.push(user)
+      return ''
+    })
+    .trim()
+
+  const [headline = '', ...restLines] = cleanedSummary
+    .split('\n')
+    .map(line => line.trimRight())
+
+  const detailLines = restLines
+    .map(line => line.trim())
+    .map(line => line.replace(/^\s*[-*]\s*/, ''))
+    .filter(line => line.length > 0)
+
+  return {
+    headline,
+    detailLines,
+    prNumber,
+    commitRef,
+    users,
+  }
+}
+
+async function resolveLinks(
+  repo: string,
+  parsed: ParsedSummary,
+  changesetCommit: string | undefined,
+): Promise<GitHubLinks> {
+  if (parsed.prNumber !== undefined) {
+    const { links } = await getInfoFromPullRequest({
+      repo,
+      pull: parsed.prNumber,
+    })
+
+    if (parsed.commitRef) {
+      const shortCommitId = parsed.commitRef.slice(0, 7)
+      links.commit = `[\`${shortCommitId}\`](https://github.com/${repo}/commit/${parsed.commitRef})`
+    }
+
+    return links
+  }
+
+  const commitToUse = parsed.commitRef ?? changesetCommit
+  if (commitToUse) {
+    const { links } = await getInfo({
+      repo,
+      commit: commitToUse,
+    })
+
+    return links
+  }
+
+  return {
+    commit: null,
+    pull: null,
+    user: null,
+  }
+}
+
+function buildUserMentions(
+  users: string[],
+  fallbackUser: string | null,
+): string {
+  if (users.length > 0) {
+    return users
+      .map(username => `[@${username}](https://github.com/${username})`)
+      .join(', ')
+  }
+
+  return fallbackUser ?? ''
+}
+
+function createHeadline(
+  headline: string,
+  type: ReleaseTypeKey,
+): string {
+  const headlineText = headline || 'Miscellaneous improvements'
+  return `- ${releaseTypeMap[type].icon} **${headlineText}**`
+}
+
+function buildDetailLines(
+  detailLines: string[],
+  links: GitHubLinks,
+  userMentions: string,
+  type: ReleaseTypeKey,
+): string[] {
+  const details = detailLines.map(line => `  - 📝 ${line}`)
+
+  if (links.pull) {
+    details.push(`  - 🔗 ${links.pull}`)
+  }
+
+  if (links.commit) {
+    details.push(`  - 🧾 ${links.commit}`)
+  }
+
+  if (userMentions) {
+    details.push(`  - 🙌 Thanks ${userMentions}!`)
+  }
+
+  if (type !== 'none') {
+    details.push(`  - 🏷️ ${releaseTypeMap[type].label} release`)
+  }
+
+  return details
 }
 
 const changelogFunctions: ChangelogFunctions = {
@@ -26,119 +224,43 @@ const changelogFunctions: ChangelogFunctions = {
       return ''
     }
 
-    const references = (
-      await Promise.all(
-        changesets.map(async (cs) => {
-          if (!cs.commit) {
-            return null
-          }
-          const { links } = await getInfo({
-            repo,
-            commit: cs.commit,
-          })
-          return links.commit
-        }),
-      )
-    ).filter(Boolean) as string[]
-
-    const headerLine = references.length
-      ? `- Updated dependencies (${references.join(', ')})`
-      : '- Updated dependencies'
-
-    const dependencyLines = dependenciesUpdated.map(
-      dependency => `  - \`${dependency.name}\` @ ${dependency.newVersion}`,
+    const references = await collectDependencyReferences(
+      changesets,
+      repo,
     )
 
-    return [headerLine, ...dependencyLines].join('\n')
+    return buildDependencyLines(references, dependenciesUpdated).join('\n')
   },
 
   async getReleaseLine(changeset, type, options) {
     assertRepo(options)
     const { repo } = options
 
-    let prFromSummary: number | undefined
-    let commitFromSummary: string | undefined
-    const usersFromSummary: string[] = []
+    const parsedSummary = parseSummary(changeset.summary)
+    const resolvedType = resolveReleaseType(type)
 
-    const cleanedSummary = changeset.summary
-      .replace(/^\s*(?:pr|pull|pull\s+request):\s*#?(\d+)/im, (_, pr) => {
-        const num = Number(pr)
-        if (!Number.isNaN(num)) {
-          prFromSummary = num
-        }
-        return ''
-      })
-      .replace(/^\s*commit:\s*(\S+)/im, (_, commit) => {
-        commitFromSummary = commit
-        return ''
-      })
-      .replace(/^\s*(?:author|user):\s*@?(\S+)/gim, (_, user) => {
-        usersFromSummary.push(user)
-        return ''
-      })
-      .trim()
+    const links = await resolveLinks(
+      repo,
+      parsedSummary,
+      changeset.commit,
+    )
 
-    const [firstLine = '', ...restLines] = cleanedSummary
-      .split('\n')
-      .map(line => line.trimRight())
+    const userMentions = buildUserMentions(
+      parsedSummary.users,
+      links.user,
+    )
 
-    const links = await (async () => {
-      if (prFromSummary !== undefined) {
-        const { links } = await getInfoFromPullRequest({
-          repo,
-          pull: prFromSummary,
-        })
-        if (commitFromSummary) {
-          const shortCommitId = commitFromSummary.slice(0, 7)
-          links.commit = `[\`${shortCommitId}\`](https://github.com/${repo}/commit/${commitFromSummary})`
-        }
-        return links
-      }
+    const headline = createHeadline(parsedSummary.headline, resolvedType)
+    const details = buildDetailLines(
+      parsedSummary.detailLines,
+      links,
+      userMentions,
+      resolvedType,
+    )
 
-      const commitToUse = commitFromSummary || changeset.commit
-      if (commitToUse) {
-        const { links } = await getInfo({
-          repo,
-          commit: commitToUse,
-        })
-        return links
-      }
+    const detailBlock = details.length > 0 ? `\n${details.join('\n')}` : ''
 
-      return {
-        commit: null,
-        pull: null,
-        user: null,
-      }
-    })()
-
-    const userMentions = usersFromSummary.length
-      ? usersFromSummary
-          .map(
-            username =>
-              `[@${username}](https://github.com/${username})`,
-          )
-          .join(', ')
-      : links.user
-
-    const metaParts = [
-      links.pull ?? undefined,
-      links.commit ?? undefined,
-      userMentions ? `Thanks ${userMentions}!` : undefined,
-    ].filter(Boolean) as string[]
-
-    const meta
-      = metaParts.length > 0 ? ` (${metaParts.join(' · ')})` : ''
-
-    const headline = `- ${firstLine}${meta}`
-
-    const body = restLines
-      .filter(line => line.length > 0)
-      .map(line => `  ${line}`)
-      .join('\n')
-
-    const typeLabel = type && type !== 'none' ? `\n\n> ${type.toUpperCase()} release` : ''
-
-    return body ? `\n\n${headline}\n${body}${typeLabel}` : `\n\n${headline}${typeLabel}`
+    return `\n\n${headline}${detailBlock}`
   },
 }
 

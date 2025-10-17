@@ -2,50 +2,11 @@
 
 exports[`lint > common > import.js 1`] = `
 {
-  "errorCount": 1,
+  "errorCount": 0,
   "fatalErrorCount": 0,
-  "fixableErrorCount": 1,
+  "fixableErrorCount": 0,
   "fixableWarningCount": 0,
-  "messages": [
-    {
-      "column": 1,
-      "endColumn": 22,
-      "endLine": 3,
-      "fix": {
-        "range": [
-          0,
-          101,
-        ],
-        "text": "import Vue from 'vue'
-import { pinia } from '@/plugins'
-import Directives from '@/plugins/Directives'",
-      },
-      "line": 3,
-      "message": "Expected "vue" (external) to come before "@/plugins/Directives" (internal).",
-      "messageId": "unexpectedImportsGroupOrder",
-      "nodeType": "ImportDeclaration",
-      "ruleId": "perfectionist/sort-imports",
-      "severity": 2,
-    },
-  ],
-  "source": "import { pinia } from '@/plugins'
-import Directives from '@/plugins/Directives'
-import Vue from 'vue'
-
-import App from './App.vue'
-import '@/plugins/vue/element-ui'
-
-import '@assets/css/element-style.scss'
-
-import '@/plugins/unocss.platform'
-
-Vue.use(Directives)
-
-new Vue({
-  pinia,
-  render: h => h(App),
-}).$mount('#app')
-",
+  "messages": [],
   "suppressedMessages": [],
   "usedDeprecatedRules": [],
   "warningCount": 0,

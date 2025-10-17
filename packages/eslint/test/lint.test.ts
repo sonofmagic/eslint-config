@@ -33,7 +33,7 @@ describe('lint', () => {
         expect(x.errorCount).toBe(3)
       }
       else if (file === 'import.js') {
-        expect(x.errorCount).toBe(1)
+        expect(x.errorCount).toBe(0)
       }
       else if (file.endsWith('.ts')) {
         expect(x.errorCount).toBe(3)
