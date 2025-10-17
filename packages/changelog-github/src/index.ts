@@ -61,25 +61,31 @@ async function collectDependencyReferences(
   return references.filter((link): link is string => Boolean(link))
 }
 
-function buildDependencyCallout(
+function formatDependencyLine(
   references: string[],
   dependenciesUpdated: Parameters<
     ChangelogFunctions['getDependencyReleaseLine']
   >[1],
 ): string {
-  const lines = ['> [!NOTE]', '> 📦 **Updated dependencies**']
+  const dependencySummaries = dependenciesUpdated.map(
+    dependency => `\`${dependency.name}\` @ ${dependency.newVersion}`,
+  )
+
+  const segments: string[] = []
+
+  if (dependencySummaries.length > 0) {
+    segments.push(dependencySummaries.join(', '))
+  }
 
   if (references.length > 0) {
-    lines.push(`> - 🔗 ${references.join(' · ')}`)
+    segments.push(references.join(' · '))
   }
 
-  for (const dependency of dependenciesUpdated) {
-    lines.push(
-      `> - ⬆️ \`${dependency.name}\` @ ${dependency.newVersion}`,
-    )
-  }
+  const details = segments.join(' · ')
 
-  return lines.join('\n')
+  return details.length > 0
+    ? `- 📦 Updated dependencies: ${details}`
+    : '- 📦 Updated dependencies'
 }
 
 interface ParsedSummary {
@@ -180,106 +186,6 @@ function buildUserMentions(
   return fallbackUser ?? ''
 }
 
-function createHeadline(
-  headline: string,
-  type: ReleaseTypeKey,
-): string {
-  const headlineText = headline || 'Miscellaneous improvements'
-  return `- ${releaseTypeMap[type].icon} **${headlineText}**`
-}
-
-type CalloutTag
-  = | '[!IMPORTANT]'
-    | '[!TIP]'
-    | '[!NOTE]'
-    | '[!WARNING]'
-    | '[!CAUTION]'
-
-function calloutTagForType(
-  type: ReleaseTypeKey,
-  detailLines: string[],
-): CalloutTag {
-  const normalized = detailLines.map(line => line.toLowerCase())
-
-  if (normalized.some(line => line.includes('breaking'))) {
-    return '[!WARNING]'
-  }
-
-  if (normalized.some(line => line.includes('deprecat'))) {
-    return '[!CAUTION]'
-  }
-
-  if (type === 'major') {
-    return '[!IMPORTANT]'
-  }
-
-  if (type === 'minor') {
-    return '[!TIP]'
-  }
-
-  return '[!NOTE]'
-}
-
-interface ReleaseDetailSections {
-  calloutLines: string[]
-  metaLines: string[]
-}
-
-function buildDetailSections(
-  detailLines: string[],
-  links: GitHubLinks,
-  userMentions: string,
-  type: ReleaseTypeKey,
-): ReleaseDetailSections {
-  const calloutLines = detailLines.map(line => `📝 ${line}`)
-  const metaLines: string[] = []
-
-  if (links.pull) {
-    metaLines.push(`- 🔗 ${links.pull}`)
-  }
-
-  if (links.commit) {
-    metaLines.push(`- 🧾 ${links.commit}`)
-  }
-
-  if (userMentions) {
-    metaLines.push(`- 🙌 Thanks ${userMentions}!`)
-  }
-
-  if (type !== 'none') {
-    metaLines.push(`- 🏷️ ${releaseTypeMap[type].label} release`)
-  }
-
-  return {
-    calloutLines,
-    metaLines,
-  }
-}
-
-function buildDetailCallout(
-  type: ReleaseTypeKey,
-  calloutLines: string[],
-): string {
-  const baseLine = `${releaseTypeMap[type].label} release`
-  const lines = calloutLines.length > 0
-    ? [baseLine, ...calloutLines]
-    : [baseLine]
-
-  if (lines.length === 0) {
-    return ''
-  }
-
-  const calloutTag = calloutTagForType(type, calloutLines)
-  const header = `> ${calloutTag}`
-  const body = lines.map(line => `> ${line}`)
-
-  return [header, ...body].join('\n')
-}
-
-function buildMetaBlock(metaLines: string[]): string {
-  return metaLines.join('\n')
-}
-
 const changelogFunctions: ChangelogFunctions = {
   async getDependencyReleaseLine(changesets, dependenciesUpdated, options) {
     assertRepo(options)
@@ -294,7 +200,7 @@ const changelogFunctions: ChangelogFunctions = {
       repo,
     )
 
-    return buildDependencyCallout(references, dependenciesUpdated)
+    return formatDependencyLine(references, dependenciesUpdated)
   },
 
   async getReleaseLine(changeset, type, options) {
@@ -315,29 +221,37 @@ const changelogFunctions: ChangelogFunctions = {
       links.user,
     )
 
-    const headline = createHeadline(parsedSummary.headline, resolvedType)
-    const { calloutLines, metaLines } = buildDetailSections(
-      parsedSummary.detailLines,
-      links,
-      userMentions,
-      resolvedType,
-    )
-    const detailBlock = buildDetailCallout(resolvedType, calloutLines)
-    const metaBlock = buildMetaBlock(metaLines)
+    const headlineText = parsedSummary.headline || 'Miscellaneous improvements'
+    const detailText = parsedSummary.detailLines.join(' · ')
 
-    const sections: string[] = []
+    const metaSegments: string[] = []
 
-    if (detailBlock) {
-      sections.push(detailBlock)
+    if (links.pull) {
+      metaSegments.push(links.pull)
     }
 
-    if (metaBlock) {
-      sections.push(metaBlock)
+    if (links.commit) {
+      metaSegments.push(links.commit)
     }
 
-    sections.push(headline)
+    if (userMentions) {
+      metaSegments.push(`Thanks ${userMentions}`)
+    }
 
-    return `\n\n${sections.join('\n\n')}`
+    if (resolvedType !== 'none') {
+      metaSegments.push(`${releaseTypeMap[resolvedType].label} release`)
+    }
+
+    const trailingSegments = [
+      detailText,
+      metaSegments.join(' · '),
+    ].filter(segment => segment.length > 0)
+
+    const suffix = trailingSegments.length
+      ? ` — ${trailingSegments.join(' · ')}`
+      : ''
+
+    return `\n\n- ${releaseTypeMap[resolvedType].icon} **${headlineText}**${suffix}`
   },
 }
 
