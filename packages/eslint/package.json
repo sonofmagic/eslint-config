@@ -55,7 +55,7 @@
     "eslint-plugin-format": "1.0.2",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react-hooks": "^7.0.0",
-    "eslint-plugin-react-refresh": "^0.4.23",
+    "eslint-plugin-react-refresh": "^0.4.24",
     "eslint-plugin-tailwindcss": "3.18.2",
     "eslint-plugin-vuejs-accessibility": "^2.4.1"
   },

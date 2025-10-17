@@ -34,3 +34,4 @@ yarn-error.log*
 
 dist
 .eslint-config-inspector
+vite.config.ts.timestamp-*.mjs
