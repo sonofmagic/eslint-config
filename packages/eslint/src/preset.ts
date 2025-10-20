@@ -1,5 +1,5 @@
 import type { UserConfigItem, UserDefinedOptions } from './types'
-import { resolveAccessibilityPresets, resolveMdxPresets, resolveTailwindPresets } from './features'
+import { resolveAccessibilityPresets, resolveMdxPresets, resolveNestPresets, resolveTailwindPresets } from './features'
 import { createBaseRuleSet, resolveUserOptions } from './options'
 
 export function getPresets(options?: UserDefinedOptions, mode?: 'legacy'): [UserDefinedOptions, ...UserConfigItem[]] {
@@ -13,6 +13,7 @@ export function getPresets(options?: UserDefinedOptions, mode?: 'legacy'): [User
   presets.push(
     ...resolveTailwindPresets(resolved.tailwindcss),
     ...resolveMdxPresets(resolved.mdx),
+    ...resolveNestPresets(resolved.nestjs),
     ...resolveAccessibilityPresets(resolved.a11y, resolved.vue, resolved.react),
   )
 

@@ -1,5 +1,6 @@
 import type { UserConfigItem, UserDefinedOptions } from './types'
 import { interopDefault } from './antfu'
+import { nestjsTypeScriptRules } from './defaults'
 
 export function resolveTailwindPresets(option: UserDefinedOptions['tailwindcss']): UserConfigItem[] {
   if (!option) {
@@ -104,4 +105,15 @@ export function resolveAccessibilityPresets(
   }
 
   return presets
+}
+
+export function resolveNestPresets(isEnabled: UserDefinedOptions['nestjs']): UserConfigItem[] {
+  if (!isEnabled) {
+    return []
+  }
+
+  return [{
+    name: 'icebreaker/nestjs/rules',
+    rules: nestjsTypeScriptRules,
+  }]
 }

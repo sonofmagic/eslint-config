@@ -63,9 +63,18 @@ export default icebreaker({
 - `tailwindcss`：传入 `true` 使用内置 Tailwind flat 配置，或通过对象指定 Tailwind v4 的入口文件 / v3 的配置文件路径。
 - `mdx`：激活 `eslint-plugin-mdx` 处理 `.mdx` 文件。
 - `a11y`：按需引入 JSX 与 Vue 的无障碍规则。
-- `typescript`：开启 TypeScript 预设，并在 `nestjs` 为 `true` 时放宽 NestJS 场景常见限制。
+- `typescript`：开启 TypeScript 预设，加强未使用诊断，可与 `nestjs` 搭配使用以获得 Nest 专属优化。
+- `nestjs`：针对 NestJS 场景做 TypeScript 调整（允许带装饰器的空构造函数、依赖注入参数属性、声明合并等）。
 - `formatters`：默认启用格式化辅助规则。
 - `test`：放宽 Vitest / Jest 常见规则，例如关闭 `test/prefer-lowercase-title`。
+
+### NestJS 项目
+
+建议在 Nest 项目中同时开启 `typescript` 与 `nestjs`，以便应用以下定制：
+
+- 允许常见的空装饰器类（如 `@Controller()`、`@Module()`）以及生命周期钩子占位实现。
+- 放宽依赖注入常用的构造函数参数属性、 ambient 模块扩展等约束。
+- 针对 `Function`、`any` 等在注入令牌或元数据中常见的类型用法做精确豁免，同时保留其他严格检查。
 
 ## 追加自定义配置
 

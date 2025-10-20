@@ -2,6 +2,41 @@ import type { OptionsTypescript, OptionsVue } from './antfu'
 import type { UserDefinedOptions } from './types'
 import INLINE_ELEMENTS from 'eslint-plugin-vue/lib/utils/inline-non-void-elements.json'
 
+export const nestjsTypeScriptRules: NonNullable<OptionsTypescript['overrides']> = {
+  'ts/explicit-function-return-type': 'off',
+  'ts/explicit-module-boundary-types': 'off',
+  'ts/no-explicit-any': 'off',
+  'ts/no-parameter-properties': 'off',
+  'ts/no-empty-function': [
+    'error',
+    {
+      allow: [
+        'decoratedFunctions',
+        'overrideMethods',
+        'private-constructors',
+        'protected-constructors',
+      ],
+    },
+  ],
+  'ts/no-empty-interface': 'off',
+  'ts/no-namespace': [
+    'error',
+    {
+      allowDeclarations: true,
+      allowDefinitionFiles: true,
+    },
+  ],
+  'ts/ban-types': [
+    'error',
+    {
+      extendDefaults: true,
+      types: {
+        Function: false,
+      },
+    },
+  ],
+}
+
 //  'vue/no-deprecated-slot-attribute': 'off',
 export function getDefaultVueOptions(opts?: UserDefinedOptions) {
   const overrides: OptionsVue['overrides'] = {
@@ -76,13 +111,7 @@ export function getDefaultTypescriptOptions(opts?: UserDefinedOptions) {
     ],
   }
   if (opts?.nestjs) {
-    Object.assign(overrides, {
-      'ts/interface-name-prefix': 'off',
-      'ts/explicit-function-return-type': 'off',
-      'ts/explicit-module-boundary-types': 'off',
-      'ts/no-explicit-any': 'off',
-      'ts/consistent-type-imports': 'off',
-    })
+    Object.assign(overrides, nestjsTypeScriptRules)
   }
   const typescriptOptions: OptionsTypescript = {
     overrides,

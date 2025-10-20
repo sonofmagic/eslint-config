@@ -65,9 +65,18 @@ export default icebreaker({
 - `tailwindcss` – pass `true` to use the built-in Tailwind flat config or provide `{ entryPoint, tailwindConfig }` for Tailwind v4/v3 projects.
 - `mdx` – activates MDX linting via `eslint-plugin-mdx`.
 - `a11y` – wires in JSX (React) and Vue accessibility plugins.
-- `typescript` – extends the TypeScript preset and applies stricter unused diagnostics plus NestJS conveniences when `nestjs` is true.
+- `typescript` – extends the TypeScript preset and applies stricter unused diagnostics. Pair with `nestjs` for Nest specific adjustments.
+- `nestjs` – enables NestJS-centric TypeScript tweaks (empty decorated constructors, declaration merging, DI parameter properties, etc.).
 - `formatters` – keeps the built-in formatting rules enabled by default.
 - `test` – relaxes certain Vitest/Jest style rules (`test/prefer-lowercase-title`).
+
+### NestJS Projects
+
+Enable `nestjs: true` together with the TypeScript preset to apply rules tailored for Nest idioms:
+
+- Keeps decorated lifecycle hooks and class constructors legal even when empty.
+- Allows DI parameter properties and ambient module augmentation (e.g. Express request typing).
+- Relaxes `no-explicit-any`/`ban-types` patterns commonly used with provider tokens while keeping other strict defaults intact.
 
 ## Adding Extra Config Items
 

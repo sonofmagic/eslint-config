@@ -342,3 +342,130 @@ exports[`presets > c3 1`] = `
   },
 ]
 `;
+
+exports[`presets > nestjs 1`] = `
+[
+  {
+    "formatters": true,
+    "javascript": {
+      "overrides": {
+        "curly": [
+          "error",
+          "all",
+        ],
+        "no-console": [
+          "warn",
+        ],
+      },
+    },
+    "nestjs": true,
+    "test": {
+      "overrides": {
+        "test/prefer-lowercase-title": [
+          "off",
+        ],
+      },
+    },
+    "typescript": {
+      "overrides": {
+        "ts/ban-ts-comment": "off",
+        "ts/ban-types": [
+          "error",
+          {
+            "extendDefaults": true,
+            "types": {
+              "Function": false,
+            },
+          },
+        ],
+        "ts/explicit-function-return-type": "off",
+        "ts/explicit-module-boundary-types": "off",
+        "ts/no-empty-function": [
+          "error",
+          {
+            "allow": [
+              "decoratedFunctions",
+              "overrideMethods",
+              "private-constructors",
+              "protected-constructors",
+            ],
+          },
+        ],
+        "ts/no-empty-interface": "off",
+        "ts/no-explicit-any": "off",
+        "ts/no-namespace": [
+          "error",
+          {
+            "allowDeclarations": true,
+            "allowDefinitionFiles": true,
+          },
+        ],
+        "ts/no-parameter-properties": "off",
+        "ts/no-unused-expressions": [
+          "error",
+          {
+            "allowShortCircuit": true,
+            "allowTernary": true,
+          },
+        ],
+        "ts/no-unused-vars": [
+          "error",
+          {
+            "args": "all",
+            "argsIgnorePattern": "^_",
+            "caughtErrors": "all",
+            "caughtErrorsIgnorePattern": "^_",
+            "destructuredArrayIgnorePattern": "^_",
+            "ignoreRestSiblings": true,
+            "varsIgnorePattern": "^_",
+          },
+        ],
+        "ts/no-use-before-define": "warn",
+        "ts/prefer-ts-expect-error": "off",
+      },
+    },
+  },
+  {
+    "rules": {
+      "unused-imports/no-unused-vars": "off",
+    },
+  },
+  {
+    "name": "icebreaker/nestjs/rules",
+    "rules": {
+      "ts/ban-types": [
+        "error",
+        {
+          "extendDefaults": true,
+          "types": {
+            "Function": false,
+          },
+        },
+      ],
+      "ts/explicit-function-return-type": "off",
+      "ts/explicit-module-boundary-types": "off",
+      "ts/no-empty-function": [
+        "error",
+        {
+          "allow": [
+            "decoratedFunctions",
+            "overrideMethods",
+            "private-constructors",
+            "protected-constructors",
+          ],
+        },
+      ],
+      "ts/no-empty-interface": "off",
+      "ts/no-explicit-any": "off",
+      "ts/no-namespace": [
+        "error",
+        {
+          "allowDeclarations": true,
+          "allowDefinitionFiles": true,
+        },
+      ],
+      "ts/no-parameter-properties": "off",
+    },
+  },
+]
+`;
