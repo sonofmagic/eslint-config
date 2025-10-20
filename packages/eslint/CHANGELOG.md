@@ -1,5 +1,11 @@
 # @icebreakers/eslint-config
 
+## 1.5.4
+
+### Patch Changes
+
+- 🐛 **Enhance the NestJS preset by inlining best-practice TypeScript relaxations (decorated empty constructors, DI parameter properties, ambient declaration merging) and expose dedicated documentation covering the improved workflow.** — [`296f575`](https://github.com/sonofmagic/dev-configs/commit/296f575a5c388baa7ab4287acff3763f77508e57) · Thanks [@sonofmagic](https://github.com/sonofmagic) · Patch release
+
 ## 1.5.3
 
 ### Patch Changes
