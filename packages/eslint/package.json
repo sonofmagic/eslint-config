@@ -49,13 +49,13 @@
     "sync": "cnpm sync @icebreakers/eslint-config"
   },
   "dependencies": {
-    "@antfu/eslint-config": "6.0.0",
+    "@antfu/eslint-config": "6.1.0",
     "@eslint-react/eslint-plugin": "^2.2.3",
     "@next/eslint-plugin-next": "^16.0.0",
     "eslint-plugin-better-tailwindcss": "^3.7.10",
     "eslint-plugin-format": "1.0.2",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-react-hooks": "^7.0.0",
+    "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "eslint-plugin-tailwindcss": "3.18.2",
     "eslint-plugin-vuejs-accessibility": "^2.4.1"

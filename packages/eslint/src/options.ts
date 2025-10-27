@@ -22,6 +22,7 @@ const BASE_DEFAULTS: Pick<UserDefinedOptions, 'formatters' | 'javascript' | 'tes
 
 const BASE_RULES: Partial<Linter.RulesRecord> = {
   'unused-imports/no-unused-vars': 'off',
+  'unicorn/prefer-number-properties': 'warn',
 }
 
 export type ResolvedUserOptions = UserDefinedOptions & {
