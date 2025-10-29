@@ -27,6 +27,7 @@ exports[`index > common 1`] = `
         ],
       },
     ],
+    "function-name-case": null,
     "scss/at-rule-no-unknown": [
       true,
       {
