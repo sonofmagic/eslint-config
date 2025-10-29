@@ -1,6 +1,6 @@
 {
   "name": "@icebreakers/mock",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Mock application demonstrating Icebreaker's dev-configs presets",
   "author": "ice breaker <1324318532@qq.com>",
   "license": "MIT",
