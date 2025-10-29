@@ -46,6 +46,7 @@ function resolveRules(options: IcebreakerStylelintOptions | undefined): Config['
   const ignoreAtRules = resolveIgnoreList('atRules', options?.ignores)
 
   const rules: Config['rules'] = {
+    'function-name-case': null,
     'unit-no-unknown': [
       true,
       {
